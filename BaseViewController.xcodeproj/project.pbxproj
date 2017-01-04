@@ -65,6 +65,7 @@
 		F5F9EA8F1E1CC41E001765F8 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9EA8E1E1CC41E001765F8 /* UIBarButtonItem+Extension.m */; };
 		F5F9EA921E1CC6EF001765F8 /* navigationbar_back_withtext_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F9EA901E1CC6EF001765F8 /* navigationbar_back_withtext_highlighted@2x.png */; };
 		F5F9EA931E1CC6EF001765F8 /* navigationbar_back_withtext_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F9EA911E1CC6EF001765F8 /* navigationbar_back_withtext_highlighted@3x.png */; };
+		F5F9EA961E1CE49D001765F8 /* BaseLoadMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9EA951E1CE49D001765F8 /* BaseLoadMoreView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +144,8 @@
 		F5F9EA8E1E1CC41E001765F8 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		F5F9EA901E1CC6EF001765F8 /* navigationbar_back_withtext_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_back_withtext_highlighted@2x.png"; sourceTree = "<group>"; };
 		F5F9EA911E1CC6EF001765F8 /* navigationbar_back_withtext_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_back_withtext_highlighted@3x.png"; sourceTree = "<group>"; };
+		F5F9EA941E1CE49D001765F8 /* BaseLoadMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLoadMoreView.h; sourceTree = "<group>"; };
+		F5F9EA951E1CE49D001765F8 /* BaseLoadMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseLoadMoreView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +222,8 @@
 				F5F9EA211E1C9275001765F8 /* MainTabBarController.m */,
 				F5F9EA231E1C9292001765F8 /* BaseNavigationController.h */,
 				F5F9EA241E1C9292001765F8 /* BaseNavigationController.m */,
+				F5F9EA941E1CE49D001765F8 /* BaseLoadMoreView.h */,
+				F5F9EA951E1CE49D001765F8 /* BaseLoadMoreView.m */,
 				F5F9EA8D1E1CC41E001765F8 /* UIBarButtonItem+Extension.h */,
 				F5F9EA8E1E1CC41E001765F8 /* UIBarButtonItem+Extension.m */,
 			);
@@ -407,6 +412,7 @@
 				F5F9EA301E1C985A001765F8 /* FourthViewController.m in Sources */,
 				F5F9EA781E1CA564001765F8 /* TestViewController.m in Sources */,
 				F5D419101E1BA7FD00DBB258 /* FirstViewController.m in Sources */,
+				F5F9EA961E1CE49D001765F8 /* BaseLoadMoreView.m in Sources */,
 				F5F9EA8F1E1CC41E001765F8 /* UIBarButtonItem+Extension.m in Sources */,
 				F5D418F51E1BA45000DBB258 /* AppDelegate.m in Sources */,
 				F5F9EA831E1CB9B4001765F8 /* UIColor+JP_Color.m in Sources */,

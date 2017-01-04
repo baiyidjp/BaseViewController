@@ -26,7 +26,6 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     
     //创建BaseNavigationController实例的时候 会先走这个方法 此时子控制器为0
-    NSLog(@"%zd",self.childViewControllers.count);
     //当子控制器的个数大于0 便是进入了第二级页面
     if (self.childViewControllers.count > 0) {
         

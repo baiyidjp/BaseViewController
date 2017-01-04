@@ -15,7 +15,9 @@
 @end
 
 @implementation MainTabBarController
-
+{
+    UIButton        *_customButton;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -36,6 +38,9 @@
     }
     //设置子控制器
     self.viewControllers = controllers;
+    
+    //设置自定义的按钮 不需要可注释
+    [self setupCustomButton];
 }
 
 /**
@@ -56,8 +61,10 @@
     //设置控制器所需数据
     controller.title = title;
     controller.tabBarItem.title = title;
+    //设置标题的图片--Normal/Selected
     controller.tabBarItem.image = [UIImage imageNamed:imageName];
     controller.tabBarItem.selectedImage = [[UIImage imageNamed:selectImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    //设置标题文字的颜色--Normal/Selected
     [controller.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor orangeColor]} forState:UIControlStateSelected];
     [controller.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateNormal];
     
@@ -86,5 +93,28 @@
     [[tabbarbuttonArray[index] layer] addAnimation:pulse forKey:nil];
 }
 
+- (void)setupCustomButton {
+    
+    //基本属性
+    _customButton = [[UIButton alloc] init];
+    [_customButton setBackgroundColor:[UIColor greenColor]];
+    [_customButton setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
+    [_customButton setTitle:@"董" forState:UIControlStateNormal];
+    
+    [self.tabBar addSubview:_customButton];
+    
+    //子控制器个数
+    NSInteger count = self.childViewControllers.count;
+    CGFloat btnW = self.tabBar.bounds.size.width / count;
+    
+    _customButton.frame = CGRectMake((count/2)*btnW, 0, btnW, self.tabBar.bounds.size.height);
+    _customButton.layer.cornerRadius = 5;
+    [_customButton addTarget:self action:@selector(clickCustomBtn) forControlEvents:UIControlEventTouchUpInside];
+
+}
+- (void)clickCustomBtn {
+    
+    NSLog(@"clickCustomBtn");
+}
 
 @end

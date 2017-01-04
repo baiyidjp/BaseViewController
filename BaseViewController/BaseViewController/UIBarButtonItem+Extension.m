@@ -21,13 +21,13 @@
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor orangeColor] forState:UIControlStateHighlighted];
         //判断是否是带返回图片的
-        if (isBack) {
-            
+        if (isBack) {    
             NSString *imageName = @"navigationbar_back_withtext";
             [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
             [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_highlighted",imageName]] forState:UIControlStateHighlighted];
-            [btn sizeToFit];
         }
+        
+        [btn sizeToFit];
         [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
         
         self.customView = btn;

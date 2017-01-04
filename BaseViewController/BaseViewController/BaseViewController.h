@@ -8,16 +8,33 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseViewController : UIViewController
+@class BaseLoadMoreView;
+@interface BaseViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 /** tableView */
-@property(nonatomic,strong)UITableView *tableView;
-
+@property(nonatomic,strong)UITableView *baseTableView;
+/** refreshControl */
+@property(nonatomic,strong) UIRefreshControl *refreshControl;
 /** 自定义导航栏 */
 @property(nonatomic,strong) UINavigationBar *baseNavigationBar;
 
 /** 自定义导航条目 */
 @property(nonatomic,strong) UINavigationItem *baseNavigationItem;
 
+/** 加载滚动视图 */
+- (void)setupTableViewWithFrame:(CGRect)frame;
+
+/** loadNewData */
+- (void)loadNewData;
+
+/** loadMoreData */
+- (void)loadMoreData;
+
+/** loadMoreView */
+@property(nonatomic,strong) BaseLoadMoreView *loadMoreView;
+/** loadMoreEndRefresh */
+- (void)loadMoreEndRefresh;
+/** noMoreData */
+- (void)noMoreData;
 
 @end

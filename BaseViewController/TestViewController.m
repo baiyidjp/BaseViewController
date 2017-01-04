@@ -13,27 +13,73 @@
 @end
 
 @implementation TestViewController
-
+{
+    NSMutableArray *_dataArray;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"test";
+    self.title = @"Test";
+    
+    _dataArray = [NSMutableArray array];
+    for (int i = 0; i < 20; i++) {
+        NSString *str = [NSString stringWithFormat:@"死数据--%d",i];
+        [_dataArray addObject:str];
+    }
+    
+    [self setupTableViewWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height-64)];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupTableViewWithFrame:(CGRect)frame {
+    
+    [super setupTableViewWithFrame:frame];
+    
+    [self.baseTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return _dataArray.count;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.textLabel.text = _dataArray[indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSLog(@"点击--%zd",indexPath.row);
+}
+
+- (void)loadNewData {
+    
+    [_dataArray insertObject:@"下拉--新数据" atIndex:0];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.baseTableView reloadData];
+        [self.refreshControl endRefreshing];
+        if (_dataArray.count > 25) {
+            [self noMoreData];
+        }
+    });
+}
+
+- (void)loadMoreData {
+    
+    [_dataArray addObject:@"上拉--新数据"];
+    NSLog(@"1");
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.baseTableView reloadData];
+        if (_dataArray.count > 25) {
+            [self noMoreData];
+        }else {
+            [self loadMoreEndRefresh];
+        }
+    });
+
+}
 
 @end
