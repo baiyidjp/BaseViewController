@@ -82,10 +82,10 @@
     //判断临界点
     if (self.scrollView.isDragging) {
         
-        if (scroll > 44 && self.state == LoadMoreState_Normal) {
+        if (scroll > 10 && self.state == LoadMoreState_Normal) {
             //如果拉伸超过临界点 并且状态是普通 --> 将状态改为pulling
             self.state = LoadMoreState_Pulling;
-        } else if (scroll < 44 && self.state == LoadMoreState_Pulling) {
+        } else if (scroll < 10 && self.state == LoadMoreState_Pulling) {
             //如果拉伸低于临界点 并且状态是pulling --> 将状态改为normal
             self.state = LoadMoreState_Normal;
         }

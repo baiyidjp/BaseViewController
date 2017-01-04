@@ -26,12 +26,13 @@
 
 /** loadNewData */
 - (void)loadNewData;
-
-/** loadMoreData */
-- (void)loadMoreData;
+/** loadNewEndRefresh */
+- (void)loadNewEndRefresh;
 
 /** loadMoreView */
 @property(nonatomic,strong) BaseLoadMoreView *loadMoreView;
+/** loadMoreData */
+- (void)loadMoreData;
 /** loadMoreEndRefresh */
 - (void)loadMoreEndRefresh;
 /** noMoreData */

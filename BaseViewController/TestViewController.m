@@ -60,7 +60,7 @@
     [_dataArray insertObject:@"下拉--新数据" atIndex:0];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.baseTableView reloadData];
-        [self.refreshControl endRefreshing];
+        [self loadNewEndRefresh];
         if (_dataArray.count > 25) {
             [self noMoreData];
         }

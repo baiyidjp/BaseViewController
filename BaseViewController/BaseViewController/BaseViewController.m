@@ -115,6 +115,11 @@
     [self.refreshControl endRefreshing];
 }
 
+- (void)loadNewEndRefresh {
+    
+    [self.refreshControl endRefreshing];
+}
+
 - (void)loadMoreData {
     
     [self.loadMoreView stopAnimation];
