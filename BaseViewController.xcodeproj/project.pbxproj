@@ -10,6 +10,8 @@
 		F55039441E1DDC5D00742E5D /* NSObject+runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F550393F1E1DDC5D00742E5D /* NSObject+runtime.m */; };
 		F55039451E1DDC5D00742E5D /* UIView+Corner_Radius.m in Sources */ = {isa = PBXBuildFile; fileRef = F55039411E1DDC5D00742E5D /* UIView+Corner_Radius.m */; };
 		F55039461E1DDC5D00742E5D /* UIViewController+NSLogAppear.m in Sources */ = {isa = PBXBuildFile; fileRef = F55039431E1DDC5D00742E5D /* UIViewController+NSLogAppear.m */; };
+		F55039491E1DEF5B00742E5D /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F55039481E1DEF5B00742E5D /* UIImage+Extension.m */; };
+		F550394B1E1DF63C00742E5D /* 曼巴谢幕.png in Resources */ = {isa = PBXBuildFile; fileRef = F550394A1E1DF63C00742E5D /* 曼巴谢幕.png */; };
 		F5D418F21E1BA45000DBB258 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D418F11E1BA45000DBB258 /* main.m */; };
 		F5D418F51E1BA45000DBB258 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D418F41E1BA45000DBB258 /* AppDelegate.m */; };
 		F5D418F81E1BA45100DBB258 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D418F71E1BA45100DBB258 /* ViewController.m */; };
@@ -78,6 +80,9 @@
 		F55039411E1DDC5D00742E5D /* UIView+Corner_Radius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Corner_Radius.m"; sourceTree = "<group>"; };
 		F55039421E1DDC5D00742E5D /* UIViewController+NSLogAppear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NSLogAppear.h"; sourceTree = "<group>"; };
 		F55039431E1DDC5D00742E5D /* UIViewController+NSLogAppear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NSLogAppear.m"; sourceTree = "<group>"; };
+		F55039471E1DEF5B00742E5D /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		F55039481E1DEF5B00742E5D /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		F550394A1E1DF63C00742E5D /* 曼巴谢幕.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "曼巴谢幕.png"; sourceTree = "<group>"; };
 		F5D418ED1E1BA45000DBB258 /* BaseViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D418F11E1BA45000DBB258 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5D418F31E1BA45000DBB258 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -202,6 +207,7 @@
 				F5F9EA2C1E1C9852001765F8 /* ThirdViewController.m */,
 				F5F9EA2E1E1C985A001765F8 /* FourthViewController.h */,
 				F5F9EA2F1E1C985A001765F8 /* FourthViewController.m */,
+				F550394A1E1DF63C00742E5D /* 曼巴谢幕.png */,
 				F5D418F91E1BA45100DBB258 /* Main.storyboard */,
 				F5D418FC1E1BA45100DBB258 /* Assets.xcassets */,
 				F5D418FE1E1BA45100DBB258 /* LaunchScreen.storyboard */,
@@ -302,6 +308,8 @@
 				F5F9EA7F1E1CB9B4001765F8 /* UIView+BlockGesture.m */,
 				F5F9EA801E1CB9B4001765F8 /* UIView+JP_Frame.h */,
 				F5F9EA811E1CB9B4001765F8 /* UIView+JP_Frame.m */,
+				F55039471E1DEF5B00742E5D /* UIImage+Extension.h */,
+				F55039481E1DEF5B00742E5D /* UIImage+Extension.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -398,6 +406,7 @@
 				F5F9EA5D1E1C9E19001765F8 /* tabbar_compose_button@3x.png in Resources */,
 				F5F9EA6B1E1C9E19001765F8 /* tabbar_home_selected@3x.png in Resources */,
 				F5F9EA5B1E1C9E19001765F8 /* tabbar_compose_background_icon_return@3x.png in Resources */,
+				F550394B1E1DF63C00742E5D /* 曼巴谢幕.png in Resources */,
 				F5F9EA711E1C9E1A001765F8 /* tabbar_profile@3x.png in Resources */,
 				F5F9EA721E1C9E1A001765F8 /* tabbar_profile_selected@2x.png in Resources */,
 				F5F9EA5E1E1C9E19001765F8 /* tabbar_compose_button_highlighted@2x.png in Resources */,
@@ -432,6 +441,7 @@
 				F5F9EA961E1CE49D001765F8 /* BaseLoadMoreView.m in Sources */,
 				F55039461E1DDC5D00742E5D /* UIViewController+NSLogAppear.m in Sources */,
 				F5F9EA8F1E1CC41E001765F8 /* UIBarButtonItem+Extension.m in Sources */,
+				F55039491E1DEF5B00742E5D /* UIImage+Extension.m in Sources */,
 				F5D418F51E1BA45000DBB258 /* AppDelegate.m in Sources */,
 				F5F9EA831E1CB9B4001765F8 /* UIColor+JP_Color.m in Sources */,
 				F5F9EA821E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.m in Sources */,
