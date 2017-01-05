@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F55039441E1DDC5D00742E5D /* NSObject+runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F550393F1E1DDC5D00742E5D /* NSObject+runtime.m */; };
+		F55039451E1DDC5D00742E5D /* UIView+Corner_Radius.m in Sources */ = {isa = PBXBuildFile; fileRef = F55039411E1DDC5D00742E5D /* UIView+Corner_Radius.m */; };
+		F55039461E1DDC5D00742E5D /* UIViewController+NSLogAppear.m in Sources */ = {isa = PBXBuildFile; fileRef = F55039431E1DDC5D00742E5D /* UIViewController+NSLogAppear.m */; };
 		F5D418F21E1BA45000DBB258 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D418F11E1BA45000DBB258 /* main.m */; };
 		F5D418F51E1BA45000DBB258 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D418F41E1BA45000DBB258 /* AppDelegate.m */; };
 		F5D418F81E1BA45100DBB258 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D418F71E1BA45100DBB258 /* ViewController.m */; };
@@ -69,6 +72,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F550393E1E1DDC5D00742E5D /* NSObject+runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+runtime.h"; sourceTree = "<group>"; };
+		F550393F1E1DDC5D00742E5D /* NSObject+runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+runtime.m"; sourceTree = "<group>"; };
+		F55039401E1DDC5D00742E5D /* UIView+Corner_Radius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Corner_Radius.h"; sourceTree = "<group>"; };
+		F55039411E1DDC5D00742E5D /* UIView+Corner_Radius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Corner_Radius.m"; sourceTree = "<group>"; };
+		F55039421E1DDC5D00742E5D /* UIViewController+NSLogAppear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NSLogAppear.h"; sourceTree = "<group>"; };
+		F55039431E1DDC5D00742E5D /* UIViewController+NSLogAppear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NSLogAppear.m"; sourceTree = "<group>"; };
 		F5D418ED1E1BA45000DBB258 /* BaseViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D418F11E1BA45000DBB258 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5D418F31E1BA45000DBB258 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -279,6 +288,12 @@
 		F5F9EA791E1CB9B4001765F8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F550393E1E1DDC5D00742E5D /* NSObject+runtime.h */,
+				F550393F1E1DDC5D00742E5D /* NSObject+runtime.m */,
+				F55039401E1DDC5D00742E5D /* UIView+Corner_Radius.h */,
+				F55039411E1DDC5D00742E5D /* UIView+Corner_Radius.m */,
+				F55039421E1DDC5D00742E5D /* UIViewController+NSLogAppear.h */,
+				F55039431E1DDC5D00742E5D /* UIViewController+NSLogAppear.m */,
 				F5F9EA7A1E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.h */,
 				F5F9EA7B1E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.m */,
 				F5F9EA7C1E1CB9B4001765F8 /* UIColor+JP_Color.h */,
@@ -405,14 +420,17 @@
 				F5F9EA841E1CB9B4001765F8 /* UIView+BlockGesture.m in Sources */,
 				F5D418F81E1BA45100DBB258 /* ViewController.m in Sources */,
 				F5F9EA251E1C9292001765F8 /* BaseNavigationController.m in Sources */,
+				F55039451E1DDC5D00742E5D /* UIView+Corner_Radius.m in Sources */,
 				F5D4190D1E1BA49F00DBB258 /* BaseViewController.m in Sources */,
 				F5F9EA221E1C9275001765F8 /* MainTabBarController.m in Sources */,
 				F5F9EA2A1E1C9849001765F8 /* SecondViewController.m in Sources */,
 				F5F9EA2D1E1C9852001765F8 /* ThirdViewController.m in Sources */,
 				F5F9EA301E1C985A001765F8 /* FourthViewController.m in Sources */,
+				F55039441E1DDC5D00742E5D /* NSObject+runtime.m in Sources */,
 				F5F9EA781E1CA564001765F8 /* TestViewController.m in Sources */,
 				F5D419101E1BA7FD00DBB258 /* FirstViewController.m in Sources */,
 				F5F9EA961E1CE49D001765F8 /* BaseLoadMoreView.m in Sources */,
+				F55039461E1DDC5D00742E5D /* UIViewController+NSLogAppear.m in Sources */,
 				F5F9EA8F1E1CC41E001765F8 /* UIBarButtonItem+Extension.m in Sources */,
 				F5D418F51E1BA45000DBB258 /* AppDelegate.m in Sources */,
 				F5F9EA831E1CB9B4001765F8 /* UIColor+JP_Color.m in Sources */,
