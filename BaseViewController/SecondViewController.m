@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "UIImage+Extension.h"
 
 @interface SecondViewController ()
 
@@ -17,6 +18,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 100, 200, 100)];
+    [self.view addSubview:imageView];
+    UIImage *image = [UIImage imageNamed:@"曼巴谢幕"];
+    [image jp_asynCornerImageWithSize:imageView.bounds.size cornerRadius:15 fillColor:self.view.backgroundColor completion:^(UIImage *image) {
+        imageView.image = image;
+    }];
+    UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(50, 250, 100, 100)];
+    [self.view addSubview:imageView1];
+    imageView1.image = [image jp_cornerImageWithSize:imageView1.bounds.size fillColor:self.view.backgroundColor];
+    
+    UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(50, 400, 150, 100)];
+    [self.view addSubview:imageView2];
+    imageView2.image = [image jp_cornerImageWithSize:imageView2.bounds.size cornerRadius:0 fillColor:self.view.backgroundColor];
 }
 
 - (void)didReceiveMemoryWarning {

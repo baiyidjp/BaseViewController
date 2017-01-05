@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ 为XIB添加设置圆角 半径
+ */
 @interface UIView (Corner_Radius)
 
 @property(nonatomic,strong) IBInspectable UIColor *borderColor;

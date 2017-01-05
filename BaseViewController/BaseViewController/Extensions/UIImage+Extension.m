@@ -37,13 +37,48 @@
 //    
 //}
 
-- (void)jp_cornerImageWithSize:(CGSize)size fillColor:(UIColor *)fillColor completion:(void (^)(UIImage *))completion {
+- (UIImage *)jp_cornerImageWithSize:(CGSize)size fillColor:(UIColor *)fillColor {
     
-    [self jp_cornerImageWithSize:size corner:size.width/2.0 fillColor:fillColor completion:completion];
+    return [self jp_cornerImageWithSize:size cornerRadius:size.width/2.0 fillColor:fillColor];
+}
+
+- (UIImage *)jp_cornerImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius fillColor:(UIColor *)fillColor {
+    
+    //使用绘图 取得上下文
+    UIGraphicsBeginImageContextWithOptions(size, YES, 0);
+    
+    //绘制范围
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    
+    //设置填充颜色
+    [fillColor setFill];
+    UIRectFill(rect);
+    
+    //使用贝塞尔曲线设置裁切路径
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
+    //裁切
+    [path addClip];
+    
+    //将图片重绘到已经裁切过的上下文中
+    [self drawInRect:rect];
+    
+    //取出图片
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    //结束上下文
+    UIGraphicsEndImageContext();
+    
+    return image;
+
+}
+
+- (void)jp_asynCornerImageWithSize:(CGSize)size fillColor:(UIColor *)fillColor completion:(void (^)(UIImage *))completion {
+    
+    [self jp_asynCornerImageWithSize:size cornerRadius:size.width/2.0 fillColor:fillColor completion:completion];
 }
 
 
-- (void)jp_cornerImageWithSize:(CGSize)size corner:(CGFloat)corner fillColor:(UIColor *)fillColor completion:(void (^)(UIImage *))completion {
+- (void)jp_asynCornerImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius fillColor:(UIColor *)fillColor completion:(void (^)(UIImage *))completion {
     
     //异步绘制
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -59,7 +94,7 @@
         UIRectFill(rect);
         
         //使用贝塞尔曲线设置裁切路径
-        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:corner];
+        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
         //裁切
         [path addClip];
         
@@ -68,6 +103,9 @@
         
         //取出图片
         UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        
+        //结束上下文
+        UIGraphicsEndImageContext();
         
         //主线程调用block返回图片
         dispatch_async(dispatch_get_main_queue(), ^{
