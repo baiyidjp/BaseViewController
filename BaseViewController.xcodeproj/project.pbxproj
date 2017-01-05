@@ -13,6 +13,15 @@
 		F55039491E1DEF5B00742E5D /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F55039481E1DEF5B00742E5D /* UIImage+Extension.m */; };
 		F550394B1E1DF63C00742E5D /* 曼巴谢幕.png in Resources */ = {isa = PBXBuildFile; fileRef = F550394A1E1DF63C00742E5D /* 曼巴谢幕.png */; };
 		F550394E1E1E19D200742E5D /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F550394D1E1E19D200742E5D /* UIBarButtonItem+Extension.m */; };
+		F550395B1E1E25D000742E5D /* box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F55039511E1E25D000742E5D /* box@2x.png */; };
+		F550395C1E1E25D000742E5D /* deliveryStaff1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F55039521E1E25D000742E5D /* deliveryStaff1@2x.png */; };
+		F550395D1E1E25D000742E5D /* deliveryStaff2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F55039531E1E25D000742E5D /* deliveryStaff2@2x.png */; };
+		F550395E1E1E25D100742E5D /* deliveryStaff3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F55039541E1E25D000742E5D /* deliveryStaff3@2x.png */; };
+		F550395F1E1E25D100742E5D /* deliveryStaff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F55039551E1E25D000742E5D /* deliveryStaff@2x.png */; };
+		F55039601E1E25D100742E5D /* staticDeliveryStaff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F55039561E1E25D000742E5D /* staticDeliveryStaff@2x.png */; };
+		F55039611E1E25D100742E5D /* JPRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F55039581E1E25D000742E5D /* JPRefreshControl.m */; };
+		F55039621E1E25D100742E5D /* JDRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = F550395A1E1E25D000742E5D /* JDRefreshView.m */; };
+		F55039651E1E260D00742E5D /* JPNormalRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = F55039641E1E260D00742E5D /* JPNormalRefreshView.m */; };
 		F5D418F21E1BA45000DBB258 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D418F11E1BA45000DBB258 /* main.m */; };
 		F5D418F51E1BA45000DBB258 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D418F41E1BA45000DBB258 /* AppDelegate.m */; };
 		F5D418F81E1BA45100DBB258 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D418F71E1BA45100DBB258 /* ViewController.m */; };
@@ -85,6 +94,18 @@
 		F550394A1E1DF63C00742E5D /* 曼巴谢幕.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "曼巴谢幕.png"; sourceTree = "<group>"; };
 		F550394C1E1E19D200742E5D /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		F550394D1E1E19D200742E5D /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		F55039511E1E25D000742E5D /* box@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "box@2x.png"; sourceTree = "<group>"; };
+		F55039521E1E25D000742E5D /* deliveryStaff1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deliveryStaff1@2x.png"; sourceTree = "<group>"; };
+		F55039531E1E25D000742E5D /* deliveryStaff2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deliveryStaff2@2x.png"; sourceTree = "<group>"; };
+		F55039541E1E25D000742E5D /* deliveryStaff3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deliveryStaff3@2x.png"; sourceTree = "<group>"; };
+		F55039551E1E25D000742E5D /* deliveryStaff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deliveryStaff@2x.png"; sourceTree = "<group>"; };
+		F55039561E1E25D000742E5D /* staticDeliveryStaff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "staticDeliveryStaff@2x.png"; sourceTree = "<group>"; };
+		F55039571E1E25D000742E5D /* JPRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPRefreshControl.h; sourceTree = "<group>"; };
+		F55039581E1E25D000742E5D /* JPRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPRefreshControl.m; sourceTree = "<group>"; };
+		F55039591E1E25D000742E5D /* JDRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDRefreshView.h; sourceTree = "<group>"; };
+		F550395A1E1E25D000742E5D /* JDRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDRefreshView.m; sourceTree = "<group>"; };
+		F55039631E1E260D00742E5D /* JPNormalRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPNormalRefreshView.h; sourceTree = "<group>"; };
+		F55039641E1E260D00742E5D /* JPNormalRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPNormalRefreshView.m; sourceTree = "<group>"; };
 		F5D418ED1E1BA45000DBB258 /* BaseViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D418F11E1BA45000DBB258 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5D418F31E1BA45000DBB258 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -173,6 +194,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F550394F1E1E25D000742E5D /* OCJDRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				F55039501E1E25D000742E5D /* image */,
+				F55039571E1E25D000742E5D /* JPRefreshControl.h */,
+				F55039581E1E25D000742E5D /* JPRefreshControl.m */,
+				F55039591E1E25D000742E5D /* JDRefreshView.h */,
+				F550395A1E1E25D000742E5D /* JDRefreshView.m */,
+				F55039631E1E260D00742E5D /* JPNormalRefreshView.h */,
+				F55039641E1E260D00742E5D /* JPNormalRefreshView.m */,
+			);
+			path = OCJDRefreshControl;
+			sourceTree = "<group>";
+		};
+		F55039501E1E25D000742E5D /* image */ = {
+			isa = PBXGroup;
+			children = (
+				F55039511E1E25D000742E5D /* box@2x.png */,
+				F55039521E1E25D000742E5D /* deliveryStaff1@2x.png */,
+				F55039531E1E25D000742E5D /* deliveryStaff2@2x.png */,
+				F55039541E1E25D000742E5D /* deliveryStaff3@2x.png */,
+				F55039551E1E25D000742E5D /* deliveryStaff@2x.png */,
+				F55039561E1E25D000742E5D /* staticDeliveryStaff@2x.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
 		F5D418E41E1BA45000DBB258 = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +276,7 @@
 		F5D419071E1BA46D00DBB258 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F550394F1E1E25D000742E5D /* OCJDRefreshControl */,
 				F5F9EA791E1CB9B4001765F8 /* Extensions */,
 				F5F9EA311E1C9E19001765F8 /* TabBar */,
 				F5F9EA261E1C9606001765F8 /* MainControllerInfo.plist */,
@@ -383,6 +432,7 @@
 				F5F9EA741E1C9E1A001765F8 /* tableview_loading@2x.png in Resources */,
 				F5F9EA571E1C9E19001765F8 /* tabbar_background@2x.png in Resources */,
 				F5F9EA731E1C9E1A001765F8 /* tabbar_profile_selected@3x.png in Resources */,
+				F55039601E1E25D100742E5D /* staticDeliveryStaff@2x.png in Resources */,
 				F5F9EA8B1E1CC3F3001765F8 /* navigationbar_back_withtext@2x.png in Resources */,
 				F5F9EA621E1C9E19001765F8 /* tabbar_compose_icon_add_highlighted@2x.png in Resources */,
 				F5D419001E1BA45100DBB258 /* LaunchScreen.storyboard in Resources */,
@@ -394,10 +444,12 @@
 				F5F9EA691E1C9E19001765F8 /* tabbar_home@3x.png in Resources */,
 				F5F9EA581E1C9E19001765F8 /* tabbar_compose_background_icon_close@2x.png in Resources */,
 				F5F9EA611E1C9E19001765F8 /* tabbar_compose_icon_add@3x.png in Resources */,
+				F550395C1E1E25D000742E5D /* deliveryStaff1@2x.png in Resources */,
 				F5F9EA641E1C9E19001765F8 /* tabbar_discover@2x.png in Resources */,
 				F5D418FB1E1BA45100DBB258 /* Main.storyboard in Resources */,
 				F5F9EA701E1C9E1A001765F8 /* tabbar_profile@2x.png in Resources */,
 				F5F9EA6C1E1C9E19001765F8 /* tabbar_message_center@2x.png in Resources */,
+				F550395D1E1E25D000742E5D /* deliveryStaff2@2x.png in Resources */,
 				F5F9EA271E1C9606001765F8 /* MainControllerInfo.plist in Resources */,
 				F5F9EA921E1CC6EF001765F8 /* navigationbar_back_withtext_highlighted@2x.png in Resources */,
 				F5F9EA8C1E1CC3F3001765F8 /* navigationbar_back_withtext@3x.png in Resources */,
@@ -405,11 +457,14 @@
 				F5F9EA6E1E1C9E1A001765F8 /* tabbar_message_center_selected@2x.png in Resources */,
 				F5F9EA5D1E1C9E19001765F8 /* tabbar_compose_button@3x.png in Resources */,
 				F5F9EA6B1E1C9E19001765F8 /* tabbar_home_selected@3x.png in Resources */,
+				F550395B1E1E25D000742E5D /* box@2x.png in Resources */,
 				F5F9EA5B1E1C9E19001765F8 /* tabbar_compose_background_icon_return@3x.png in Resources */,
 				F550394B1E1DF63C00742E5D /* 曼巴谢幕.png in Resources */,
 				F5F9EA711E1C9E1A001765F8 /* tabbar_profile@3x.png in Resources */,
 				F5F9EA721E1C9E1A001765F8 /* tabbar_profile_selected@2x.png in Resources */,
+				F550395E1E1E25D100742E5D /* deliveryStaff3@2x.png in Resources */,
 				F5F9EA5E1E1C9E19001765F8 /* tabbar_compose_button_highlighted@2x.png in Resources */,
+				F550395F1E1E25D100742E5D /* deliveryStaff@2x.png in Resources */,
 				F5F9EA6F1E1C9E1A001765F8 /* tabbar_message_center_selected@3x.png in Resources */,
 				F5F9EA751E1C9E1A001765F8 /* tableview_pull_refresh@2x.png in Resources */,
 				F5F9EA631E1C9E19001765F8 /* tabbar_compose_icon_add_highlighted@3x.png in Resources */,
@@ -430,6 +485,7 @@
 				F5D418F81E1BA45100DBB258 /* ViewController.m in Sources */,
 				F5F9EA251E1C9292001765F8 /* BaseNavigationController.m in Sources */,
 				F55039451E1DDC5D00742E5D /* UIView+Corner_Radius.m in Sources */,
+				F55039621E1E25D100742E5D /* JDRefreshView.m in Sources */,
 				F5D4190D1E1BA49F00DBB258 /* BaseViewController.m in Sources */,
 				F5F9EA221E1C9275001765F8 /* MainTabBarController.m in Sources */,
 				F550394E1E1E19D200742E5D /* UIBarButtonItem+Extension.m in Sources */,
@@ -438,9 +494,11 @@
 				F5F9EA301E1C985A001765F8 /* FourthViewController.m in Sources */,
 				F55039441E1DDC5D00742E5D /* NSObject+runtime.m in Sources */,
 				F5F9EA781E1CA564001765F8 /* TestViewController.m in Sources */,
+				F55039651E1E260D00742E5D /* JPNormalRefreshView.m in Sources */,
 				F5D419101E1BA7FD00DBB258 /* FirstViewController.m in Sources */,
 				F5F9EA961E1CE49D001765F8 /* BaseLoadMoreView.m in Sources */,
 				F55039461E1DDC5D00742E5D /* UIViewController+NSLogAppear.m in Sources */,
+				F55039611E1E25D100742E5D /* JPRefreshControl.m in Sources */,
 				F55039491E1DEF5B00742E5D /* UIImage+Extension.m in Sources */,
 				F5D418F51E1BA45000DBB258 /* AppDelegate.m in Sources */,
 				F5F9EA831E1CB9B4001765F8 /* UIColor+JP_Color.m in Sources */,

@@ -93,10 +93,13 @@
         [fillColor setFill];
         UIRectFill(rect);
         
-        //使用贝塞尔曲线设置裁切路径
-        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
-        //裁切
-        [path addClip];
+        if (cornerRadius) {
+            
+            //使用贝塞尔曲线设置裁切路径
+            UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
+            //裁切
+            [path addClip];
+        }        
         
         //将图片重绘到已经裁切过的上下文中
         [self drawInRect:rect];

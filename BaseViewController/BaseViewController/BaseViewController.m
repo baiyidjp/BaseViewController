@@ -10,6 +10,7 @@
 #import "UIView+JP_Frame.h"
 #import "UIColor+JP_Color.h"
 #import "BaseLoadMoreView.h"
+#import "JPRefreshControl.h"
 
 @interface BaseViewController ()
 
@@ -75,8 +76,8 @@
     self.baseTableView.delegate = self;
     
     //下拉刷新
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"下拉刷新"];
+    self.refreshControl = [[JPRefreshControl alloc] init];
+//    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"下拉刷新"];
     [self.baseTableView addSubview:self.refreshControl];
     [self.refreshControl addTarget:self action:@selector(loadData1) forControlEvents:UIControlEventValueChanged];
     
@@ -104,10 +105,10 @@
 //下拉调用数据
 - (void)loadData1 {
     
-    if (self.refreshControl.isRefreshing) {
-        self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"加载中"];
+//    if (self.refreshControl.isRefreshing) {
+//        self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"加载中"];
         [self loadNewData];
-    }
+//    }
 }
 
 - (void)loadNewData {

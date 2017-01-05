@@ -42,7 +42,7 @@
  异步图片切圆角 适用于只切圆角
  
  @param size defalut--imageView size
- @param cornerRadius custom
+ @param cornerRadius custom =0->不作处理的原图
  @param fillColor 填充颜色
  @param completion return--带圆角的图片
  */
