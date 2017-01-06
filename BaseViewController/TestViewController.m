@@ -7,6 +7,7 @@
 //
 
 #import "TestViewController.h"
+#import "LoadingHUD.h"
 
 @interface TestViewController ()
 
@@ -22,13 +23,16 @@
     
     self.title = @"Test";
     
+    [self setupTableViewWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height-64)];
+    
+    
+    
     _dataArray = [NSMutableArray array];
     for (int i = 0; i < 20; i++) {
         NSString *str = [NSString stringWithFormat:@"死数据--%d",i];
         [_dataArray addObject:str];
     }
     
-    [self setupTableViewWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height-64)];
 }
 
 - (void)setupTableViewWithFrame:(CGRect)frame {
@@ -53,6 +57,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"点击--%zd",indexPath.row);
+    [LoadingHUD showHUD];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [LoadingHUD dismissHUD];
+    });
 }
 
 - (void)loadNewData {

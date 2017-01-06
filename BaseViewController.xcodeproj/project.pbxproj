@@ -61,6 +61,7 @@
 		F55039B11E1E2FE100742E5D /* tableview_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F550398B1E1E2FE000742E5D /* tableview_loading@2x.png */; };
 		F55039B21E1E2FE100742E5D /* tableview_pull_refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F550398C1E1E2FE000742E5D /* tableview_pull_refresh@2x.png */; };
 		F55039B51E1E2FF200742E5D /* MidLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F55039B41E1E2FF200742E5D /* MidLineLabel.m */; };
+		F5C4EF4A1E1F72F40092CD3C /* LoadingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C4EF491E1F72F40092CD3C /* LoadingHUD.m */; };
 		F5D418F21E1BA45000DBB258 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D418F11E1BA45000DBB258 /* main.m */; };
 		F5D418F51E1BA45000DBB258 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D418F41E1BA45000DBB258 /* AppDelegate.m */; };
 		F5D418F81E1BA45100DBB258 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D418F71E1BA45100DBB258 /* ViewController.m */; };
@@ -147,6 +148,8 @@
 		F550398C1E1E2FE000742E5D /* tableview_pull_refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableview_pull_refresh@2x.png"; sourceTree = "<group>"; };
 		F55039B31E1E2FF200742E5D /* MidLineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidLineLabel.h; sourceTree = "<group>"; };
 		F55039B41E1E2FF200742E5D /* MidLineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidLineLabel.m; sourceTree = "<group>"; };
+		F5C4EF481E1F72F40092CD3C /* LoadingHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingHUD.h; sourceTree = "<group>"; };
+		F5C4EF491E1F72F40092CD3C /* LoadingHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingHUD.m; sourceTree = "<group>"; };
 		F5D418ED1E1BA45000DBB258 /* BaseViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D418F11E1BA45000DBB258 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5D418F31E1BA45000DBB258 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -269,6 +272,15 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		F5C4EF471E1F72F40092CD3C /* LoadingHUD */ = {
+			isa = PBXGroup;
+			children = (
+				F5C4EF481E1F72F40092CD3C /* LoadingHUD.h */,
+				F5C4EF491E1F72F40092CD3C /* LoadingHUD.m */,
+			);
+			path = LoadingHUD;
+			sourceTree = "<group>";
+		};
 		F5D418E41E1BA45000DBB258 = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +336,7 @@
 		F5D419071E1BA46D00DBB258 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F5C4EF471E1F72F40092CD3C /* LoadingHUD */,
 				F55039661E1E2FE000742E5D /* TabBar */,
 				F550394F1E1E25D000742E5D /* OCJDRefreshControl */,
 				F5F9EA791E1CB9B4001765F8 /* Extensions */,
@@ -507,6 +520,7 @@
 				F55039491E1DEF5B00742E5D /* UIImage+Extension.m in Sources */,
 				F5D418F51E1BA45000DBB258 /* AppDelegate.m in Sources */,
 				F5F9EA831E1CB9B4001765F8 /* UIColor+JP_Color.m in Sources */,
+				F5C4EF4A1E1F72F40092CD3C /* LoadingHUD.m in Sources */,
 				F5F9EA821E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.m in Sources */,
 				F5F9EA851E1CB9B4001765F8 /* UIView+JP_Frame.m in Sources */,
 				F5D418F21E1BA45000DBB258 /* main.m in Sources */,
