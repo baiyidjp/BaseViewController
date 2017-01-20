@@ -15,4 +15,10 @@
 #import "AFNetworking.h"
 #import "UIImageView+WebCache.h"
 
+#ifdef DEBUG
+#define NSLog(...) NSLog(@"%s 第%d行 %@\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#else
+#define NSLog(...)
+#endif
+
 #endif /* PrefixHeader_pch */

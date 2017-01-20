@@ -13,7 +13,7 @@
 NSString *const JPCollectionViewId = @"JPCollectionViewId";
 NSInteger const allCount = 200;
 
-#define scrollTime  10
+#define scrollTime  5
 
 @interface JPLoopView ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -151,11 +151,11 @@ NSInteger const allCount = 200;
 - (void)update{
     
     _timeCount++;
-    NSLog(@"count  %zd",_timeCount);
+//    NSLog(@"count  %zd",_timeCount);
     if (_timeCount % scrollTime != 0){
         return;
     }else{
-        NSLog(@"%zd   %zd",_timeCount,_viewIndex);
+//        NSLog(@"%zd   %zd",_timeCount,_viewIndex);
         _viewIndex++;
         [_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:_viewIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     }
