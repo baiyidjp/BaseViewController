@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UILabel *L = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+    UILabel *L = [[UILabel alloc] initWithFrame:CGRectMake(50, 70, 300, 20)];
     L.text = @"UIImageView+JPWebImage";
     [self.view addSubview:L];
     

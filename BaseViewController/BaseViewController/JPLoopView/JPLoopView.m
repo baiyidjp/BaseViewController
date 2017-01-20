@@ -121,7 +121,7 @@ NSInteger const allCount = 200;
     
     //实现无线滚动
     if (index == 0 || index == allCellCount - 1) {
-        NSLog(@"%zd",index);
+//        NSLog(@"%zd",index);
         
         if (index == 0) {
             index = allCellCount/2;

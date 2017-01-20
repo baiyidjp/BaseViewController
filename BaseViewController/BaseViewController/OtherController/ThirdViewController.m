@@ -18,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UILabel *L = [[UILabel alloc] initWithFrame:CGRectMake(50, 70, 300, 20)];
+    L.text = @"UIImageView+SDWebImage";
+    [self.view addSubview:L];
+    
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 100, 200, 100)];
     [self.view addSubview:imageView];
     UIImage *image = [UIImage imageNamed:@"曼巴谢幕"];

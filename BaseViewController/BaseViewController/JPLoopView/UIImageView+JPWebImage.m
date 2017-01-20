@@ -41,13 +41,14 @@
     NSString *pathString = [[path stringByAppendingString:@"/"] stringByAppendingString:imageName];
     NSData *saveData = [NSData dataWithContentsOfFile:pathString];
     UIImage *saveImage = placeholder;
+    //占位图
+    self.image = [saveImage jp_cornerImageWithSize:self.bounds.size cornerRadius:cornerRadius fillColor:self.superview.backgroundColor];
+    //本地缓存
     if (saveData) {
         saveImage = [UIImage imageWithData:saveData];
-    }
-    [saveImage jp_asynCornerImageWithSize:self.bounds.size cornerRadius:cornerRadius fillColor:self.superview.backgroundColor completion:^(UIImage *resultImage) {
-        self.image = resultImage;
+        self.image = [saveImage jp_cornerImageWithSize:self.bounds.size cornerRadius:cornerRadius fillColor:self.superview.backgroundColor];
         return;
-    }];
+    }
     //创建会话对象
     NSURLSession *session = [NSURLSession sharedSession];
     //创建会话请求
@@ -63,8 +64,8 @@
             }
             [saveImage jp_asynCornerImageWithSize:self.bounds.size cornerRadius:cornerRadius fillColor:self.superview.backgroundColor completion:^(UIImage *resultImage) {
                 self.image = resultImage;
-                return;
-            }];        });
+            }];
+        });
     }];
     //发送请求
     [downTask resume];
