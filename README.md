@@ -1,7 +1,7 @@
 # BaseViewController   
 ### 总结开发中封装的类和demo   
 
-    1. ##### MainTabBarController->tabBar控制器->包括中间的不规则按钮/点击tabbar按钮弹跳效果   
+##### - 1.MainTabBarController->tabBar控制器->包括中间的不规则按钮/点击tabbar按钮弹跳效果   
 ##### 2.BaseNavigationController->导航控制器->自定义左右Item     
 ##### 3.BaseViewController->Base控制器->自定义导航条实现全屏统一返回/加入BaseTableView默认加入自定义的上拉下拉刷新控件   
 ##### 4.OCJDRefreshControl-模仿京东的下拉刷新控件OC版[ Swift版](https://github.com/baiyidjp/SwiftJDRefreshControl)    
