@@ -17,6 +17,7 @@
 @end
 
 @implementation BaseViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -26,6 +27,13 @@
     //设置导航条
     [self setupNavigationBar];
 
+}
+
+
+//状态栏的背景色
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    
+    return UIStatusBarStyleDefault;
 }
 
 //懒加载

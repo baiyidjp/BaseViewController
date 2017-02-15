@@ -17,11 +17,29 @@
 {
     NSMutableArray *_dataArray;
 }
+
+//在导航控制器的子控制器中 改变状态栏的背景颜色
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleDefault];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     self.title = @"Test";
+    
+    self.baseNavigationBar.barTintColor = [UIColor redColor];
     
     [self setupTableViewWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height-64)];
     
