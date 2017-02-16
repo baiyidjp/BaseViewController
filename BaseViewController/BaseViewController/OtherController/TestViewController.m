@@ -53,6 +53,7 @@
     
     //测试同步执行异步请求
     [self syncExecuteAsyncRequest];
+
 }
 
 - (void)setupTableViewWithFrame:(CGRect)frame {
@@ -110,9 +111,7 @@
 
 }
 
-/**
-    同步执行 异步请求
- */
+#pragma mark - 测试同步执行异步请求
 - (void)syncExecuteAsyncRequest {
     
     
@@ -154,18 +153,33 @@
     [operation6 addDependency:operation5];
     //5.创建队列并加入任务
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-    [queue addOperations:@[operation6,operation5,operation4,operation3, operation2, operation1] waitUntilFinished:YES];
-    NSLog(@"全部完成");
+    //添加监听 监听队列是否全部执行完毕
+    [queue addObserver:self forKeyPath:@"operationCount" options:0 context:nil];
+    [queue addOperations:@[operation6,operation5,operation4,operation3, operation2, operation1] waitUntilFinished:NO];
+    NSLog(@"kaishi");
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    
+    if ([keyPath isEqualToString:@"operationCount"]) {
+        NSOperationQueue *queue = (NSOperationQueue *)object;
+        if (queue.operationCount == 0) {
+            NSLog(@"全部完成");
+        }
+    }
 }
 
 - (void)request:(NSString *)index {
     
-    NSString * api = @"openapi/baseservices/recommendhomenew.json";
-    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
-    [param setObject:[NSNumber numberWithInteger:11] forKey:@"type"];
+    NSString *strURL = @"openapi/onlineservices/querybyclassifyid.json";
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:@1 forKey:@"state"];
+    [params setObject:[NSNumber numberWithInteger:20] forKey:@"shownum"];
+    [params setObject:[NSNumber numberWithInteger:1] forKey:@"pageno"];
     
     /*
-     dispatch_semaphore进行实现，即营造线程同步情况。
+     借助GCD中的信号量dispatch_semaphore进行实现，即营造线程同步情况。
      
      dispatch_semaphore信号量为基于计数器的一种多线程同步机制。用于解决在多个线程访问共有资源时候，会因为多线程的特性而引发数据出错的问题。
      
@@ -173,16 +187,20 @@
      
      dispatch_semaphore_signal(semaphore)为计数+1操作。dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER)为设置等待时间，这里设置的等待时间是一直等待。我们可以通俗的理解为单柜台排队点餐，计数默认为0，每当有顾客点餐，计数+1，点餐结束-1归零继续等待下一位顾客。比较类似于NSLock。
      */
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     
-    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-    
-    [[NetworkManager shared] RequestWithMethod:HttpMethod_POST Url:api params:param success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[NetworkManager shared] RequestWithMethod:HttpMethod_POST Url:strURL params:params success:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@",index);
-        dispatch_semaphore_signal(sema);
+        dispatch_semaphore_signal(semaphore);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        dispatch_semaphore_signal(sema);
+        dispatch_semaphore_signal(semaphore);
     }];
-    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+}
+
+- (void)dealloc {
+    
+    [self removeObserver:self forKeyPath:@"operationCount"];
 }
 
 @end
