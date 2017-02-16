@@ -51,6 +51,8 @@
         [_dataArray addObject:str];
     }
     
+    //测试同步执行异步请求
+    [self syncExecuteAsyncRequest];
 }
 
 - (void)setupTableViewWithFrame:(CGRect)frame {
@@ -106,6 +108,81 @@
         }
     });
 
+}
+
+/**
+    同步执行 异步请求
+ */
+- (void)syncExecuteAsyncRequest {
+    
+    
+    //1.任务一：
+    NSBlockOperation *operation1 = [NSBlockOperation blockOperationWithBlock:^{
+        [self request:@"A"];
+    }];
+    
+    //2.任务二：
+    NSBlockOperation *operation2 = [NSBlockOperation blockOperationWithBlock:^{
+        [self request:@"B"];
+    }];
+    
+    //3.任务三：
+    NSBlockOperation *operation3 = [NSBlockOperation blockOperationWithBlock:^{
+        [self request:@"C"];
+    }];
+    
+    //4.任务六：
+    NSBlockOperation *operation4 = [NSBlockOperation blockOperationWithBlock:^{
+        [self request:@"D"];
+    }];
+    
+    //5.任务五：
+    NSBlockOperation *operation5 = [NSBlockOperation blockOperationWithBlock:^{
+        [self request:@"E"];
+    }];
+    
+    //6.任务六：
+    NSBlockOperation *operation6 = [NSBlockOperation blockOperationWithBlock:^{
+        [self request:@"F"];
+    }];
+    
+    //4.设置依赖
+    [operation2 addDependency:operation1];      //任务二依赖任务一
+    [operation3 addDependency:operation2];      //任务三依赖任务二
+    [operation4 addDependency:operation3];
+    [operation5 addDependency:operation4];
+    [operation6 addDependency:operation5];
+    //5.创建队列并加入任务
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [queue addOperations:@[operation6,operation5,operation4,operation3, operation2, operation1] waitUntilFinished:YES];
+    NSLog(@"全部完成");
+}
+
+- (void)request:(NSString *)index {
+    
+    NSString * api = @"openapi/baseservices/recommendhomenew.json";
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    [param setObject:[NSNumber numberWithInteger:11] forKey:@"type"];
+    
+    /*
+     dispatch_semaphore进行实现，即营造线程同步情况。
+     
+     dispatch_semaphore信号量为基于计数器的一种多线程同步机制。用于解决在多个线程访问共有资源时候，会因为多线程的特性而引发数据出错的问题。
+     
+     如果semaphore计数大于等于1，计数-1，返回，程序继续运行。如果计数为0，则等待。
+     
+     dispatch_semaphore_signal(semaphore)为计数+1操作。dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER)为设置等待时间，这里设置的等待时间是一直等待。我们可以通俗的理解为单柜台排队点餐，计数默认为0，每当有顾客点餐，计数+1，点餐结束-1归零继续等待下一位顾客。比较类似于NSLock。
+     */
+    
+    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+    
+    [[NetworkManager shared] RequestWithMethod:HttpMethod_POST Url:api params:param success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@",index);
+        dispatch_semaphore_signal(sema);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        dispatch_semaphore_signal(sema);
+    }];
+    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
 }
 
 @end

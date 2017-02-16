@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D0FAD47CE311E306ADB47A30 /* libPods-BaseViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D318ABA87E73B3AD6BB5C1C /* libPods-BaseViewController.a */; };
+		F535AA8D1E55512A00C7BE9C /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F535AA8C1E55512A00C7BE9C /* NetworkManager.m */; };
 		F55039441E1DDC5D00742E5D /* NSObject+runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F550393F1E1DDC5D00742E5D /* NSObject+runtime.m */; };
 		F55039451E1DDC5D00742E5D /* UIView+Corner_Radius.m in Sources */ = {isa = PBXBuildFile; fileRef = F55039411E1DDC5D00742E5D /* UIView+Corner_Radius.m */; };
 		F55039461E1DDC5D00742E5D /* UIViewController+NSLogAppear.m in Sources */ = {isa = PBXBuildFile; fileRef = F55039431E1DDC5D00742E5D /* UIViewController+NSLogAppear.m */; };
@@ -94,6 +95,8 @@
 		5D318ABA87E73B3AD6BB5C1C /* libPods-BaseViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B10C11AEED04B4B80CD19A0 /* Pods-BaseViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseViewController/Pods-BaseViewController.release.xcconfig"; sourceTree = "<group>"; };
 		B81F2EAB479D139261D0C826 /* Pods-BaseViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseViewController/Pods-BaseViewController.debug.xcconfig"; sourceTree = "<group>"; };
+		F535AA8B1E55512A00C7BE9C /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		F535AA8C1E55512A00C7BE9C /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		F550393E1E1DDC5D00742E5D /* NSObject+runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+runtime.h"; sourceTree = "<group>"; };
 		F550393F1E1DDC5D00742E5D /* NSObject+runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+runtime.m"; sourceTree = "<group>"; };
 		F55039401E1DDC5D00742E5D /* UIView+Corner_Radius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Corner_Radius.h"; sourceTree = "<group>"; };
@@ -236,6 +239,15 @@
 				5D318ABA87E73B3AD6BB5C1C /* libPods-BaseViewController.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F535AA8A1E55512A00C7BE9C /* AFNetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				F535AA8B1E55512A00C7BE9C /* NetworkManager.h */,
+				F535AA8C1E55512A00C7BE9C /* NetworkManager.m */,
+			);
+			path = AFNetworkManager;
 			sourceTree = "<group>";
 		};
 		F550394F1E1E25D000742E5D /* OCJDRefreshControl */ = {
@@ -415,6 +427,7 @@
 		F5D419071E1BA46D00DBB258 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F535AA8A1E55512A00C7BE9C /* AFNetworkManager */,
 				F57ED8DA1E31AD9F00826D18 /* JPLoopView */,
 				F5C4EF471E1F72F40092CD3C /* LoadingHUD */,
 				F55039661E1E2FE000742E5D /* TabBar */,
@@ -640,6 +653,7 @@
 				F57ED8F51E31ADD900826D18 /* BaseLoadMoreView.m in Sources */,
 				F57ED9081E31AE1700826D18 /* ViewController.m in Sources */,
 				F55039441E1DDC5D00742E5D /* NSObject+runtime.m in Sources */,
+				F535AA8D1E55512A00C7BE9C /* NetworkManager.m in Sources */,
 				F55039651E1E260D00742E5D /* JPNormalRefreshView.m in Sources */,
 				F55039B51E1E2FF200742E5D /* MidLineLabel.m in Sources */,
 				F55039461E1DDC5D00742E5D /* UIViewController+NSLogAppear.m in Sources */,

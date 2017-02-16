@@ -11,7 +11,7 @@
 #import "JPLoopViewCell.h"
 
 NSString *const JPCollectionViewId = @"JPCollectionViewId";
-NSInteger const allCount = 200;
+NSInteger const allCount = 200000;
 
 #define scrollTime  5
 
