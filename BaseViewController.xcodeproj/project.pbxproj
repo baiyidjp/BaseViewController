@@ -79,6 +79,8 @@
 		F57ED9061E31AE1700826D18 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F57ED8FE1E31AE1700826D18 /* TestViewController.m */; };
 		F57ED9071E31AE1700826D18 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F57ED9001E31AE1700826D18 /* ThirdViewController.m */; };
 		F57ED9081E31AE1700826D18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F57ED9021E31AE1700826D18 /* ViewController.m */; };
+		F5A2520C1E56D60300B12AA0 /* BigImageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A2520B1E56D60300B12AA0 /* BigImageTest.m */; };
+		F5A252131E56DFE300B12AA0 /* BigImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A252121E56DFE300B12AA0 /* BigImageViewController.m */; };
 		F5C4EF4A1E1F72F40092CD3C /* LoadingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C4EF491E1F72F40092CD3C /* LoadingHUD.m */; };
 		F5D418F21E1BA45000DBB258 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D418F11E1BA45000DBB258 /* main.m */; };
 		F5D418F51E1BA45000DBB258 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D418F41E1BA45000DBB258 /* AppDelegate.m */; };
@@ -192,6 +194,10 @@
 		F57ED9001E31AE1700826D18 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		F57ED9011E31AE1700826D18 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F57ED9021E31AE1700826D18 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F5A2520A1E56D60300B12AA0 /* BigImageTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigImageTest.h; sourceTree = "<group>"; };
+		F5A2520B1E56D60300B12AA0 /* BigImageTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigImageTest.m; sourceTree = "<group>"; };
+		F5A252111E56DFE300B12AA0 /* BigImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigImageViewController.h; sourceTree = "<group>"; };
+		F5A252121E56DFE300B12AA0 /* BigImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigImageViewController.m; sourceTree = "<group>"; };
 		F5C4EF481E1F72F40092CD3C /* LoadingHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingHUD.h; sourceTree = "<group>"; };
 		F5C4EF491E1F72F40092CD3C /* LoadingHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingHUD.m; sourceTree = "<group>"; };
 		F5D418ED1E1BA45000DBB258 /* BaseViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -364,6 +370,10 @@
 				F57ED8FC1E31AE1700826D18 /* SecondViewController.m */,
 				F57ED8FD1E31AE1700826D18 /* TestViewController.h */,
 				F57ED8FE1E31AE1700826D18 /* TestViewController.m */,
+				F5A2520A1E56D60300B12AA0 /* BigImageTest.h */,
+				F5A2520B1E56D60300B12AA0 /* BigImageTest.m */,
+				F5A252111E56DFE300B12AA0 /* BigImageViewController.h */,
+				F5A252121E56DFE300B12AA0 /* BigImageViewController.m */,
 				F57ED8FF1E31AE1700826D18 /* ThirdViewController.h */,
 				F57ED9001E31AE1700826D18 /* ThirdViewController.m */,
 				F57ED9011E31AE1700826D18 /* ViewController.h */,
@@ -652,6 +662,7 @@
 				F57ED9071E31AE1700826D18 /* ThirdViewController.m in Sources */,
 				F57ED8F51E31ADD900826D18 /* BaseLoadMoreView.m in Sources */,
 				F57ED9081E31AE1700826D18 /* ViewController.m in Sources */,
+				F5A252131E56DFE300B12AA0 /* BigImageViewController.m in Sources */,
 				F55039441E1DDC5D00742E5D /* NSObject+runtime.m in Sources */,
 				F535AA8D1E55512A00C7BE9C /* NetworkManager.m in Sources */,
 				F55039651E1E260D00742E5D /* JPNormalRefreshView.m in Sources */,
@@ -668,6 +679,7 @@
 				F5C4EF4A1E1F72F40092CD3C /* LoadingHUD.m in Sources */,
 				F5F9EA821E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.m in Sources */,
 				F5F9EA851E1CB9B4001765F8 /* UIView+JP_Frame.m in Sources */,
+				F5A2520C1E56D60300B12AA0 /* BigImageTest.m in Sources */,
 				F5D418F21E1BA45000DBB258 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

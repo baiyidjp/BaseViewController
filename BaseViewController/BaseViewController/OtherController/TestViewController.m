@@ -8,6 +8,8 @@
 
 #import "TestViewController.h"
 #import "LoadingHUD.h"
+#import "UIBarButtonItem+Extension.h"
+#import "BigImageTest.h"
 
 @interface TestViewController ()
 
@@ -16,6 +18,7 @@
 @implementation TestViewController
 {
     NSMutableArray *_dataArray;
+    NSOperationQueue *_queue;
 }
 
 //在导航控制器的子控制器中 改变状态栏的背景颜色
@@ -51,9 +54,15 @@
         [_dataArray addObject:str];
     }
     
-    //测试同步执行异步请求
-    [self syncExecuteAsyncRequest];
 
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"大图" fontSize:16 target:self action:@selector(clickBtn) isBack:NO];
+    self.baseNavigationItem.rightBarButtonItem = rightItem;
+    
+}
+
+- (void)clickBtn {
+    
+    [self.navigationController pushViewController:[[BigImageTest alloc] init] animated:YES];
 }
 
 - (void)setupTableViewWithFrame:(CGRect)frame {
@@ -78,10 +87,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"点击--%zd",indexPath.row);
-    [LoadingHUD showHUD];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [LoadingHUD dismissHUD];
-    });
+    //测试同步执行异步请求
+    [self syncExecuteAsyncRequest];
 }
 
 - (void)loadNewData {
@@ -152,11 +159,12 @@
     [operation5 addDependency:operation4];
     [operation6 addDependency:operation5];
     //5.创建队列并加入任务
-    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    _queue = [[NSOperationQueue alloc] init];
     //添加监听 监听队列是否全部执行完毕
-    [queue addObserver:self forKeyPath:@"operationCount" options:0 context:nil];
-    [queue addOperations:@[operation6,operation5,operation4,operation3, operation2, operation1] waitUntilFinished:NO];
-    NSLog(@"kaishi");
+    [_queue addObserver:self forKeyPath:@"operationCount" options:0 context:nil];
+    [_queue addOperations:@[operation6,operation5,operation4,operation3, operation2, operation1] waitUntilFinished:NO];
+    [LoadingHUD showHUD];
+    
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -165,6 +173,10 @@
         NSOperationQueue *queue = (NSOperationQueue *)object;
         if (queue.operationCount == 0) {
             NSLog(@"全部完成");
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                
+                [LoadingHUD dismissHUD];
+            });
         }
     }
 }
@@ -200,7 +212,7 @@
 
 - (void)dealloc {
     
-    [self removeObserver:self forKeyPath:@"operationCount"];
+    [_queue removeObserver:self forKeyPath:@"operationCount"];
 }
 
 @end
