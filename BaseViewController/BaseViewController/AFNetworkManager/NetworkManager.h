@@ -19,6 +19,7 @@ typedef void(^successBlock)(NSURLSessionDataTask *task, id responseObject);
 /** 失败回调 */
 typedef void(^failureBlock)(NSURLSessionDataTask *task, NSError *error);
 
+
 @interface NetworkManager : NSObject
 
 

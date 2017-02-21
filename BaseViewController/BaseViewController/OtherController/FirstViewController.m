@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 #import "TestViewController.h"
 #import "UIBarButtonItem+Extension.h"
+#import "DynamicDemo.h"
 
 @interface FirstViewController ()
 
@@ -23,6 +24,10 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" fontSize:16 target:self action:@selector(clickBtn) isBack:NO];
     self.baseNavigationItem.rightBarButtonItem = rightItem;
     
+    DynamicDemo *dynamic = [[DynamicDemo alloc] init];
+    dynamic.date = [NSDate date];
+    dynamic.string = @"I am string";
+    NSLog(@"date:%@\nstring:%@",dynamic.date,dynamic.string);
 }
 
 - (void)clickBtn {

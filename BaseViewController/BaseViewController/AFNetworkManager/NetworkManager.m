@@ -9,7 +9,10 @@
 #import "NetworkManager.h"
 #import "AFNetworking.h"
 
+static const NSTimeInterval NetworkManagerTimeoutInterval = 2;
+
 @interface NetworkManager ()
+
 
 /** AFNHTTPSessionManager */
 @property(nonatomic,strong) AFHTTPSessionManager *sessionManager;
@@ -39,7 +42,7 @@
 //        [securityPolicy setAllowInvalidCertificates:YES];
 //        _sessionManager.securityPolicy = securityPolicy;
         //超时
-        _sessionManager.requestSerializer.timeoutInterval = 8;
+        _sessionManager.requestSerializer.timeoutInterval = NetworkManagerTimeoutInterval;
         //设置AFN反序列化支持 text/plain text/html
         _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/plain",@"text/html",nil];
 //        _sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];

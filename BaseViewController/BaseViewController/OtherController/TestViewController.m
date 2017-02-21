@@ -87,6 +87,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"点击--%zd",indexPath.row);
+     [LoadingHUD showHUD];
     //测试同步执行异步请求
     [self syncExecuteAsyncRequest];
 }
@@ -163,7 +164,7 @@
     //添加监听 监听队列是否全部执行完毕
     [_queue addObserver:self forKeyPath:@"operationCount" options:0 context:nil];
     [_queue addOperations:@[operation6,operation5,operation4,operation3, operation2, operation1] waitUntilFinished:NO];
-    [LoadingHUD showHUD];
+   
     
 }
 
@@ -173,10 +174,10 @@
         NSOperationQueue *queue = (NSOperationQueue *)object;
         if (queue.operationCount == 0) {
             NSLog(@"全部完成");
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                
-                [LoadingHUD dismissHUD];
-            });
+            [LoadingHUD dismissHUD];
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                
+//            });
         }
     }
 }
@@ -205,6 +206,7 @@
         NSLog(@"%@",index);
         dispatch_semaphore_signal(semaphore);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@ failed",index);
         dispatch_semaphore_signal(semaphore);
     }];
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);

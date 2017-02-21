@@ -79,6 +79,8 @@
 		F57ED9061E31AE1700826D18 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F57ED8FE1E31AE1700826D18 /* TestViewController.m */; };
 		F57ED9071E31AE1700826D18 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F57ED9001E31AE1700826D18 /* ThirdViewController.m */; };
 		F57ED9081E31AE1700826D18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F57ED9021E31AE1700826D18 /* ViewController.m */; };
+		F588F5A01E5AC2EE0041E8FA /* BaseConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F588F59F1E5AC2EE0041E8FA /* BaseConst.m */; };
+		F588F5A41E5ADE600041E8FA /* DynamicDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F588F5A31E5ADE600041E8FA /* DynamicDemo.m */; };
 		F5A2520C1E56D60300B12AA0 /* BigImageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A2520B1E56D60300B12AA0 /* BigImageTest.m */; };
 		F5A252131E56DFE300B12AA0 /* BigImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A252121E56DFE300B12AA0 /* BigImageViewController.m */; };
 		F5C4EF4A1E1F72F40092CD3C /* LoadingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C4EF491E1F72F40092CD3C /* LoadingHUD.m */; };
@@ -194,6 +196,10 @@
 		F57ED9001E31AE1700826D18 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		F57ED9011E31AE1700826D18 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F57ED9021E31AE1700826D18 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F588F59E1E5AC2EE0041E8FA /* BaseConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseConst.h; sourceTree = "<group>"; };
+		F588F59F1E5AC2EE0041E8FA /* BaseConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseConst.m; sourceTree = "<group>"; };
+		F588F5A21E5ADE600041E8FA /* DynamicDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicDemo.h; sourceTree = "<group>"; };
+		F588F5A31E5ADE600041E8FA /* DynamicDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicDemo.m; sourceTree = "<group>"; };
 		F5A2520A1E56D60300B12AA0 /* BigImageTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigImageTest.h; sourceTree = "<group>"; };
 		F5A2520B1E56D60300B12AA0 /* BigImageTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigImageTest.m; sourceTree = "<group>"; };
 		F5A252111E56DFE300B12AA0 /* BigImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigImageViewController.h; sourceTree = "<group>"; };
@@ -355,6 +361,8 @@
 				F57ED8EC1E31ADC300826D18 /* MainControllerInfo.plist */,
 				F57ED8ED1E31ADC300826D18 /* MainTabBarController.h */,
 				F57ED8EE1E31ADC300826D18 /* MainTabBarController.m */,
+				F588F59E1E5AC2EE0041E8FA /* BaseConst.h */,
+				F588F59F1E5AC2EE0041E8FA /* BaseConst.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -380,6 +388,15 @@
 				F57ED9021E31AE1700826D18 /* ViewController.m */,
 			);
 			path = OtherController;
+			sourceTree = "<group>";
+		};
+		F588F5A11E5ADE380041E8FA /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				F588F5A21E5ADE600041E8FA /* DynamicDemo.h */,
+				F588F5A31E5ADE600041E8FA /* DynamicDemo.m */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		F5C4EF471E1F72F40092CD3C /* LoadingHUD */ = {
@@ -444,6 +461,7 @@
 				F550394F1E1E25D000742E5D /* OCJDRefreshControl */,
 				F5F9EA791E1CB9B4001765F8 /* Extensions */,
 				F57ED8E71E31ADC300826D18 /* Base */,
+				F588F5A11E5ADE380041E8FA /* Test */,
 				F57ED8F61E31ADF600826D18 /* OtherController */,
 			);
 			path = BaseViewController;
@@ -652,6 +670,7 @@
 				F57ED8EF1E31ADC300826D18 /* BaseNavigationController.m in Sources */,
 				F57ED8E51E31AD9F00826D18 /* JPLoopViewLayout.m in Sources */,
 				F55039621E1E25D100742E5D /* JDRefreshView.m in Sources */,
+				F588F5A01E5AC2EE0041E8FA /* BaseConst.m in Sources */,
 				F550394E1E1E19D200742E5D /* UIBarButtonItem+Extension.m in Sources */,
 				F57ED8F21E31ADC300826D18 /* MainTabBarController.m in Sources */,
 				F57ED9061E31AE1700826D18 /* TestViewController.m in Sources */,
@@ -676,6 +695,7 @@
 				F57ED9041E31AE1700826D18 /* FourthViewController.m in Sources */,
 				F57ED9051E31AE1700826D18 /* SecondViewController.m in Sources */,
 				F5F9EA831E1CB9B4001765F8 /* UIColor+JP_Color.m in Sources */,
+				F588F5A41E5ADE600041E8FA /* DynamicDemo.m in Sources */,
 				F5C4EF4A1E1F72F40092CD3C /* LoadingHUD.m in Sources */,
 				F5F9EA821E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.m in Sources */,
 				F5F9EA851E1CB9B4001765F8 /* UIView+JP_Frame.m in Sources */,

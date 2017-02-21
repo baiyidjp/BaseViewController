@@ -64,6 +64,7 @@
 
 + (void)showHUD{
   LoadingHUD *hud = [LoadingHUD sharedHUD];
+    NSLog(@"%@",hud);
   UIWindow *window = UIApplication.sharedApplication.keyWindow;
   if (window != nil) {
     hud.alpha = 0.0;
@@ -80,13 +81,14 @@
 
 + (void)dismissHUD{
   LoadingHUD *hud = [LoadingHUD sharedHUD];
+    NSLog(@"%@",hud);
   [hud stopLoadingAnimation];
   [hud.timer invalidate];
-  [UIView animateWithDuration:0.3 animations:^{
-    hud.alpha = 0;
-  } completion:^(BOOL finished) {
+        hud.alpha = 0;
     [hud removeFromSuperview];
-  }];
+//  [UIView animateWithDuration:0.3 animations:^{
+//  } completion:^(BOOL finished) {
+//  }];
 }
 
 -(void)startLoadingAnimation{
