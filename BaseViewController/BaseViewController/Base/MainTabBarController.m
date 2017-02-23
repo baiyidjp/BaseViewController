@@ -9,6 +9,7 @@
 #import "MainTabBarController.h"
 #import "BaseNavigationController.h"
 #import "BaseViewController.h"
+#import "MapViewController.h"
 
 @interface MainTabBarController ()
 
@@ -114,7 +115,7 @@
 }
 - (void)clickCustomBtn {
     
-    NSLog(@"clickCustomBtn");
+    [self presentViewController:[[MapViewController alloc] init] animated:YES completion:nil];
 }
 
 @end

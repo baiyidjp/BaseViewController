@@ -6,6 +6,9 @@ target 'BaseViewController' do
   # use_frameworks!
 pod ‘SDWebImage’
 pod 'AFNetworking', '~> 3.0'
+pod 'CYLTableViewPlaceHolder'
+pod 'BaiduMapKit'
+pod 'AMap3DMap'  
   # Pods for BaseViewController
 
 end

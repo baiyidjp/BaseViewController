@@ -27,7 +27,8 @@
     DynamicDemo *dynamic = [[DynamicDemo alloc] init];
     dynamic.date = [NSDate date];
     dynamic.string = @"I am string";
-    NSLog(@"date:%@\nstring:%@",dynamic.date,dynamic.string);
+    dynamic.objc = [[UIView alloc] init];
+    NSLog(@"date:%@\nstring:%@\nobj:%@",dynamic.date,dynamic.string,dynamic.objc);
 }
 
 - (void)clickBtn {

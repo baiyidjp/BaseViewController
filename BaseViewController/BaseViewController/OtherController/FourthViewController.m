@@ -8,6 +8,7 @@
 
 #import "FourthViewController.h"
 #import "JPLoopView.h"
+#import "MapViewController.h"
 
 @interface FourthViewController ()<JPLoopViewDataSource,JPLoopViewDelegate>
 
@@ -33,7 +34,12 @@
     [btn setTitle:@"换图" forState:UIControlStateNormal];
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(changePic) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"地图" fontSize:16 target:self action:@selector(clickBtn) isBack:NO];
+    self.baseNavigationItem.rightBarButtonItem = rightItem;
+
 }
+
 
 - (void)loadData{
     
