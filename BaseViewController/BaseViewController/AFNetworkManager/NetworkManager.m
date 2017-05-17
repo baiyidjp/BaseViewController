@@ -9,7 +9,7 @@
 #import "NetworkManager.h"
 #import "AFNetworking.h"
 
-static const NSTimeInterval NetworkManagerTimeoutInterval = 2;
+static const NSTimeInterval NetworkManagerTimeoutInterval = 8;
 
 @interface NetworkManager ()
 

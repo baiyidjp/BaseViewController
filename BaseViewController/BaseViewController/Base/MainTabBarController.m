@@ -10,8 +10,9 @@
 #import "BaseNavigationController.h"
 #import "BaseViewController.h"
 #import "MapViewController.h"
+#import "BaseTabBar.h"
 
-@interface MainTabBarController ()
+@interface MainTabBarController ()<UITabBarControllerDelegate>
 
 @end
 
@@ -21,6 +22,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    [self p_SetCustomTabBar];
     
     //获取plist数据
     NSString *infoPath = [[NSBundle mainBundle] pathForResource:@"MainControllerInfo.plist" ofType:nil];
@@ -40,8 +44,9 @@
     //设置子控制器
     self.viewControllers = controllers;
     
-    //设置自定义的按钮 不需要可注释
-    [self setupCustomButton];
+    //设置自定义的不突出按钮 不需要可注释
+//    [self setupCustomButton];
+    
 }
 
 /**
@@ -73,26 +78,7 @@
     return navCtrl;
 }
 
-//通过代理 设置点击item 的动画效果
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
-    
-    NSInteger index = [self.tabBar.items indexOfObject:item];
-    NSMutableArray * tabbarbuttonArray = [NSMutableArray array];
-    for (UIView *tabBarButton in self.tabBar.subviews) {
-        if ([tabBarButton isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
-            [tabbarbuttonArray addObject:tabBarButton];
-        }
-    }
-    
-    CABasicAnimation*pulse = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    pulse.timingFunction= [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    pulse.duration = 0.08;
-    pulse.repeatCount= 1;
-    pulse.autoreverses= YES;
-    pulse.fromValue= [NSNumber numberWithFloat:0.7];
-    pulse.toValue= [NSNumber numberWithFloat:1.3];
-    [[tabbarbuttonArray[index] layer] addAnimation:pulse forKey:nil];
-}
+
 
 - (void)setupCustomButton {
     
@@ -108,14 +94,35 @@
     NSInteger count = self.childViewControllers.count;
     CGFloat btnW = self.tabBar.bounds.size.width / count;
     
-    _customButton.frame = CGRectMake((count/2)*btnW, 0, btnW, self.tabBar.bounds.size.height);
+    _customButton.frame = CGRectMake((count/2)*btnW, -30, btnW, self.tabBar.bounds.size.height+30);
     _customButton.layer.cornerRadius = 5;
     [_customButton addTarget:self action:@selector(clickCustomBtn) forControlEvents:UIControlEventTouchUpInside];
+    
 
 }
+
+#pragma mark -设置tabBar
+- (void)p_SetCustomTabBar {
+    
+    BaseTabBar *baseTabBar = [[BaseTabBar alloc] init];
+    
+    [self setValue:baseTabBar forKey:@"tabBar"];
+    
+    [baseTabBar setCustomBtnClick:^{
+        [self clickCustomBtn];
+    }];
+}
+
+
 - (void)clickCustomBtn {
     
     [self presentViewController:[[MapViewController alloc] init] animated:YES completion:nil];
+}
+
+//判断是否重复点了哪个item
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
+    
+    return YES;
 }
 
 @end

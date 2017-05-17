@@ -63,32 +63,40 @@
 
 
 + (void)showHUD{
-  LoadingHUD *hud = [LoadingHUD sharedHUD];
-    NSLog(@"%@",hud);
-  UIWindow *window = UIApplication.sharedApplication.keyWindow;
-  if (window != nil) {
-    hud.alpha = 0.0;
-    [window addSubview:hud];
-    [UIView animateWithDuration:0.3 animations:^{
-      hud.alpha = 0.9;
-    } completion:^(BOOL finished) {
-      hud.alpha = 0.9;
-      [hud startLoadingAnimation];
-    }];
-  }
-  
+    
+  dispatch_async(dispatch_get_main_queue(), ^{
+      LoadingHUD *hud = [LoadingHUD sharedHUD];
+      NSLog(@"%@",hud);
+      UIWindow *window = UIApplication.sharedApplication.keyWindow;
+      if (window != nil) {
+          hud.alpha = 0.0;
+          [window addSubview:hud];
+          [UIView animateWithDuration:0.3 animations:^{
+              hud.alpha = 0.9;
+          } completion:^(BOOL finished) {
+              hud.alpha = 0.9;
+              [hud startLoadingAnimation];
+          }];
+      }
+      
+  });
 }
 
 + (void)dismissHUD{
-  LoadingHUD *hud = [LoadingHUD sharedHUD];
-    NSLog(@"%@",hud);
-  [hud stopLoadingAnimation];
-  [hud.timer invalidate];
-        hud.alpha = 0;
-    [hud removeFromSuperview];
-//  [UIView animateWithDuration:0.3 animations:^{
-//  } completion:^(BOOL finished) {
-//  }];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        LoadingHUD *hud = [LoadingHUD sharedHUD];
+        NSLog(@"%@",hud);
+        [hud stopLoadingAnimation];
+        [hud.timer invalidate];
+        [UIView animateWithDuration:0.3 animations:^{
+            hud.alpha = 0;
+        } completion:^(BOOL finished) {
+            [hud removeFromSuperview];
+        }];
+    });
+
 }
 
 -(void)startLoadingAnimation{

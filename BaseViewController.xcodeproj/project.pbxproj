@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D0FAD47CE311E306ADB47A30 /* libPods-BaseViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D318ABA87E73B3AD6BB5C1C /* libPods-BaseViewController.a */; };
+		F513D9831ECBE8CE0000B672 /* BaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F513D9821ECBE8CE0000B672 /* BaseTabBar.m */; };
 		F535AA8D1E55512A00C7BE9C /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F535AA8C1E55512A00C7BE9C /* NetworkManager.m */; };
 		F55039441E1DDC5D00742E5D /* NSObject+runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F550393F1E1DDC5D00742E5D /* NSObject+runtime.m */; };
 		F55039451E1DDC5D00742E5D /* UIView+Corner_Radius.m in Sources */ = {isa = PBXBuildFile; fileRef = F55039411E1DDC5D00742E5D /* UIView+Corner_Radius.m */; };
@@ -113,6 +114,8 @@
 		F5D418FB1E1BA45100DBB258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D418F91E1BA45100DBB258 /* Main.storyboard */; };
 		F5D418FD1E1BA45100DBB258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D418FC1E1BA45100DBB258 /* Assets.xcassets */; };
 		F5D419001E1BA45100DBB258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D418FE1E1BA45100DBB258 /* LaunchScreen.storyboard */; };
+		F5E38C8A1E6572ED00306B3C /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E38C891E6572ED00306B3C /* BaseTableView.m */; };
+		F5E38C8D1E6576EA00306B3C /* BaseTableTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E38C8C1E6576EA00306B3C /* BaseTableTextController.m */; };
 		F5F9EA821E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9EA7B1E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.m */; };
 		F5F9EA831E1CB9B4001765F8 /* UIColor+JP_Color.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9EA7D1E1CB9B4001765F8 /* UIColor+JP_Color.m */; };
 		F5F9EA841E1CB9B4001765F8 /* UIView+BlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9EA7F1E1CB9B4001765F8 /* UIView+BlockGesture.m */; };
@@ -123,6 +126,8 @@
 		5D318ABA87E73B3AD6BB5C1C /* libPods-BaseViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B10C11AEED04B4B80CD19A0 /* Pods-BaseViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseViewController/Pods-BaseViewController.release.xcconfig"; sourceTree = "<group>"; };
 		B81F2EAB479D139261D0C826 /* Pods-BaseViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseViewController/Pods-BaseViewController.debug.xcconfig"; sourceTree = "<group>"; };
+		F513D9811ECBE8CE0000B672 /* BaseTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBar.h; sourceTree = "<group>"; };
+		F513D9821ECBE8CE0000B672 /* BaseTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBar.m; sourceTree = "<group>"; };
 		F535AA8B1E55512A00C7BE9C /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		F535AA8C1E55512A00C7BE9C /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		F550393E1E1DDC5D00742E5D /* NSObject+runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+runtime.h"; sourceTree = "<group>"; };
@@ -271,6 +276,10 @@
 		F5D418FC1E1BA45100DBB258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5D418FF1E1BA45100DBB258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5D419011E1BA45100DBB258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5E38C881E6572ED00306B3C /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
+		F5E38C891E6572ED00306B3C /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
+		F5E38C8B1E6576EA00306B3C /* BaseTableTextController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableTextController.h; sourceTree = "<group>"; };
+		F5E38C8C1E6576EA00306B3C /* BaseTableTextController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableTextController.m; sourceTree = "<group>"; };
 		F5F9EA7A1E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+RemoveHighlightEffect.h"; sourceTree = "<group>"; };
 		F5F9EA7B1E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RemoveHighlightEffect.m"; sourceTree = "<group>"; };
 		F5F9EA7C1E1CB9B4001765F8 /* UIColor+JP_Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JP_Color.h"; sourceTree = "<group>"; };
@@ -446,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				F58304AD1E5ED0E30085E23B /* BaseMap(面向协议) */,
+				F5E38C871E6572DA00306B3C /* BaseViews */,
 				F57ED8E81E31ADC300826D18 /* BaseNavigationController.h */,
 				F57ED8E91E31ADC300826D18 /* BaseNavigationController.m */,
 				F57ED8EA1E31ADC300826D18 /* BaseViewController.h */,
@@ -453,6 +463,8 @@
 				F57ED8EC1E31ADC300826D18 /* MainControllerInfo.plist */,
 				F57ED8ED1E31ADC300826D18 /* MainTabBarController.h */,
 				F57ED8EE1E31ADC300826D18 /* MainTabBarController.m */,
+				F513D9811ECBE8CE0000B672 /* BaseTabBar.h */,
+				F513D9821ECBE8CE0000B672 /* BaseTabBar.m */,
 				F588F59E1E5AC2EE0041E8FA /* BaseConst.h */,
 				F588F59F1E5AC2EE0041E8FA /* BaseConst.m */,
 			);
@@ -482,6 +494,8 @@
 				F58304AB1E5ECB9A0085E23B /* MapViewController.m */,
 				F58304B21E5EDBA10085E23B /* GDMapViewController.h */,
 				F58304B31E5EDBA10085E23B /* GDMapViewController.m */,
+				F5E38C8B1E6576EA00306B3C /* BaseTableTextController.h */,
+				F5E38C8C1E6576EA00306B3C /* BaseTableTextController.m */,
 			);
 			path = OtherController;
 			sourceTree = "<group>";
@@ -581,6 +595,15 @@
 				F57ED8F61E31ADF600826D18 /* OtherController */,
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		F5E38C871E6572DA00306B3C /* BaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				F5E38C881E6572ED00306B3C /* BaseTableView.h */,
+				F5E38C891E6572ED00306B3C /* BaseTableView.m */,
+			);
+			path = BaseViews;
 			sourceTree = "<group>";
 		};
 		F5F9EA791E1CB9B4001765F8 /* Extensions */ = {
@@ -788,10 +811,12 @@
 				F57ED8E51E31AD9F00826D18 /* JPLoopViewLayout.m in Sources */,
 				F55039621E1E25D100742E5D /* JDRefreshView.m in Sources */,
 				F588F5A01E5AC2EE0041E8FA /* BaseConst.m in Sources */,
+				F5E38C8D1E6576EA00306B3C /* BaseTableTextController.m in Sources */,
 				F550394E1E1E19D200742E5D /* UIBarButtonItem+Extension.m in Sources */,
 				F57ED8F21E31ADC300826D18 /* MainTabBarController.m in Sources */,
 				F57ED9061E31AE1700826D18 /* TestViewController.m in Sources */,
 				F57ED8E61E31AD9F00826D18 /* UIImageView+JPWebImage.m in Sources */,
+				F513D9831ECBE8CE0000B672 /* BaseTabBar.m in Sources */,
 				F57ED8D91E31A72200826D18 /* UIImageView+SDWebImage.m in Sources */,
 				F57ED8F01E31ADC300826D18 /* BaseViewController.m in Sources */,
 				F57ED8E31E31AD9F00826D18 /* JPLoopView.m in Sources */,
@@ -809,6 +834,7 @@
 				F57ED9031E31AE1700826D18 /* FirstViewController.m in Sources */,
 				F58304B71E5EDC8E0085E23B /* GaodeBaseMapView.m in Sources */,
 				F58304BB1E5EE1900085E23B /* BaiduMapFactory.m in Sources */,
+				F5E38C8A1E6572ED00306B3C /* BaseTableView.m in Sources */,
 				F55039491E1DEF5B00742E5D /* UIImage+Extension.m in Sources */,
 				F5D418F51E1BA45000DBB258 /* AppDelegate.m in Sources */,
 				F58304B11E5ED2430085E23B /* BaiduBaseMapView.m in Sources */,

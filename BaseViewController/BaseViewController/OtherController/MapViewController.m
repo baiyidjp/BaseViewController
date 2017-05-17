@@ -22,13 +22,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"百度地图";
+    self.title = @"弹出视图";
     
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"退出" fontSize:16 target:self action:@selector(clickBtn) isBack:NO];
     self.baseNavigationItem.leftBarButtonItem = leftItem;
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"高德" fontSize:16 target:self action:@selector(clickRightBtn) isBack:NO];
-    self.baseNavigationItem.rightBarButtonItem = rightItem;
+//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"高德" fontSize:16 target:self action:@selector(clickRightBtn) isBack:NO];
+//    self.baseNavigationItem.rightBarButtonItem = rightItem;
 
     
     //初始化百度地图
@@ -40,9 +40,9 @@
 //    id<IMapView> mapView = [mapFactory getMapView:CGRectMake(0, 64, self.view.jp_w, self.view.jp_h-64)];
 //    [self.view addSubview:[mapView getView]];
     //使用引擎
-    id<IMapFactory> mapFactory = [[IMapEngine sharedEngine] getMapFactoryType:SDKType_BD];
-    id<IMapView> mapView = [mapFactory getMapView:CGRectMake(0, 64, self.view.jp_w, self.view.jp_h-64)];
-    [self.view addSubview:[mapView getView]];
+//    id<IMapFactory> mapFactory = [[IMapEngine sharedEngine] getMapFactoryType:SDKType_BD];
+//    id<IMapView> mapView = [mapFactory getMapView:CGRectMake(0, 64, self.view.jp_w, self.view.jp_h-64)];
+//    [self.view addSubview:[mapView getView]];
 
 }
 

@@ -22,6 +22,7 @@ PODS:
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
+  - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - BaiduMapKit
   - CYLTableViewPlaceHolder
   - SDWebImage
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -37,7 +39,8 @@ SPEC CHECKSUMS:
   BaiduMapKit: 9c748785aa3dddfc41dcb70c14b21ce32f680930
   CYLTableViewPlaceHolder: 44075c119aab78bbc514c75d771d6565e19938e8
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 36784225ab71cc7f8579d69e5276febc260829e6
+PODFILE CHECKSUM: 5b8f1d649d3f338a909b90e2bf2629c721d074e9
 
 COCOAPODS: 1.1.1

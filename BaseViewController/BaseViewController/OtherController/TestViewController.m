@@ -10,6 +10,7 @@
 #import "LoadingHUD.h"
 #import "UIBarButtonItem+Extension.h"
 #import "BigImageTest.h"
+#import "SVProgressHUD.h"
 
 @interface TestViewController ()
 
@@ -88,6 +89,7 @@
     
     NSLog(@"点击--%zd",indexPath.row);
      [LoadingHUD showHUD];
+//    [SVProgressHUD show];
     //测试同步执行异步请求
     [self syncExecuteAsyncRequest];
 }
@@ -174,10 +176,11 @@
         NSOperationQueue *queue = (NSOperationQueue *)object;
         if (queue.operationCount == 0) {
             NSLog(@"全部完成");
-            [LoadingHUD dismissHUD];
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                
-//            });
+//            [SVProgressHUD dismiss];
+            //异步中执行的动画 需要改到主线程结束
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [LoadingHUD dismissHUD];
+            });
         }
     }
 }

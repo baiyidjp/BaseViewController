@@ -10,8 +10,9 @@
 #import "TestViewController.h"
 #import "UIBarButtonItem+Extension.h"
 #import "DynamicDemo.h"
+#import "BaseTableView.h"
 
-@interface FirstViewController ()
+@interface FirstViewController ()<BaseTableViewDelegate>
 
 @end
 
@@ -29,6 +30,7 @@
     dynamic.string = @"I am string";
     dynamic.objc = [[UIView alloc] init];
     NSLog(@"date:%@\nstring:%@\nobj:%@",dynamic.date,dynamic.string,dynamic.objc);
+
 }
 
 - (void)clickBtn {

@@ -20,10 +20,6 @@
 	</dict>
 	<dict>
 		<key>className</key>
-		<string>UIViewController</string>
-	</dict>
-	<dict>
-		<key>className</key>
 		<string>ThirdViewController</string>
 		<key>classTitle</key>
 		<string>Third</string>
