@@ -36,7 +36,7 @@
         UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:backTitle fontSize:16 target:self action:@selector(popViewController) isBack:YES];
         //为了向左缩进
         UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-        spaceItem.width = -10;
+        spaceItem.width = -5;
         
         BaseViewController *baseCtrl = (BaseViewController *)viewController;
         baseCtrl.baseNavigationItem.leftBarButtonItems = @[spaceItem,backItem];
