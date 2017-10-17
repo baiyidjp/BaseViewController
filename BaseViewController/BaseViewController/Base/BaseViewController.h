@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseNavigationBar.h"
 
 @class BaseLoadMoreView,JPRefreshControl;
 @interface BaseViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
@@ -16,7 +17,7 @@
 /** refreshControl */
 @property(nonatomic,strong) JPRefreshControl *refreshControl;
 /** 自定义导航栏 */
-@property(nonatomic,strong) UINavigationBar *baseNavigationBar;
+@property(nonatomic,strong) BaseNavigationBar *baseNavigationBar;
 
 /** 自定义导航条目 */
 @property(nonatomic,strong) UINavigationItem *baseNavigationItem;

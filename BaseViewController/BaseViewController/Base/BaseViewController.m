@@ -23,7 +23,12 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor lightGrayColor];
     //取消缩进
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    if (@available(iOS 11.0, *)) {
+        self.baseTableView.contentInsetAdjustmentBehavior =UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    
     //设置导航条
     [self setupNavigationBar];
 
@@ -37,11 +42,11 @@
 }
 
 //懒加载
-- (UINavigationBar *)baseNavigationBar{
+- (BaseNavigationBar *)baseNavigationBar{
     
     if (!_baseNavigationBar) {
         
-        _baseNavigationBar =  [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 64)];
+        _baseNavigationBar =  [[BaseNavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, NAVIGATION_BAR_HEIGHT)];
     }
     return _baseNavigationBar;
 }
@@ -82,7 +87,10 @@
     [self.view insertSubview:self.baseTableView belowSubview:self.baseNavigationBar];
     self.baseTableView.dataSource = self;
     self.baseTableView.delegate = self;
-    
+    self.baseTableView.estimatedRowHeight = 0;
+    self.baseTableView.estimatedSectionFooterHeight = 0;
+    self.baseTableView.estimatedSectionHeaderHeight = 0;
+
     //下拉刷新
     self.refreshControl = [[JPRefreshControl alloc] init];
 //    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"下拉刷新"];

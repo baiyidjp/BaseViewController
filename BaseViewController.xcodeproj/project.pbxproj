@@ -116,6 +116,8 @@
 		F5D419001E1BA45100DBB258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D418FE1E1BA45100DBB258 /* LaunchScreen.storyboard */; };
 		F5E38C8A1E6572ED00306B3C /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E38C891E6572ED00306B3C /* BaseTableView.m */; };
 		F5E38C8D1E6576EA00306B3C /* BaseTableTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E38C8C1E6576EA00306B3C /* BaseTableTextController.m */; };
+		F5E978A31F95A55E009AC73F /* Base.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5E978A51F95A55E009AC73F /* Base.strings */; };
+		F5E978AF1F95B6B5009AC73F /* BaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E978AE1F95B6B5009AC73F /* BaseNavigationBar.m */; };
 		F5F9EA821E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9EA7B1E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.m */; };
 		F5F9EA831E1CB9B4001765F8 /* UIColor+JP_Color.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9EA7D1E1CB9B4001765F8 /* UIColor+JP_Color.m */; };
 		F5F9EA841E1CB9B4001765F8 /* UIView+BlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9EA7F1E1CB9B4001765F8 /* UIView+BlockGesture.m */; };
@@ -280,6 +282,12 @@
 		F5E38C891E6572ED00306B3C /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		F5E38C8B1E6576EA00306B3C /* BaseTableTextController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableTextController.h; sourceTree = "<group>"; };
 		F5E38C8C1E6576EA00306B3C /* BaseTableTextController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableTextController.m; sourceTree = "<group>"; };
+		F5E978A41F95A55E009AC73F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Base.strings; sourceTree = "<group>"; };
+		F5E978A61F95A578009AC73F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Base.strings; sourceTree = "<group>"; };
+		F5E978A71F95A5CE009AC73F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Base.strings"; sourceTree = "<group>"; };
+		F5E978A81F95A5D7009AC73F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Base.strings"; sourceTree = "<group>"; };
+		F5E978AD1F95B6B5009AC73F /* BaseNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationBar.h; sourceTree = "<group>"; };
+		F5E978AE1F95B6B5009AC73F /* BaseNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationBar.m; sourceTree = "<group>"; };
 		F5F9EA7A1E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+RemoveHighlightEffect.h"; sourceTree = "<group>"; };
 		F5F9EA7B1E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RemoveHighlightEffect.m"; sourceTree = "<group>"; };
 		F5F9EA7C1E1CB9B4001765F8 /* UIColor+JP_Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JP_Color.h"; sourceTree = "<group>"; };
@@ -568,6 +576,7 @@
 				F5D418FC1E1BA45100DBB258 /* Assets.xcassets */,
 				F5D418FE1E1BA45100DBB258 /* LaunchScreen.storyboard */,
 				F5D419011E1BA45100DBB258 /* Info.plist */,
+				F5E978A51F95A55E009AC73F /* Base.strings */,
 				F5D418F01E1BA45000DBB258 /* Supporting Files */,
 			);
 			path = BaseViewController;
@@ -600,6 +609,8 @@
 		F5E38C871E6572DA00306B3C /* BaseViews */ = {
 			isa = PBXGroup;
 			children = (
+				F5E978AD1F95B6B5009AC73F /* BaseNavigationBar.h */,
+				F5E978AE1F95B6B5009AC73F /* BaseNavigationBar.m */,
 				F5E38C881E6572ED00306B3C /* BaseTableView.h */,
 				F5E38C891E6572ED00306B3C /* BaseTableView.m */,
 			);
@@ -681,6 +692,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = F5D418E41E1BA45000DBB258;
 			productRefGroup = F5D418EE1E1BA45000DBB258 /* Products */;
@@ -720,6 +733,7 @@
 				F550395C1E1E25D000742E5D /* deliveryStaff1@2x.png in Resources */,
 				F550399B1E1E2FE000742E5D /* tabbar_compose_button_highlighted@2x.png in Resources */,
 				F55039A41E1E2FE000742E5D /* tabbar_discover_selected@3x.png in Resources */,
+				F5E978A31F95A55E009AC73F /* Base.strings in Resources */,
 				F5D418FB1E1BA45100DBB258 /* Main.storyboard in Resources */,
 				F55039AB1E1E2FE000742E5D /* tabbar_message_center_selected@2x.png in Resources */,
 				F55039941E1E2FE000742E5D /* tabbar_background@2x.png in Resources */,
@@ -820,6 +834,7 @@
 				F57ED8D91E31A72200826D18 /* UIImageView+SDWebImage.m in Sources */,
 				F57ED8F01E31ADC300826D18 /* BaseViewController.m in Sources */,
 				F57ED8E31E31AD9F00826D18 /* JPLoopView.m in Sources */,
+				F5E978AF1F95B6B5009AC73F /* BaseNavigationBar.m in Sources */,
 				F57ED9071E31AE1700826D18 /* ThirdViewController.m in Sources */,
 				F57ED8F51E31ADD900826D18 /* BaseLoadMoreView.m in Sources */,
 				F57ED9081E31AE1700826D18 /* ViewController.m in Sources */,
@@ -872,6 +887,17 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		F5E978A51F95A55E009AC73F /* Base.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5E978A41F95A55E009AC73F /* en */,
+				F5E978A61F95A578009AC73F /* Base */,
+				F5E978A71F95A5CE009AC73F /* zh-Hans */,
+				F5E978A81F95A5D7009AC73F /* zh-Hant */,
+			);
+			name = Base.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -879,6 +905,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -926,6 +953,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

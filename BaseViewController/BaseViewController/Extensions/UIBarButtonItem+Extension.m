@@ -15,7 +15,7 @@
     self = [self init];
     if (self) {
         //创建btn
-        UIButton *btn = [[UIButton alloc] init];
+        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
         [btn setTitle:title forState:UIControlStateNormal];
         [btn.titleLabel setFont:[UIFont systemFontOfSize:fontSize]];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
