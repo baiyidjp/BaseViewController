@@ -9,6 +9,7 @@
 #import "SecondViewController.h"
 #import "UIImage+Extension.h"
 #import "UIImageView+JPWebImage.h"
+#import "BaseTableTextController.h"
 
 @interface SecondViewController ()<CAAnimationDelegate>
 /** l */
@@ -40,6 +41,10 @@
     [imageView2 jp_setImageWithURL:[NSURL URLWithString:@"http://a.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=0e7551694ded2e73fcbc8e28b2318dbd/4610b912c8fcc3cefbf277de9545d688d43f2028.jpg"] placeholderImage:image cornerRadius:10];
     
     [self setLoveBtn];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" fontSize:16 target:self action:@selector(clickBtn) isBack:NO];
+    self.baseNavigationItem.rightBarButtonItem = rightItem;
+   
 }
 
 #pragma mark -点赞
@@ -112,6 +117,11 @@
         _layerArrM = [NSMutableArray array];
     }
     return _layerArrM;
+}
+
+- (void)clickBtn {
+    
+    [self.navigationController pushViewController:[[BaseTableTextController alloc] init] animated:YES];
 }
 
 @end

@@ -10,6 +10,7 @@ pod 'CYLTableViewPlaceHolder'
 pod 'BaiduMapKit'
 pod 'AMap3DMap'
 pod 'SVProgressHUD'
+pod 'MJRefresh'
   # Pods for BaseViewController
 
 end
