@@ -42,10 +42,11 @@
     // Do any additional setup after loading the view.
     
     self.title = @"Test";
+    self.view.backgroundColor = [UIColor whiteColor];
     
     self.baseNavigationBar.barTintColor = [UIColor redColor];
     
-    [self setupTableViewWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, self.view.bounds.size.width, self.view.bounds.size.height-NAVIGATION_BAR_HEIGHT)];
+    [self setupTableViewWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, self.view.bounds.size.width, self.view.bounds.size.height-NAVIGATION_BAR_HEIGHT-HOME_INDICATOR_HEIGHT)];
     
     
     

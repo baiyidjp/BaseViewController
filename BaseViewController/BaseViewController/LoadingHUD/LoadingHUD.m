@@ -28,16 +28,17 @@
   UIView *ball_3;
 }
 
-+ (LoadingHUD*)sharedHUD {
-  static dispatch_once_t once;
-  static LoadingHUD *sharedHUD;
-  dispatch_once(&once, ^{
-    sharedHUD = [[self alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular]];
-  });
-  return sharedHUD;
++ (LoadingHUD *)sharedHUD {
+  
+    static LoadingHUD *sharedHUD = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedHUD = [[[self class] alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular]];
+    });
+    return sharedHUD;
 }
 
--(id)initWithEffect:(UIVisualEffect *)effect{
+- (instancetype)initWithEffect:(UIVisualEffect *)effect{
   self = [super initWithEffect:effect];
   if (self) {
     self.frame = UIScreen.mainScreen.bounds;
@@ -53,6 +54,7 @@
     ball_3.backgroundColor = [UIColor yellowColor];
     ball_3.layer.cornerRadius = ball_3.bounds.size.width / 2;
     
+    
     [self addSubview:ball_1];
     [self addSubview:ball_2];
     [self addSubview:ball_3];
@@ -64,10 +66,10 @@
 
 + (void)showHUD{
     
-  dispatch_async(dispatch_get_main_queue(), ^{
       LoadingHUD *hud = [LoadingHUD sharedHUD];
       NSLog(@"%@",hud);
       UIWindow *window = UIApplication.sharedApplication.keyWindow;
+    dispatch_async(dispatch_get_main_queue(), ^{
       if (window != nil) {
           hud.alpha = 0.0;
           [window addSubview:hud];
@@ -84,10 +86,10 @@
 
 + (void)dismissHUD{
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        
+    
         LoadingHUD *hud = [LoadingHUD sharedHUD];
         NSLog(@"%@",hud);
+    dispatch_async(dispatch_get_main_queue(), ^{
         [hud stopLoadingAnimation];
         [hud.timer invalidate];
         [UIView animateWithDuration:0.3 animations:^{

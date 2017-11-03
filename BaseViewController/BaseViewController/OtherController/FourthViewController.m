@@ -23,14 +23,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _loopView = [[JPLoopView alloc]initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, self.view.bounds.size.width*9.0/16)];
+    _loopView = [[JPLoopView alloc]initWithFrame:CGRectMake(0, STATUS_BAR_HEIGHT, self.view.bounds.size.width, self.view.bounds.size.width*9.0/16)];
     _loopView.dataSource = self;
     _loopView.delegate = self;
     [self.view addSubview:_loopView];
     //先创建view后获取数据并reload
     [self loadData];
     
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 100, 30)];
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 300+STATUS_BAR_HEIGHT, 100, 30)];
     [btn setTitle:@"换图" forState:UIControlStateNormal];
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(changePic) forControlEvents:UIControlEventTouchUpInside];

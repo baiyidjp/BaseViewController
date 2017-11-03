@@ -65,7 +65,7 @@
     //调整自定义按钮的位置
     CGFloat tabbarBtnW = self.jp_w * 0.2;
     
-    _customButton.frame = CGRectMake(2*tabbarBtnW, -30, tabbarBtnW, self.jp_h+30);
+    _customButton.frame = CGRectMake(2*tabbarBtnW, -30, tabbarBtnW, self.jp_h+30-HOME_INDICATOR_HEIGHT);
     _customButton.layer.cornerRadius = 5;
 
     //调整uitabbarButton的大小和位置
