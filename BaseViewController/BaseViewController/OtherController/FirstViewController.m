@@ -11,6 +11,7 @@
 #import "UIBarButtonItem+Extension.h"
 #import "DynamicDemo.h"
 #import "BaseTableView.h"
+#import "HiddenNavViewController.h"
 
 @interface FirstViewController ()<BaseTableViewDelegate>
 
@@ -24,12 +25,17 @@
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" fontSize:16 target:self action:@selector(clickBtn) isBack:NO];
     self.baseNavigationItem.rightBarButtonItem = rightItem;
-    
+
     DynamicDemo *dynamic = [[DynamicDemo alloc] init];
     dynamic.date = [NSDate date];
     dynamic.string = @"I am string";
     dynamic.objc = [[UIView alloc] init];
     NSLog(@"date:%@\nstring:%@\nobj:%@",dynamic.date,dynamic.string,dynamic.objc);
+    
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 40, 40)];
+    [btn setTitle:@"点" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(clickDian) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 
 }
 
@@ -38,5 +44,10 @@
     [self.navigationController pushViewController:[[TestViewController alloc] init] animated:YES];
 }
 
+- (void)clickDian {
+    
+    HiddenNavViewController *fourCtrl = [[HiddenNavViewController alloc] init];
+    [self.navigationController pushViewController:fourCtrl animated:YES];
+}
 
 @end

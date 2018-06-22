@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D0FAD47CE311E306ADB47A30 /* libPods-BaseViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D318ABA87E73B3AD6BB5C1C /* libPods-BaseViewController.a */; };
 		F513D9831ECBE8CE0000B672 /* BaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F513D9821ECBE8CE0000B672 /* BaseTabBar.m */; };
+		F51D759C2072338200802789 /* AddClickBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = F51D759B2072338200802789 /* AddClickBtn.m */; };
+		F51D75A22072403B00802789 /* UIButton+AddClick.m in Sources */ = {isa = PBXBuildFile; fileRef = F51D75A12072403B00802789 /* UIButton+AddClick.m */; };
+		F5226ECA1FDE62B30019EF8D /* JPLoadingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F5226EC91FDE62B30019EF8D /* JPLoadingHUD.m */; };
 		F535AA8D1E55512A00C7BE9C /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F535AA8C1E55512A00C7BE9C /* NetworkManager.m */; };
 		F55039441E1DDC5D00742E5D /* NSObject+runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F550393F1E1DDC5D00742E5D /* NSObject+runtime.m */; };
 		F55039451E1DDC5D00742E5D /* UIView+Corner_Radius.m in Sources */ = {isa = PBXBuildFile; fileRef = F55039411E1DDC5D00742E5D /* UIView+Corner_Radius.m */; };
@@ -80,6 +83,7 @@
 		F57ED9061E31AE1700826D18 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F57ED8FE1E31AE1700826D18 /* TestViewController.m */; };
 		F57ED9071E31AE1700826D18 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F57ED9001E31AE1700826D18 /* ThirdViewController.m */; };
 		F57ED9081E31AE1700826D18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F57ED9021E31AE1700826D18 /* ViewController.m */; };
+		F58246EB1FCE5EAD00F7EB33 /* JPEditLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F58246EA1FCE5EAD00F7EB33 /* JPEditLabel.m */; };
 		F58304891E5EC8930085E23B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58304881E5EC8930085E23B /* CoreLocation.framework */; };
 		F583048B1E5EC89B0085E23B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F583048A1E5EC89B0085E23B /* QuartzCore.framework */; };
 		F583048D1E5EC8A40085E23B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F583048C1E5EC8A40085E23B /* OpenGLES.framework */; };
@@ -116,6 +120,7 @@
 		F5D419001E1BA45100DBB258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D418FE1E1BA45100DBB258 /* LaunchScreen.storyboard */; };
 		F5E38C8A1E6572ED00306B3C /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E38C891E6572ED00306B3C /* BaseTableView.m */; };
 		F5E38C8D1E6576EA00306B3C /* BaseTableTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E38C8C1E6576EA00306B3C /* BaseTableTextController.m */; };
+		F5E49BC92089DEDD00DD56AA /* HiddenNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E49BC82089DEDD00DD56AA /* HiddenNavViewController.m */; };
 		F5E978A31F95A55E009AC73F /* Base.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5E978A51F95A55E009AC73F /* Base.strings */; };
 		F5E978AF1F95B6B5009AC73F /* BaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E978AE1F95B6B5009AC73F /* BaseNavigationBar.m */; };
 		F5F9EA821E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9EA7B1E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.m */; };
@@ -130,6 +135,12 @@
 		B81F2EAB479D139261D0C826 /* Pods-BaseViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseViewController/Pods-BaseViewController.debug.xcconfig"; sourceTree = "<group>"; };
 		F513D9811ECBE8CE0000B672 /* BaseTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBar.h; sourceTree = "<group>"; };
 		F513D9821ECBE8CE0000B672 /* BaseTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBar.m; sourceTree = "<group>"; };
+		F51D759A2072338200802789 /* AddClickBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddClickBtn.h; sourceTree = "<group>"; };
+		F51D759B2072338200802789 /* AddClickBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddClickBtn.m; sourceTree = "<group>"; };
+		F51D75A02072403B00802789 /* UIButton+AddClick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+AddClick.h"; sourceTree = "<group>"; };
+		F51D75A12072403B00802789 /* UIButton+AddClick.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AddClick.m"; sourceTree = "<group>"; };
+		F5226EC81FDE62B30019EF8D /* JPLoadingHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPLoadingHUD.h; sourceTree = "<group>"; };
+		F5226EC91FDE62B30019EF8D /* JPLoadingHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPLoadingHUD.m; sourceTree = "<group>"; };
 		F535AA8B1E55512A00C7BE9C /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		F535AA8C1E55512A00C7BE9C /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		F550393E1E1DDC5D00742E5D /* NSObject+runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+runtime.h"; sourceTree = "<group>"; };
@@ -227,6 +238,8 @@
 		F57ED9001E31AE1700826D18 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		F57ED9011E31AE1700826D18 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F57ED9021E31AE1700826D18 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F58246E91FCE5EAD00F7EB33 /* JPEditLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPEditLabel.h; sourceTree = "<group>"; };
+		F58246EA1FCE5EAD00F7EB33 /* JPEditLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPEditLabel.m; sourceTree = "<group>"; };
 		F58304881E5EC8930085E23B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F583048A1E5EC89B0085E23B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F583048C1E5EC8A40085E23B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -282,6 +295,8 @@
 		F5E38C891E6572ED00306B3C /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		F5E38C8B1E6576EA00306B3C /* BaseTableTextController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableTextController.h; sourceTree = "<group>"; };
 		F5E38C8C1E6576EA00306B3C /* BaseTableTextController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableTextController.m; sourceTree = "<group>"; };
+		F5E49BC72089DEDD00DD56AA /* HiddenNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiddenNavViewController.h; sourceTree = "<group>"; };
+		F5E49BC82089DEDD00DD56AA /* HiddenNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiddenNavViewController.m; sourceTree = "<group>"; };
 		F5E978A41F95A55E009AC73F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Base.strings; sourceTree = "<group>"; };
 		F5E978A61F95A578009AC73F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Base.strings; sourceTree = "<group>"; };
 		F5E978A71F95A5CE009AC73F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Base.strings"; sourceTree = "<group>"; };
@@ -488,6 +503,8 @@
 				F57ED8FA1E31AE1700826D18 /* FourthViewController.m */,
 				F57ED8FB1E31AE1700826D18 /* SecondViewController.h */,
 				F57ED8FC1E31AE1700826D18 /* SecondViewController.m */,
+				F5E49BC72089DEDD00DD56AA /* HiddenNavViewController.h */,
+				F5E49BC82089DEDD00DD56AA /* HiddenNavViewController.m */,
 				F57ED8FD1E31AE1700826D18 /* TestViewController.h */,
 				F57ED8FE1E31AE1700826D18 /* TestViewController.m */,
 				F5A2520A1E56D60300B12AA0 /* BigImageTest.h */,
@@ -542,6 +559,8 @@
 			children = (
 				F5C4EF481E1F72F40092CD3C /* LoadingHUD.h */,
 				F5C4EF491E1F72F40092CD3C /* LoadingHUD.m */,
+				F5226EC81FDE62B30019EF8D /* JPLoadingHUD.h */,
+				F5226EC91FDE62B30019EF8D /* JPLoadingHUD.m */,
 			);
 			path = LoadingHUD;
 			sourceTree = "<group>";
@@ -613,6 +632,10 @@
 				F5E978AE1F95B6B5009AC73F /* BaseNavigationBar.m */,
 				F5E38C881E6572ED00306B3C /* BaseTableView.h */,
 				F5E38C891E6572ED00306B3C /* BaseTableView.m */,
+				F51D759A2072338200802789 /* AddClickBtn.h */,
+				F51D759B2072338200802789 /* AddClickBtn.m */,
+				F51D75A02072403B00802789 /* UIButton+AddClick.h */,
+				F51D75A12072403B00802789 /* UIButton+AddClick.m */,
 			);
 			path = BaseViews;
 			sourceTree = "<group>";
@@ -642,6 +665,8 @@
 				F57ED8D81E31A72200826D18 /* UIImageView+SDWebImage.m */,
 				F550394C1E1E19D200742E5D /* UIBarButtonItem+Extension.h */,
 				F550394D1E1E19D200742E5D /* UIBarButtonItem+Extension.m */,
+				F58246E91FCE5EAD00F7EB33 /* JPEditLabel.h */,
+				F58246EA1FCE5EAD00F7EB33 /* JPEditLabel.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -837,6 +862,7 @@
 				F5E978AF1F95B6B5009AC73F /* BaseNavigationBar.m in Sources */,
 				F57ED9071E31AE1700826D18 /* ThirdViewController.m in Sources */,
 				F57ED8F51E31ADD900826D18 /* BaseLoadMoreView.m in Sources */,
+				F5E49BC92089DEDD00DD56AA /* HiddenNavViewController.m in Sources */,
 				F57ED9081E31AE1700826D18 /* ViewController.m in Sources */,
 				F5A252131E56DFE300B12AA0 /* BigImageViewController.m in Sources */,
 				F58304BE1E5EE4560085E23B /* GaodeMapFactory.m in Sources */,
@@ -844,6 +870,8 @@
 				F535AA8D1E55512A00C7BE9C /* NetworkManager.m in Sources */,
 				F55039651E1E260D00742E5D /* JPNormalRefreshView.m in Sources */,
 				F55039B51E1E2FF200742E5D /* MidLineLabel.m in Sources */,
+				F51D75A22072403B00802789 /* UIButton+AddClick.m in Sources */,
+				F51D759C2072338200802789 /* AddClickBtn.m in Sources */,
 				F55039461E1DDC5D00742E5D /* UIViewController+NSLogAppear.m in Sources */,
 				F55039611E1E25D100742E5D /* JPRefreshControl.m in Sources */,
 				F57ED9031E31AE1700826D18 /* FirstViewController.m in Sources */,
@@ -858,6 +886,7 @@
 				F57ED9051E31AE1700826D18 /* SecondViewController.m in Sources */,
 				F5F9EA831E1CB9B4001765F8 /* UIColor+JP_Color.m in Sources */,
 				F588F5A41E5ADE600041E8FA /* DynamicDemo.m in Sources */,
+				F58246EB1FCE5EAD00F7EB33 /* JPEditLabel.m in Sources */,
 				F58304C11E5EE8A70085E23B /* IMapEngine.m in Sources */,
 				F5C4EF4A1E1F72F40092CD3C /* LoadingHUD.m in Sources */,
 				F5F9EA821E1CB9B4001765F8 /* UIButton+RemoveHighlightEffect.m in Sources */,
@@ -865,6 +894,7 @@
 				F5A2520C1E56D60300B12AA0 /* BigImageTest.m in Sources */,
 				F58304B41E5EDBA10085E23B /* GDMapViewController.m in Sources */,
 				F5D418F21E1BA45000DBB258 /* main.m in Sources */,
+				F5226ECA1FDE62B30019EF8D /* JPLoadingHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
