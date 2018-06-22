@@ -174,7 +174,9 @@ NSInteger const allCount = 200000;
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
     
     _viewIndex = scrollView.contentOffset.x/self.bounds.size.width;
-    _pageControl.currentPage = _viewIndex % _urls.count;
+    if (_urls && _urls.count) {    
+        _pageControl.currentPage = _viewIndex % _urls.count;
+    }
 }
 
 

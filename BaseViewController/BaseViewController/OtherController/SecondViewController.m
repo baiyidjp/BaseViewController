@@ -10,12 +10,15 @@
 #import "UIImage+Extension.h"
 #import "UIImageView+JPWebImage.h"
 #import "BaseTableTextController.h"
+#import "JPEditLabel.h"
 
 @interface SecondViewController ()<CAAnimationDelegate>
 /** l */
 @property(nonatomic,strong) CALayer *heartLayer;
 /** nsmu */
 @property(nonatomic,strong) NSMutableArray *layerArrM;
+/** editl */
+@property(nonatomic,strong) JPEditLabel *editLabel;
 @end
 
 @implementation SecondViewController
@@ -24,9 +27,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UILabel *L = [[UILabel alloc] initWithFrame:CGRectMake(50, NAVIGATION_BAR_HEIGHT+10, 300, 20)];
+    JPEditLabel *L = [[JPEditLabel alloc] initWithFrame:CGRectMake(50, NAVIGATION_BAR_HEIGHT+10, 300, 20)];
     L.text = @"UIImageView+JPWebImage";
     [self.view addSubview:L];
+    self.editLabel = L;
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, NAVIGATION_BAR_HEIGHT+40, 200, 100)];
     [self.view addSubview:imageView];

@@ -14,6 +14,7 @@
     [super layoutSubviews];
     
     //注意导航栏及状态栏高度适配
+    CGFloat systemVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
     self.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), NAVIGATION_BAR_HEIGHT);
     for (UIView *view in self.subviews) {
         if([NSStringFromClass([view class]) containsString:@"Background"]) {
@@ -24,8 +25,15 @@
             frame.origin.y = STATUS_BAR_HEIGHT;
             frame.size.height = self.bounds.size.height - frame.origin.y;
             view.frame = frame;
+//            if (systemVersion >=11) {
+//                view.layoutMargins = UIEdgeInsetsZero;
+//            }
+
         }
     }
+    
+    
+
 }
 
 
