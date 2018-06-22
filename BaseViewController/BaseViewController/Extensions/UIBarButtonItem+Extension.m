@@ -17,7 +17,7 @@
     self = [self init];
     if (self) {
         //创建btn
-        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, title.length ? 44 : 14, 44)];
         [btn setTitle:title forState:UIControlStateNormal];
         [btn.titleLabel setFont:[UIFont systemFontOfSize:fontSize]];
         [btn setTitleColor:[UIColor jp_colorWithHexString:@"3DD1E0"] forState:UIControlStateNormal];
@@ -31,13 +31,13 @@
         
         [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
         
-        CGFloat systemVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
-        if (systemVersion >= 11) {
-            
-            [btn setHitTestEdgeInsets:UIEdgeInsetsMake(-30, -30, -30, -30)];
-            btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-            [btn setImageEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 0)];
-        }
+//        CGFloat systemVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+//        if (systemVersion >= 11) {
+//
+//            [btn setHitTestEdgeInsets:UIEdgeInsetsMake(-30, -30, -30, -30)];
+//            btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+//            [btn setImageEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 0)];
+//        }
 
 
         self.customView = btn;

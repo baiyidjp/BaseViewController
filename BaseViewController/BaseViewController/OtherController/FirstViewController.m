@@ -12,6 +12,8 @@
 #import "DynamicDemo.h"
 #import "BaseTableView.h"
 #import "HiddenNavViewController.h"
+#import "LoginViewController.h"
+#import "BaseNavigationController.h"
 
 @interface FirstViewController ()<BaseTableViewDelegate>
 
@@ -36,7 +38,9 @@
     [btn setTitle:@"点" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(clickDian) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
-
+    
+    BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:[LoginViewController new]];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)clickBtn {

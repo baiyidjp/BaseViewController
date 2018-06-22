@@ -31,7 +31,7 @@
         
         viewController.hidesBottomBarWhenPushed = YES;
         
-        NSString *backTitle = @"返回";
+        NSString *backTitle = @"";
         //通过分类获取自定义的item
         UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:backTitle fontSize:16 target:self action:@selector(popViewController) isBack:YES];
         //为了向左缩进

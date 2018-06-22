@@ -22,6 +22,7 @@
 #import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
+#import "SVProgressHUD.h"
 
 #ifdef DEBUG
 #define NSLog(...) NSLog(@"%s 第%d行\n %@\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])

@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		D0FAD47CE311E306ADB47A30 /* libPods-BaseViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D318ABA87E73B3AD6BB5C1C /* libPods-BaseViewController.a */; };
 		F513D9831ECBE8CE0000B672 /* BaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F513D9821ECBE8CE0000B672 /* BaseTabBar.m */; };
+		F5161FC020DCC8E100FEFED1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5161FBF20DCC8E100FEFED1 /* LoginViewController.m */; };
+		F5161FC320DCC8F000FEFED1 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5161FC220DCC8F000FEFED1 /* LoginViewModel.m */; };
+		F5161FC620DCC8FB00FEFED1 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5161FC520DCC8FB00FEFED1 /* LoginManager.m */; };
+		F5161FC920DCC90500FEFED1 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5161FC820DCC90500FEFED1 /* LoginView.m */; };
+		F5161FCC20DCD9B500FEFED1 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5161FCB20DCD9B500FEFED1 /* ForgetViewController.m */; };
 		F51D759C2072338200802789 /* AddClickBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = F51D759B2072338200802789 /* AddClickBtn.m */; };
 		F51D75A22072403B00802789 /* UIButton+AddClick.m in Sources */ = {isa = PBXBuildFile; fileRef = F51D75A12072403B00802789 /* UIButton+AddClick.m */; };
 		F5226ECA1FDE62B30019EF8D /* JPLoadingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F5226EC91FDE62B30019EF8D /* JPLoadingHUD.m */; };
@@ -135,6 +140,16 @@
 		B81F2EAB479D139261D0C826 /* Pods-BaseViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseViewController/Pods-BaseViewController.debug.xcconfig"; sourceTree = "<group>"; };
 		F513D9811ECBE8CE0000B672 /* BaseTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBar.h; sourceTree = "<group>"; };
 		F513D9821ECBE8CE0000B672 /* BaseTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBar.m; sourceTree = "<group>"; };
+		F5161FBE20DCC8E100FEFED1 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F5161FBF20DCC8E100FEFED1 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F5161FC120DCC8F000FEFED1 /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		F5161FC220DCC8F000FEFED1 /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		F5161FC420DCC8FB00FEFED1 /* LoginManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
+		F5161FC520DCC8FB00FEFED1 /* LoginManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
+		F5161FC720DCC90500FEFED1 /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		F5161FC820DCC90500FEFED1 /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		F5161FCA20DCD9B500FEFED1 /* ForgetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
+		F5161FCB20DCD9B500FEFED1 /* ForgetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
 		F51D759A2072338200802789 /* AddClickBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddClickBtn.h; sourceTree = "<group>"; };
 		F51D759B2072338200802789 /* AddClickBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddClickBtn.m; sourceTree = "<group>"; };
 		F51D75A02072403B00802789 /* UIButton+AddClick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+AddClick.h"; sourceTree = "<group>"; };
@@ -376,6 +391,55 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F5161FB920DCC88500FEFED1 /* Login(MVVM) */ = {
+			isa = PBXGroup;
+			children = (
+				F5161FBA20DCC88500FEFED1 /* ViewModel */,
+				F5161FBB20DCC88500FEFED1 /* Controller */,
+				F5161FBC20DCC88500FEFED1 /* Manager */,
+				F5161FBD20DCC88500FEFED1 /* View */,
+			);
+			path = "Login(MVVM)";
+			sourceTree = "<group>";
+		};
+		F5161FBA20DCC88500FEFED1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F5161FC120DCC8F000FEFED1 /* LoginViewModel.h */,
+				F5161FC220DCC8F000FEFED1 /* LoginViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F5161FBB20DCC88500FEFED1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F5161FBE20DCC8E100FEFED1 /* LoginViewController.h */,
+				F5161FBF20DCC8E100FEFED1 /* LoginViewController.m */,
+				F5161FCA20DCD9B500FEFED1 /* ForgetViewController.h */,
+				F5161FCB20DCD9B500FEFED1 /* ForgetViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F5161FBC20DCC88500FEFED1 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F5161FC420DCC8FB00FEFED1 /* LoginManager.h */,
+				F5161FC520DCC8FB00FEFED1 /* LoginManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F5161FBD20DCC88500FEFED1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F5161FC720DCC90500FEFED1 /* LoginView.h */,
+				F5161FC820DCC90500FEFED1 /* LoginView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F535AA8A1E55512A00C7BE9C /* AFNetworkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,6 +676,7 @@
 		F5D419071E1BA46D00DBB258 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F5161FB920DCC88500FEFED1 /* Login(MVVM) */,
 				F535AA8A1E55512A00C7BE9C /* AFNetworkManager */,
 				F57ED8DA1E31AD9F00826D18 /* JPLoopView */,
 				F5C4EF471E1F72F40092CD3C /* LoadingHUD */,
@@ -845,6 +910,7 @@
 			files = (
 				F5F9EA841E1CB9B4001765F8 /* UIView+BlockGesture.m in Sources */,
 				F55039451E1DDC5D00742E5D /* UIView+Corner_Radius.m in Sources */,
+				F5161FC920DCC90500FEFED1 /* LoginView.m in Sources */,
 				F58304AC1E5ECB9A0085E23B /* MapViewController.m in Sources */,
 				F57ED8EF1E31ADC300826D18 /* BaseNavigationController.m in Sources */,
 				F57ED8E51E31AD9F00826D18 /* JPLoopViewLayout.m in Sources */,
@@ -858,17 +924,21 @@
 				F513D9831ECBE8CE0000B672 /* BaseTabBar.m in Sources */,
 				F57ED8D91E31A72200826D18 /* UIImageView+SDWebImage.m in Sources */,
 				F57ED8F01E31ADC300826D18 /* BaseViewController.m in Sources */,
+				F5161FCC20DCD9B500FEFED1 /* ForgetViewController.m in Sources */,
 				F57ED8E31E31AD9F00826D18 /* JPLoopView.m in Sources */,
 				F5E978AF1F95B6B5009AC73F /* BaseNavigationBar.m in Sources */,
 				F57ED9071E31AE1700826D18 /* ThirdViewController.m in Sources */,
 				F57ED8F51E31ADD900826D18 /* BaseLoadMoreView.m in Sources */,
 				F5E49BC92089DEDD00DD56AA /* HiddenNavViewController.m in Sources */,
 				F57ED9081E31AE1700826D18 /* ViewController.m in Sources */,
+				F5161FC620DCC8FB00FEFED1 /* LoginManager.m in Sources */,
 				F5A252131E56DFE300B12AA0 /* BigImageViewController.m in Sources */,
 				F58304BE1E5EE4560085E23B /* GaodeMapFactory.m in Sources */,
 				F55039441E1DDC5D00742E5D /* NSObject+runtime.m in Sources */,
 				F535AA8D1E55512A00C7BE9C /* NetworkManager.m in Sources */,
 				F55039651E1E260D00742E5D /* JPNormalRefreshView.m in Sources */,
+				F5161FC320DCC8F000FEFED1 /* LoginViewModel.m in Sources */,
+				F5161FC020DCC8E100FEFED1 /* LoginViewController.m in Sources */,
 				F55039B51E1E2FF200742E5D /* MidLineLabel.m in Sources */,
 				F51D75A22072403B00802789 /* UIButton+AddClick.m in Sources */,
 				F51D759C2072338200802789 /* AddClickBtn.m in Sources */,
