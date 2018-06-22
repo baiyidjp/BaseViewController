@@ -25,7 +25,7 @@
     self.title = @"弹出视图";
     
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"退出" fontSize:16 target:self action:@selector(clickBtn) isBack:NO];
-    self.navigationItem.leftBarButtonItem = leftItem;
+    self.baseNavigationItem.leftBarButtonItem = leftItem;
     
 //    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"高德" fontSize:16 target:self action:@selector(clickRightBtn) isBack:NO];
 //    self.baseNavigationItem.rightBarButtonItem = rightItem;
