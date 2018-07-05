@@ -11,6 +11,7 @@ pod 'BaiduMapKit'
 pod 'AMap3DMap'
 pod 'SVProgressHUD'
 pod 'MJRefresh'
+pod 'YYText'
   # Pods for BaseViewController
 
 end

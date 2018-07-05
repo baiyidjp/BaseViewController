@@ -14,6 +14,7 @@
 #import "HiddenNavViewController.h"
 #import "LoginViewController.h"
 #import "BaseNavigationController.h"
+#import "MessageController.h"
 
 @interface FirstViewController ()<BaseTableViewDelegate>
 
@@ -34,13 +35,14 @@
     dynamic.objc = [[UIView alloc] init];
     NSLog(@"date:%@\nstring:%@\nobj:%@",dynamic.date,dynamic.string,dynamic.objc);
     
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 40, 40)];
-    [btn setTitle:@"点" forState:UIControlStateNormal];
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 100, 40)];
+    [btn setTitle:@"MsgList" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(clickDian) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
     BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:[LoginViewController new]];
-    [self presentViewController:nav animated:YES completion:nil];
+//    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)clickBtn {
@@ -50,8 +52,8 @@
 
 - (void)clickDian {
     
-    HiddenNavViewController *fourCtrl = [[HiddenNavViewController alloc] init];
-    [self.navigationController pushViewController:fourCtrl animated:YES];
+    MessageController *msgCtrl = [[MessageController alloc] init];
+    [self.navigationController pushViewController:msgCtrl animated:YES];
 }
 
 @end
