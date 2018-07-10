@@ -1,0 +1,59 @@
+//
+//  PrefixHeader.pch
+//  BaseViewController
+//
+//  Created by Keep丶Dream on 17/1/20.
+//  Copyright © 2017年 dong. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "NetworkManager.h"
+#import "UIView+JP_Frame.h"
+#import "UIBarButtonItem+JPItem.h"
+#import "BaseConst.h"
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
+#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+#import <MAMapKit/MAMapKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import "SVProgressHUD.h"
+#import "JPBaseViewController.h"
+#import "JPNavigationController.h"
+#import "UIColor+JP_Color.h"
+
+#ifdef DEBUG
+#define NSLog(...) NSLog(@"%s 第%d行\n %@\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#else
+#define NSLog(...)
+#endif
+
+// 判断是否是iPhone X
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+// 状态栏高度
+#define STATUS_BAR_HEIGHT (iPhoneX ? 44.f : 20.f)
+// 导航栏高度
+#define NAVIGATION_BAR_HEIGHT (iPhoneX ? 88.f : 64.f)
+// tabBar高度
+#define TAB_BAR_HEIGHT (iPhoneX ? (49.f+34.f) : 49.f)
+// home indicator
+#define HOME_INDICATOR_HEIGHT (iPhoneX ? 34.f : 0.f)
+
+#endif /* PrefixHeader_pch */
+
+/*
+ --Classes     //模块。包含各个模块的Model,View,Controller,Manager
+ --categories  //类目。包含各种类的分类
+ --Frameworks  //系统框架。包含导入的系统的框架
+ --Helpers     //帮助类。包含网络，数据库，归档，定位等操作类的封装和实现
+ --Utilites    //工具类，一些非对象的，而是类方法调用的类
+ --Vendors     //第三方库。部分需要修改或者不支持cocoapod的第三方的框架引入
+ --Config      //配置。包含宏定义文件，全局配置文件，全局常量文件，颜色配置文件
+ --Resources   //资源。包含plist,image,html,bundle，Localizable.strings等
+ 
+ */
