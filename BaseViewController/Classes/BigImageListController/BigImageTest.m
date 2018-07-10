@@ -25,7 +25,7 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithItemTitle:@"优化" Layout:NO target:self action:@selector(clickBtn)];
-    self.jp_NavigationItem.rightBarButtonItem = rightItem;
+    [self jp_SetItem:rightItem Layout:NO];
     
 }
 

@@ -25,10 +25,10 @@
     self.title = @"PresendViewController";
     
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithItemImageName:@"tabbar_home" Layout:YES target:self action:@selector(p_ClickBackBtn)];
-    self.jp_NavigationItem.leftBarButtonItem = backItem;
+    [self jp_SetItem:backItem Layout:YES];
 
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithItemTitle:@"高德Map" Layout:NO target:self action:@selector(p_ClickRightBtn)];
-    self.jp_NavigationItem.rightBarButtonItem = rightItem;
+    [self jp_SetItem:rightItem Layout:NO];
 
 
     

@@ -34,7 +34,7 @@
         spaceItem.width = -5;
 
         JPBaseViewController *baseCtrl = (JPBaseViewController *)viewController;
-        baseCtrl.jp_NavigationItem.leftBarButtonItems = @[spaceItem,backItem];
+        [baseCtrl jp_SetItems:@[spaceItem,backItem] Layout:YES];
     }
     [super pushViewController:viewController animated:animated];
 }

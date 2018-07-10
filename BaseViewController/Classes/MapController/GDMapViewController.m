@@ -24,7 +24,7 @@
     self.title = @"高德地图";
     
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithItemImageName:@"tabbar_home" Layout:YES target:self action:@selector(clickBtn)];
-    self.jp_NavigationItem.leftBarButtonItem = backItem;
+    [self jp_SetItem:backItem Layout:YES];
 
 
     //高德地图的初始化

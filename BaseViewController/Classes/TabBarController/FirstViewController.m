@@ -24,10 +24,10 @@
     // Do any additional setup after loading the view.
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithItemTitle:@"Next" Layout:NO target:self action:@selector(clickBtn)];
-    self.jp_NavigationItem.rightBarButtonItem = rightItem;
+    [self jp_SetItem:rightItem Layout:NO];
     
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithItemTitle:@"MsgList" Layout:YES target:self action:@selector(clickDian)];
-    self.jp_NavigationItem.leftBarButtonItem = leftItem;
+    [self jp_SetItem:leftItem Layout:YES];
     
     DynamicDemo *dynamic = [[DynamicDemo alloc] init];
     dynamic.date = [NSDate date];

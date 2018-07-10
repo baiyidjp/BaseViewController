@@ -7,8 +7,14 @@
 //
 
 #import "JPBaseViewController.h"
+#import "JPNavigationBar.h"
 
 @interface JPBaseViewController ()
+
+/** 控制共用的NavigationBar 可直接Hidden隐藏 */
+@property(nonatomic,strong) JPNavigationBar *jp_NavigationBar;
+/** NavigationBar 上的 NavigationItem 导航条目 接收左右的item */
+@property(nonatomic,strong) UINavigationItem *jp_NavigationItem;
 
 @end
 
@@ -71,19 +77,46 @@
 
 }
 
+- (void)setIsHiddenNavigationBar:(BOOL)isHiddenNavigationBar {
+    
+    _isHiddenNavigationBar = isHiddenNavigationBar;
+    self.jp_NavigationBar.hidden = isHiddenNavigationBar;
+}
+
 - (void)setJp_BarTintColor:(UIColor *)jp_BarTintColor {
     
+    _jp_BarTintColor = jp_BarTintColor;
     self.jp_NavigationBar.barTintColor = jp_BarTintColor;
 }
 
 - (void)setJp_BarTitleTextColor:(UIColor *)jp_BarTitleTextColor {
     
+    _jp_BarTitleTextColor = jp_BarTitleTextColor;
     self.jp_NavigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : jp_BarTitleTextColor};
 }
 
 - (void)setJp_BarTitleFont:(UIFont *)jp_BarTitleFont {
     
+    _jp_BarTitleFont = jp_BarTitleFont;
     self.jp_NavigationBar.titleTextAttributes = @{NSFontAttributeName : jp_BarTitleFont};
+}
+
+- (void)jp_SetItem:(UIBarButtonItem *)item Layout:(BOOL)isLeft {
+    
+    if (isLeft) {
+        self.jp_NavigationItem.leftBarButtonItem = item;
+    }else {
+        self.jp_NavigationItem.rightBarButtonItem = item;
+    }
+}
+
+- (void)jp_SetItems:(NSArray *)items Layout:(BOOL)isLeft {
+    
+    if (isLeft) {
+        self.jp_NavigationItem.leftBarButtonItems = items;
+    }else {
+        self.jp_NavigationItem.rightBarButtonItems = items;
+    }
 }
 
 @end
