@@ -23,8 +23,7 @@
     
     self.title = @"高德地图";
     
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithItemImageName:@"tabbar_home" Layout:YES target:self action:@selector(clickBtn)];
-    [self jp_SetItem:backItem Layout:YES];
+    [self jp_SetNavigationItemWithInfoString:@"tabbar_home" Type:JPNavigationItemType_Image Layout:YES FixSpace:YES target:self action:@selector(clickBtn)];
 
 
     //高德地图的初始化

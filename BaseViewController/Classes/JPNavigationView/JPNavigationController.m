@@ -28,13 +28,10 @@
     if (self.childViewControllers.count > 0) {
         
         viewController.hidesBottomBarWhenPushed = YES;
-        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithItemImageName:@"navigationbar_back_withtext" target:self action:@selector(popViewController)];
-        //为了向左缩进
-        UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-        spaceItem.width = -5;
-
+        
         JPBaseViewController *baseCtrl = (JPBaseViewController *)viewController;
-        [baseCtrl jp_SetItems:@[spaceItem,backItem] Layout:YES];
+        [baseCtrl jp_SetNavigationBackItemWithTarget:self action:@selector(popViewController)];
+        
     }
     [super pushViewController:viewController animated:animated];
 }

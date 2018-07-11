@@ -23,11 +23,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithItemTitle:@"Next" Layout:NO target:self action:@selector(clickBtn)];
-    [self jp_SetItem:rightItem Layout:NO];
+    [self jp_SetNavigationRightTextItemWithInfoString:@"Next" target:self action:@selector(clickBtn)];
     
-    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithItemTitle:@"MsgList" Layout:YES target:self action:@selector(clickDian)];
-    [self jp_SetItem:leftItem Layout:YES];
+    [self jp_SetNavigationItemWithInfoString:@"MsgList" Type:JPNavigationItemType_Text Layout:YES FixSpace:YES target:self action:@selector(clickDian)];
     
     DynamicDemo *dynamic = [[DynamicDemo alloc] init];
     dynamic.date = [NSDate date];

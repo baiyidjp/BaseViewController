@@ -101,7 +101,43 @@
     self.jp_NavigationBar.titleTextAttributes = @{NSFontAttributeName : jp_BarTitleFont};
 }
 
-- (void)jp_SetItem:(UIBarButtonItem *)item Layout:(BOOL)isLeft {
+- (void)jp_SetNavigationBackItemWithTarget:(id)target action:(SEL)action {
+    
+    [self jp_SetNavigationItemWithInfoString:@"navigationbar_back_withtext" Type:JPNavigationItemType_Image Layout:YES FixSpace:YES target:target action:action];
+}
+
+- (void)jp_SetNavigationRightTextItemWithInfoString:(NSString *)infoStr target:(id)target action:(SEL)action {
+    
+    [self jp_SetNavigationItemWithInfoString:infoStr Type:JPNavigationItemType_Text Layout:NO FixSpace:NO target:target action:action];
+}
+
+- (void)jp_SetNavigationItemWithInfoString:(NSString *)infoStr Type:(JPNavigationItemType)type Layout:(BOOL)isLeft FixSpace:(BOOL)isFix target:(id)target action:(SEL)action {
+    
+    UIBarButtonItem *item;
+    
+    if (type == JPNavigationItemType_Text) {
+        item = [[UIBarButtonItem alloc] initWithItemTitle:infoStr Layout:isLeft target:target action:action];
+    }
+    
+    if (type == JPNavigationItemType_Image) {
+        item = [[UIBarButtonItem alloc] initWithItemImageName:infoStr Layout:isLeft target:target action:action];
+    }
+
+    if (isFix) {
+        //为了缩进
+        UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+        spaceItem.width = -5;
+        NSArray *items = @[spaceItem,item];
+        if (!isLeft) {
+            items = @[item,spaceItem];
+        }
+        [self jp_SetItems:items Layout:isLeft];
+    }else {
+        [self p_SetItem:item Layout:isLeft];
+    }
+}
+
+- (void)p_SetItem:(UIBarButtonItem *)item Layout:(BOOL)isLeft {
     
     if (isLeft) {
         self.jp_NavigationItem.leftBarButtonItem = item;
