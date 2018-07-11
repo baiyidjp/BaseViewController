@@ -32,11 +32,23 @@
     dynamic.string = @"I am string";
     dynamic.objc = [[UIView alloc] init];
     NSLog(@"date:%@\nstring:%@\nobj:%@",dynamic.date,dynamic.string,dynamic.objc);
+    
+    UIButton *loginBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 300+STATUS_BAR_HEIGHT, 100, 30)];
+    [loginBtn setTitle:@"登录" forState:UIControlStateNormal];
+    [loginBtn setBackgroundColor:[UIColor redColor]];
+    [self.view addSubview:loginBtn];
+    [loginBtn addTarget:self action:@selector(p_ClickLoginBtn) forControlEvents:UIControlEventTouchUpInside];
 
     
-//    JPNavigationController *nav = [[JPNavigationController alloc] initWithRootViewController:[LoginViewController new]];
-//    [self presentViewController:nav animated:YES completion:nil];
 }
+
+#pragma mark -denglu
+- (void)p_ClickLoginBtn {
+    
+    JPNavigationController *nav = [[JPNavigationController alloc] initWithRootViewController:[LoginViewController new]];
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
 
 - (void)clickBtn {
     

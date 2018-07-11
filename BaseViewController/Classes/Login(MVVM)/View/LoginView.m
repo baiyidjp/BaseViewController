@@ -47,6 +47,7 @@
     
     UIButton *forgetBtn = [[UIButton alloc] initWithFrame:CGRectMake(KScreenWidth*0.5 - 50, CGRectGetMaxY(loginBtn.frame)+ 15, 100, 40)];
     [forgetBtn setTitle:@"忘记密码" forState:UIControlStateNormal];
+    [forgetBtn setBackgroundColor:[UIColor purpleColor]];
     [forgetBtn addTarget:self action:@selector(p_ClickForgetBtn) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:forgetBtn];
 

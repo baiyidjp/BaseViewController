@@ -8,6 +8,7 @@
 
 #import "JPBaseViewController.h"
 #import "JPNavigationBar.h"
+#import "JPNavItemButton.h"
 
 @interface JPBaseViewController ()
 
@@ -72,15 +73,41 @@
     self.jp_NavigationBar.barTintColor = [UIColor jp_colorWithHexString:@"F6F6F6"];
     //设置 bar 的标题字体颜色
     self.jp_NavigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor purpleColor]};
-    //设置系统的UIBarbuttonItem的字体颜色
-//    self.jp_NavigationBar.tintColor = [UIColor redColor];
-
 }
 
 - (void)setIsHiddenNavigationBar:(BOOL)isHiddenNavigationBar {
     
     _isHiddenNavigationBar = isHiddenNavigationBar;
     self.jp_NavigationBar.hidden = isHiddenNavigationBar;
+}
+
+- (void)jp_HiddenNavigationBarAndShowBackBtn:(BOOL)isShow {
+    
+    self.jp_NavigationBar.hidden = YES;
+    
+    if (isShow) {
+        //创建btn
+        JPNavItemButton *backBtn = [[JPNavItemButton alloc] initWithFrame:CGRectMake(8, STATUS_BAR_HEIGHT, 44, 44)];
+        backBtn.isLeft = YES;
+        [backBtn setImage:[UIImage imageNamed:@"navigationbar_back_withtext"] forState:UIControlStateNormal];
+        [backBtn setImage:[UIImage imageNamed:@"navigationbar_back_withtext"] forState:UIControlStateHighlighted];
+        [backBtn addTarget:self action:@selector(p_ClickBackBtn) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self.view addSubview:backBtn];
+        
+    }
+}
+
+- (void)p_ClickBackBtn {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+- (void)setJp_NavigationAlpha:(CGFloat)jp_NavigationAlpha {
+    
+    _jp_NavigationAlpha = jp_NavigationAlpha;
+    self.jp_NavigationBar.alpha = jp_NavigationAlpha;
 }
 
 - (void)setJp_BarTintColor:(UIColor *)jp_BarTintColor {
@@ -122,7 +149,7 @@
     if (type == JPNavigationItemType_Image) {
         item = [[UIBarButtonItem alloc] initWithItemImageName:infoStr Layout:isLeft target:target action:action];
     }
-
+    
     if (isFix) {
         //为了缩进
         UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
@@ -152,6 +179,25 @@
         self.jp_NavigationItem.leftBarButtonItems = items;
     }else {
         self.jp_NavigationItem.rightBarButtonItems = items;
+    }
+}
+
+- (void)jp_CancelScrollViewInsetWithTableView:(UITableView *)tableview {
+    
+    if (@available(iOS 11.0, *)) {
+        tableview.contentInsetAdjustmentBehavior =UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    
+}
+
+- (void)jp_AddSubView:(UIView *)view belowNavigationBar:(BOOL)isBelow {
+    
+    if (isBelow) {
+        [self.view insertSubview:view belowSubview:self.jp_NavigationBar];
+    }else {
+        [self.view insertSubview:view aboveSubview:self.jp_NavigationBar];
     }
 }
 

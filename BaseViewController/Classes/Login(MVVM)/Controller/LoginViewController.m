@@ -25,7 +25,7 @@
     
     [super viewDidLoad];
     
-    self.isHiddenNavigationBar = YES;
+    [self jp_HiddenNavigationBarAndShowBackBtn:NO];
     
     [self p_SetUI];
 }

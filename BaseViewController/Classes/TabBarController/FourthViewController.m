@@ -23,7 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.isHiddenNavigationBar = YES;
+    [self jp_HiddenNavigationBarAndShowBackBtn:NO];
     
     _loopView = [[JPLoopView alloc]initWithFrame:CGRectMake(0, STATUS_BAR_HEIGHT, self.view.bounds.size.width, self.view.bounds.size.width*9.0/16)];
     _loopView.dataSource = self;

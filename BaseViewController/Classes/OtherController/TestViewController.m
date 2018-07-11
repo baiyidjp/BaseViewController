@@ -64,12 +64,13 @@
 
 - (void)setupTableViewWithFrame:(CGRect)frame {
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NavHeight, self.view.bounds.size.width, self.view.bounds.size.height-NavHeight) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    [self.view addSubview:self.tableView];
-    
+    self.tableView.contentInset = UIEdgeInsetsMake(NAVIGATION_BAR_HEIGHT, 0, 0, 0);
+    [self jp_CancelScrollViewInsetWithTableView:self.tableView];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self jp_AddSubView:self.tableView belowNavigationBar:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -91,6 +92,18 @@
 //    [SVProgressHUD show];
     //测试同步执行异步请求
     [self syncExecuteAsyncRequest];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    CGFloat contentOffsetY = scrollView.contentOffset.y+NAVIGATION_BAR_HEIGHT;
+    NSLog(@"%f",contentOffsetY);
+    if (contentOffsetY >= 0) {
+        self.jp_NavigationAlpha = 1 - ((contentOffsetY)/NAVIGATION_BAR_HEIGHT*1.0);
+        self.isHiddenNavigationBar = contentOffsetY>NAVIGATION_BAR_HEIGHT ? YES : NO;
+    }else {
+        self.jp_NavigationAlpha = 1.0;
+    }
 }
 
 //- (void)loadNewData {
