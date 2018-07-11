@@ -1,23 +1,48 @@
-# BaseViewController   
-### 总结开发中封装的类和demo   
+# BaseViewController    
+### `一个通用的带导航栏的基础控制器+封装库/类`    
 
-#### 1.MainTabBarController->tabBar控制器->包括中间的不规则按钮/点击tabbar按钮弹跳效果   
-#### 2.BaseNavigationController->导航控制器->自定义左右Item     
-#### 3.BaseViewController->Base控制器->自定义导航条实现全屏统一返回/加入BaseTableView默认加入自定义的上拉下拉刷新控件   
-#### 4.OCJDRefreshControl-模仿京东的下拉刷新控件OC版[ Swift版](https://github.com/baiyidjp/SwiftJDRefreshControl)    
-#### 5.JPLoopView->无限轮播图->不需要依赖第三方/使用系统的下载API   
-#### 6.LoadingHUD->一个模仿UC浏览器的loading控件   
-#### 7.Extensions->分类文件夹   
-* 7.1 MidLineLabel->在Label中间划线适用于价格打折     
-* 7.2 NSObject+runtime->Runtime字典转模型-比较简陋   
-* 7.3 UIView+Corner_Radius->使用Runtime为XIB中View添加可以设置圆角属性   
-* 7.4 UIViewController+NSLogAppear->使用Runtime监控控制器的弹出   
-* 7.5 UIButton+RemoveHighlightEffect->一句代码移除UIButton的高亮效果   
-* 7.6 UIColor+JP_Color->使用十六进制设置颜色   
-* 7.7 UIView+BlockGesture->使用block回掉UIView的手势   
-* 7.8 UIView+JP_Frame->重写UIView的frame的get/set方法 方便直接赋值或者调用   
-* 7.9 UIImage+Extension->图片切圆角,防止滚动离屏渲染   
-* 7.10 UIImageView+SDWebImage->封装SDWebImage 加入自动切圆角   
-* 7.11 UIImageView+JPWebImage->封装系统API,模仿SDWebimage下载图片 并加入切圆角   
-* 7.12 UIBarButtonItem+Extension->自定义Item   
+```
+--Classes     //模块。包含各个模块的Model,View,Controller,Manager
+--categories  //类目。包含各种类的分类 和 继承
+--Frameworks  //系统框架。包含导入的系统的框架
+--Helpers     //帮助类。包含网络，数据库，归档，定位等操作类的封装和实现
+--Utilites    //工具类，一些非对象的，而是类方法调用的类
+--Vendors     //第三方库。部分需要修改或者不支持cocoapod的第三方的框架引入
+--Config      //配置。包含宏定义文件，全局配置文件，全局常量文件，颜色配置文件
+--Resources   //资源。包含plist,image,html,bundle，Localizable.strings等
+
+```
+## Classes
+```
+1. JPTabBarController:包含MainTabBarController和自定义(JPTabBar)
+1.1 JPTabBar:实现UITabBarButton的点击动画,控制中间的不规则UITabBarButton的显示与隐藏
+2. JPNavigationView:自定义一套导航栏,取代系统导航栏,完美适配iOS11.
+2.1 JPBaseViewController:基础控制器,所有的控制器都是继承这个.提供自定义导航栏和Item的API.
+2.2 JPNavigationController:自定义导航控制器
+2.3 UIBarButtonItem+JPItem:UIBarButtonItem的分类,可以方便快捷创建一个UIBarButtonItem.
+2.4 JPNavigationBar:自定义的UINavigationBar,适配iOS 11的精髓所在^_^.
+3. LiveMessageList:使用YYText框架组建直播聊天的消息界面.
+4. Login(MVVM):最简单的MVVM应用demo.
+5. MapController:使用协议打开地图的一个demo
+6. BigImageListController:使用Runloop优化cell加载大图卡顿的demo.
+```
+## Vendors
+
+```
+1. BaseMapView:加载地图所需的view
+2. JPLoopView:轮播图.使用代理/数据源启用
+2.1 UIImageView+JPWebImage:封装一套模仿SDWebImage的图片下载,并加入 UIImage+Extension 自动切圆角,减少列表滑动时离屏渲染!
+3. LoadingHUD:一个有意思的loading动画实现(对组动画的一个demo).
+4. OCJDRefreshControl:仿京东的下拉刷新OC版本.Swift版本:https://github.com/baiyidjp/SwiftJDRefreshControl)
+```
+## Categories
+
+```
+1. NSObject+runtime:runtime的基本探究.字典转模型
+2. UIView+Corner_Radius:使用runtime实现直接在xib中给UIView添加圆角等属性的功能.
+3. UIButton+RemoveHighlightEffect:按钮的分类,使用runtime移除按钮的高亮状态.
+4. UIImage+Extension:UIImage的分类,可对图片直接进行圆角剪切,增加性能.
+5. UIImageView+SDWebImage:对SDImageView的再次封装,使用 UIImage+Extension 实现切圆角.用于列表中,减少离屏渲染,增加性能.
+```
+
 

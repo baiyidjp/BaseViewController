@@ -1,9 +1,5 @@
 //
 //  UIButton+RemoveHighlightEffect.m
-//  Weibo16
-//
-//  Created by 0426iOS on 15/8/8.
-//  Copyright (c) 2015年 0426iOS. All rights reserved.
 //
 
 #import "UIButton+RemoveHighlightEffect.h"
