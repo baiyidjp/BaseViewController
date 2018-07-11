@@ -15,8 +15,8 @@
     [super layoutSubviews];
     
     CGRect imageFrame = self.imageView.frame;
-    imageFrame.origin.x = 0;
     if (self.isLeft) {
+        imageFrame.origin.x = 0;
     }else {
         imageFrame.origin.x = self.frame.size.width-imageFrame.size.width;
     }

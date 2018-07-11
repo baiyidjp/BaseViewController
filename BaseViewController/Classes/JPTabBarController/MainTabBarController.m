@@ -80,7 +80,7 @@
     
     [self setValue:baseTabBar forKey:@"tabBar"];
     
-    [baseTabBar setCustomBtnClick:^{
+    [baseTabBar setCustomBtnClick:^(UIButton *customBtn) {
         [self clickCustomBtn];
     }];
 }

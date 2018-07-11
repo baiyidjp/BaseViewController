@@ -104,7 +104,7 @@
 - (void)btnClick {
     
     if (self.customBtnClick) {
-        self.customBtnClick();
+        self.customBtnClick(self.customButton);
     }
 }
 
