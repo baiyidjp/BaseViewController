@@ -45,4 +45,6 @@
 5. UIImageView+SDWebImage:对SDImageView的再次封装,使用 UIImage+Extension 实现切圆角.用于列表中,减少离屏渲染,增加性能.
 ```
 
-
+![1](https://github.com/baiyidjp/BaseViewController/blob/master/BaseViewController/Resources/Gif/base1.gif)
+![2](https://github.com/baiyidjp/BaseViewController/blob/master/BaseViewController/Resources/Gif/base2.gif)
+![3](https://github.com/baiyidjp/BaseViewController/blob/master/BaseViewController/Resources/Gif/base23.gif)
