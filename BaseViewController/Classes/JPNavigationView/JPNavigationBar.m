@@ -28,10 +28,14 @@
             for (UIView *subView in view.subviews) {
                 if ([NSStringFromClass([subView class]) containsString:@"BarStackView"] && systemVersion >= 11.0) {
                     
-                    NSArray * arrayConstraint = subView.constraints;
-                    for (NSLayoutConstraint * constant in arrayConstraint) {
-                        constant.constant = 0;
-                    }
+                    view.layoutMargins = UIEdgeInsetsMake(view.layoutMargins.top, 8, view.layoutMargins.bottom, 8);
+//                    NSArray * arrayConstraint = subView.constraints;
+//                    for (NSLayoutConstraint * constant in arrayConstraint) {
+//                        NSLog(@"firstItem--%@ secondItem--%@",[constant.firstItem class],[constant.secondItem class]);
+//                        if ([NSStringFromClass([constant.firstItem class]) containsString:@"UILayoutGuide"] && constant.firstAttribute == NSLayoutAttributeWidth) {
+//                            constant.constant = 0;
+//                        }
+//                    }
                     
                 }
             }

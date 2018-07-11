@@ -108,7 +108,7 @@
 
 - (void)jp_SetNavigationRightTextItemWithInfoString:(NSString *)infoStr target:(id)target action:(SEL)action {
     
-    [self jp_SetNavigationItemWithInfoString:infoStr Type:JPNavigationItemType_Text Layout:NO FixSpace:NO target:target action:action];
+    [self jp_SetNavigationItemWithInfoString:infoStr Type:JPNavigationItemType_Text Layout:NO FixSpace:YES target:target action:action];
 }
 
 - (void)jp_SetNavigationItemWithInfoString:(NSString *)infoStr Type:(JPNavigationItemType)type Layout:(BOOL)isLeft FixSpace:(BOOL)isFix target:(id)target action:(SEL)action {
