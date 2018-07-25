@@ -19,4 +19,6 @@
 /** 获取当前类的属性列表 */
 + (NSArray *)jp_getPropertis;
 
++ (void) getAllIvarList;
+
 @end

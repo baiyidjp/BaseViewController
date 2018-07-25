@@ -6,13 +6,16 @@
 
 @implementation UIColor (JP_Color)
 
-+ (UIColor *) jp_colorWithHexString: (NSString *) hexString {
++ (UIColor *)jp_colorWithHexString:(NSString *)hexString {
     
+    return [self jp_colorWithHexString:hexString alpha:1.0];
+}
++ (UIColor *)jp_colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha {
+
     NSString *colorString = [[hexString stringByReplacingOccurrencesOfString: @"#" withString: @""] uppercaseString];
-    CGFloat alpha, red, blue, green;
+    CGFloat red, blue, green;
     switch ([colorString length]) {
         case 3: // #RGB
-            alpha = 1.0f;
             red   = [self colorComponentFrom: colorString start: 0 length: 1 Case:1];
             green = [self colorComponentFrom: colorString start: 1 length: 1 Case:2];
             blue  = [self colorComponentFrom: colorString start: 2 length: 1 Case:3];
@@ -24,7 +27,6 @@
             blue  = [self colorComponentFrom: colorString start: 3 length: 1 Case:3];
             break;
         case 6: // #RRGGBB
-            alpha = 1.0f;
             red   = [self colorComponentFrom: colorString start: 0 length: 2 Case:1];
             green = [self colorComponentFrom: colorString start: 2 length: 2 Case:2];
             blue  = [self colorComponentFrom: colorString start: 4 length: 2 Case:3];
@@ -39,7 +41,7 @@
             return nil;
             break;
     }
-    return [UIColor colorWithRed: red green: green blue: blue alpha: alpha];
+    return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
 + (CGFloat) colorComponentFrom: (NSString *) string start: (NSUInteger) start length: (NSUInteger) length Case:(int) ARGB{

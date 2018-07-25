@@ -84,7 +84,11 @@
         [self clickCustomBtn];
     }];
 }
-
+//禁用KVC
+//+ (BOOL)accessInstanceVariablesDirectly {
+//    return NO;
+//这样的话如果KVC没有找到set:属性名时，会直接用setValue：forUndefinedKey：方法。
+//}
 
 - (void)clickCustomBtn {
     

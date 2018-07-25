@@ -64,6 +64,7 @@ const char * kPropertykey = "kPropertykey";
     for (unsigned int i = 0 ; i < outCount ; i++) {
         objc_property_t property = prolist[i];
         const char* cName = property_getName(property);
+        NSLog(@"%s拥有的属性为: '%s'", object_getClassName(self),cName);
         NSString *name = [NSString stringWithCString:cName encoding:NSUTF8StringEncoding];
         [arrM addObject:name];
     }
@@ -73,6 +74,19 @@ const char * kPropertykey = "kPropertykey";
     objc_setAssociatedObject(self, kPropertykey, arrM.copy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     return arrM.copy;
+}
+
+//遍历获取类所有的成员变量IvarList
++ (void) getAllIvarList {
+    unsigned int methodCount = 0;
+    Ivar * ivars = class_copyIvarList([self class], &methodCount);
+    for (unsigned int i = 0; i < methodCount; i ++) {
+        Ivar ivar = ivars[i];
+        const char * name = ivar_getName(ivar);
+        const char * type = ivar_getTypeEncoding(ivar);
+        NSLog(@"%s拥有的成员变量的类型为%s，名字为 %s ",object_getClassName(self),type, name);
+    }
+    free(ivars);
 }
 
 @end

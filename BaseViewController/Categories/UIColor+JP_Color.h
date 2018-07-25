@@ -14,11 +14,21 @@
 
 @interface UIColor (JP_Color)
 /**
- *  iOS中十六进制的颜色转换为UIColor
- *
- *  @param color 16进制的color #ffffff
- *
- *  @return 1
+ iOS十六进制颜色转换为UIColor(默认透明度为1.0)
+ 带A或者AA的色值 透明度不适用默认的
+ 
+ @param hexString 包括8种格式(RGB,ARGB,RRGGBB,AARRGGBB,#RGB,#ARGB,#RRGGBB,#AARRGGBB)
+ @return 颜色
  */
-+ (UIColor *) jp_colorWithHexString: (NSString *)color;
++ (UIColor *)jp_colorWithHexString:(NSString *)hexString;
+
+/**
+ iOS十六进制颜色转换为UIColor
+ 带A或者AA的色值 透明度不适用默认的
+ 
+ @param hexString 包括8种格式(RGB,ARGB,RRGGBB,AARRGGBB,#RGB,#ARGB,#RRGGBB,#AARRGGBB)
+ @param alpha 颜色的透明度
+ @return 颜色
+ */
++ (UIColor *)jp_colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha;
 @end

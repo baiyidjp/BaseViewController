@@ -11,6 +11,7 @@
 #import "MessageTableViewCell.h"
 #import "MessageModel.h"
 #import "MessageViewModel.h"
+#import "NSObject+runtime.h"
 
 @interface MessageController()<UITableViewDelegate,UITableViewDataSource,MessageViewModelDelegate>
 /** tableview */
@@ -81,7 +82,9 @@
     
     
     [self p_Send];
-
+    
+    [MessageModel getAllIvarList];
+    [MessageModel jp_getPropertis];
 }
 
 #pragma mark -发言
