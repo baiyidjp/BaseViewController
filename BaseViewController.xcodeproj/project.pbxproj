@@ -17,7 +17,7 @@
 		F57093CB20F49026002EE746 /* UIBarButtonItem+JPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F570932A20F49025002EE746 /* UIBarButtonItem+JPItem.m */; };
 		F57093CC20F49026002EE746 /* JPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F570932B20F49025002EE746 /* JPBaseViewController.m */; };
 		F57093CD20F49026002EE746 /* JPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F570932E20F49025002EE746 /* JPNavigationController.m */; };
-		F57093CE20F49026002EE746 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F570933020F49025002EE746 /* TestViewController.m */; };
+		F57093CE20F49026002EE746 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F570933020F49025002EE746 /* NextViewController.m */; };
 		F57093CF20F49026002EE746 /* HiddenNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F570933120F49025002EE746 /* HiddenNavViewController.m */; };
 		F57093D020F49026002EE746 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F570933220F49025002EE746 /* ViewController.m */; };
 		F57093D120F49026002EE746 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F570933920F49025002EE746 /* LoginViewModel.m */; };
@@ -132,6 +132,13 @@
 		F5D418FB1E1BA45100DBB258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D418F91E1BA45100DBB258 /* Main.storyboard */; };
 		F5D418FD1E1BA45100DBB258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D418FC1E1BA45100DBB258 /* Assets.xcassets */; };
 		F5D419001E1BA45100DBB258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D418FE1E1BA45100DBB258 /* LaunchScreen.storyboard */; };
+		F5E7D077212F9AC500D76CF1 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F5E7D076212F9AC500D76CF1 /* data.json */; };
+		F5E7D08A212F9AE000D76CF1 /* TestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E7D07B212F9AE000D76CF1 /* TestViewModel.m */; };
+		F5E7D08B212F9AE000D76CF1 /* TestMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E7D07D212F9AE000D76CF1 /* TestMessageViewController.m */; };
+		F5E7D08C212F9AE000D76CF1 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E7D081212F9AE000D76CF1 /* TestModel.m */; };
+		F5E7D08D212F9AE000D76CF1 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E7D084212F9AE000D76CF1 /* TestTableViewCell.m */; };
+		F5E7D08E212F9AE000D76CF1 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E7D085212F9AE000D76CF1 /* TestView.m */; };
+		F5E7D08F212F9AE000D76CF1 /* TestDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E7D089212F9AE000D76CF1 /* TestDataModel.m */; };
 		F5E978A31F95A55E009AC73F /* Base.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5E978A51F95A55E009AC73F /* Base.strings */; };
 /* End PBXBuildFile section */
 
@@ -157,11 +164,11 @@
 		F570932C20F49025002EE746 /* JPNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPNavigationBar.h; sourceTree = "<group>"; };
 		F570932D20F49025002EE746 /* JPNavItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPNavItemButton.h; sourceTree = "<group>"; };
 		F570932E20F49025002EE746 /* JPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPNavigationController.m; sourceTree = "<group>"; };
-		F570933020F49025002EE746 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		F570933020F49025002EE746 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		F570933120F49025002EE746 /* HiddenNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiddenNavViewController.m; sourceTree = "<group>"; };
 		F570933220F49025002EE746 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F570933320F49025002EE746 /* HiddenNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiddenNavViewController.h; sourceTree = "<group>"; };
-		F570933420F49025002EE746 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		F570933420F49025002EE746 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
 		F570933520F49025002EE746 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F570933820F49025002EE746 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		F570933920F49025002EE746 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
@@ -326,6 +333,19 @@
 		F5D418FA1E1BA45100DBB258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5D418FC1E1BA45100DBB258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5D418FF1E1BA45100DBB258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5E7D076212F9AC500D76CF1 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		F5E7D07A212F9AE000D76CF1 /* TestViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewModel.h; sourceTree = "<group>"; };
+		F5E7D07B212F9AE000D76CF1 /* TestViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewModel.m; sourceTree = "<group>"; };
+		F5E7D07D212F9AE000D76CF1 /* TestMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMessageViewController.m; sourceTree = "<group>"; };
+		F5E7D07E212F9AE000D76CF1 /* TestMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMessageViewController.h; sourceTree = "<group>"; };
+		F5E7D080212F9AE000D76CF1 /* TestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		F5E7D081212F9AE000D76CF1 /* TestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		F5E7D083212F9AE000D76CF1 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		F5E7D084212F9AE000D76CF1 /* TestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
+		F5E7D085212F9AE000D76CF1 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		F5E7D086212F9AE000D76CF1 /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
+		F5E7D088212F9AE000D76CF1 /* TestDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDataModel.h; sourceTree = "<group>"; };
+		F5E7D089212F9AE000D76CF1 /* TestDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDataModel.m; sourceTree = "<group>"; };
 		F5E978A41F95A55E009AC73F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Base.strings; sourceTree = "<group>"; };
 		F5E978A61F95A578009AC73F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Base.strings; sourceTree = "<group>"; };
 		F5E978A71F95A5CE009AC73F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Base.strings"; sourceTree = "<group>"; };
@@ -419,6 +439,7 @@
 				F570931B20F49025002EE746 /* LiveMessageList */,
 				F570933620F49025002EE746 /* Login(MVVM) */,
 				F570934520F49025002EE746 /* MapController */,
+				F5E7D078212F9AE000D76CF1 /* CCMessageList */,
 				F570935020F49025002EE746 /* BigImageListController */,
 				F570932F20F49025002EE746 /* OtherController */,
 			);
@@ -464,8 +485,8 @@
 				F570933220F49025002EE746 /* ViewController.m */,
 				F570933320F49025002EE746 /* HiddenNavViewController.h */,
 				F570933120F49025002EE746 /* HiddenNavViewController.m */,
-				F570933420F49025002EE746 /* TestViewController.h */,
-				F570933020F49025002EE746 /* TestViewController.m */,
+				F570933420F49025002EE746 /* NextViewController.h */,
+				F570933020F49025002EE746 /* NextViewController.m */,
 			);
 			path = OtherController;
 			sourceTree = "<group>";
@@ -582,6 +603,7 @@
 		F570935F20F49026002EE746 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F5E7D075212F9AC500D76CF1 /* Json */,
 				F570936020F49026002EE746 /* image */,
 			);
 			path = Resources;
@@ -830,6 +852,73 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F5E7D075212F9AC500D76CF1 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				F5E7D076212F9AC500D76CF1 /* data.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		F5E7D078212F9AE000D76CF1 /* CCMessageList */ = {
+			isa = PBXGroup;
+			children = (
+				F5E7D079212F9AE000D76CF1 /* ViewModel */,
+				F5E7D07C212F9AE000D76CF1 /* Controller */,
+				F5E7D07F212F9AE000D76CF1 /* Model */,
+				F5E7D082212F9AE000D76CF1 /* View */,
+				F5E7D087212F9AE000D76CF1 /* DataModel */,
+			);
+			path = CCMessageList;
+			sourceTree = "<group>";
+		};
+		F5E7D079212F9AE000D76CF1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F5E7D07A212F9AE000D76CF1 /* TestViewModel.h */,
+				F5E7D07B212F9AE000D76CF1 /* TestViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F5E7D07C212F9AE000D76CF1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F5E7D07E212F9AE000D76CF1 /* TestMessageViewController.h */,
+				F5E7D07D212F9AE000D76CF1 /* TestMessageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F5E7D07F212F9AE000D76CF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5E7D080212F9AE000D76CF1 /* TestModel.h */,
+				F5E7D081212F9AE000D76CF1 /* TestModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F5E7D082212F9AE000D76CF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F5E7D083212F9AE000D76CF1 /* TestView.h */,
+				F5E7D084212F9AE000D76CF1 /* TestTableViewCell.m */,
+				F5E7D085212F9AE000D76CF1 /* TestView.m */,
+				F5E7D086212F9AE000D76CF1 /* TestTableViewCell.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F5E7D087212F9AE000D76CF1 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				F5E7D088212F9AE000D76CF1 /* TestDataModel.h */,
+				F5E7D089212F9AE000D76CF1 /* TestDataModel.m */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -904,6 +993,7 @@
 				F57093F820F49027002EE746 /* tabbar_discover@2x.png in Resources */,
 				F57093EA20F49027002EE746 /* navigationbar_back_withtext_highlighted@2x.png in Resources */,
 				F57093FF20F49027002EE746 /* tabbar_discover_selected@3x.png in Resources */,
+				F5E7D077212F9AC500D76CF1 /* data.json in Resources */,
 				F5D419001E1BA45100DBB258 /* LaunchScreen.storyboard in Resources */,
 				F57093E620F49027002EE746 /* tabbar_compose_icon_add_highlighted@2x.png in Resources */,
 				F57093E420F49027002EE746 /* tabbar_home@3x.png in Resources */,
@@ -1005,9 +1095,11 @@
 				F570945820F4912B002EE746 /* JDRefreshView.m in Sources */,
 				F57093DF20F49027002EE746 /* SecondViewController.m in Sources */,
 				F570940B20F49027002EE746 /* UIImageView+SDWebImage.m in Sources */,
+				F5E7D08D212F9AE000D76CF1 /* TestTableViewCell.m in Sources */,
 				F570944D20F4912B002EE746 /* GaodeBaseMapView.m in Sources */,
 				F570945520F4912B002EE746 /* JPLoopViewLayout.m in Sources */,
 				F57093D020F49026002EE746 /* ViewController.m in Sources */,
+				F5E7D08E212F9AE000D76CF1 /* TestView.m in Sources */,
 				F57093C820F49026002EE746 /* MessageTableViewCell.m in Sources */,
 				F570941320F49027002EE746 /* UIButton+RemoveHighlightEffect.m in Sources */,
 				F57093DB20F49027002EE746 /* BigImageTest.m in Sources */,
@@ -1038,8 +1130,10 @@
 				F570941420F49027002EE746 /* UIView+JP_Frame.m in Sources */,
 				F570941D20F49060002EE746 /* main.m in Sources */,
 				F57093CA20F49026002EE746 /* JPNavigationBar.m in Sources */,
+				F5E7D08C212F9AE000D76CF1 /* TestModel.m in Sources */,
 				F57093D520F49026002EE746 /* LoginView.m in Sources */,
 				F57093D320F49026002EE746 /* ForgetViewController.m in Sources */,
+				F5E7D08A212F9AE000D76CF1 /* TestViewModel.m in Sources */,
 				F570941820F49027002EE746 /* BaseConst.m in Sources */,
 				F570941220F49027002EE746 /* NSObject+runtime.m in Sources */,
 				F570940C20F49027002EE746 /* UIColor+JP_Color.m in Sources */,
@@ -1051,10 +1145,12 @@
 				F57093E020F49027002EE746 /* ThirdViewController.m in Sources */,
 				F57093C720F49026002EE746 /* MessageViewModel.m in Sources */,
 				F570940F20F49027002EE746 /* UIViewController+NSLogAppear.m in Sources */,
-				F57093CE20F49026002EE746 /* TestViewController.m in Sources */,
+				F5E7D08F212F9AE000D76CF1 /* TestDataModel.m in Sources */,
+				F57093CE20F49026002EE746 /* NextViewController.m in Sources */,
 				F57093CC20F49026002EE746 /* JPBaseViewController.m in Sources */,
 				F570940920F49027002EE746 /* DynamicDemo.m in Sources */,
 				F57093D220F49026002EE746 /* LoginViewController.m in Sources */,
+				F5E7D08B212F9AE000D76CF1 /* TestMessageViewController.m in Sources */,
 				F570945620F4912B002EE746 /* BaseLoadMoreView.m in Sources */,
 				F570945120F4912B002EE746 /* BaiduBaseMapView.m in Sources */,
 				F570945220F4912B002EE746 /* JPLoopViewCell.m in Sources */,

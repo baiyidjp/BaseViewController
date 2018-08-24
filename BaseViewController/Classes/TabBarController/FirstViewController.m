@@ -7,11 +7,12 @@
 //
 
 #import "FirstViewController.h"
-#import "TestViewController.h"
+#import "TestMessageViewController.h"
 #import "DynamicDemo.h"
 #import "HiddenNavViewController.h"
 #import "LoginViewController.h"
 #import "MessageController.h"
+#import "NextViewController.h"
 
 @interface FirstViewController ()
 
@@ -39,7 +40,12 @@
     [self.view addSubview:loginBtn];
     [loginBtn addTarget:self action:@selector(p_ClickLoginBtn) forControlEvents:UIControlEventTouchUpInside];
 
-    
+    UIButton *messageBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 300+STATUS_BAR_HEIGHT+50, 100, 30)];
+    [messageBtn setTitle:@"信息流" forState:UIControlStateNormal];
+    [messageBtn setBackgroundColor:[UIColor redColor]];
+    [self.view addSubview:messageBtn];
+    [messageBtn addTarget:self action:@selector(p_ClickMessageBtn) forControlEvents:UIControlEventTouchUpInside];
+
 }
 
 #pragma mark -denglu
@@ -49,10 +55,16 @@
     [self presentViewController:nav animated:YES completion:nil];
 }
 
+#pragma mark -message
+- (void)p_ClickMessageBtn {
+    
+    [self.navigationController pushViewController:[[TestMessageViewController alloc] init] animated:YES];
+
+}
 
 - (void)clickBtn {
     
-    [self.navigationController pushViewController:[[TestViewController alloc] init] animated:YES];
+    [self.navigationController pushViewController:[[NextViewController alloc] init] animated:YES];
 }
 
 - (void)clickDian {

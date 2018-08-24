@@ -6,17 +6,17 @@
 //  Copyright © 2017年 dong. All rights reserved.
 //
 
-#import "TestViewController.h"
+#import "NextViewController.h"
 #import "JPLoadingHUD.h"
 #import "BigImageTest.h"
 #import "SVProgressHUD.h"
 
-@interface TestViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface NextViewController ()<UITableViewDataSource,UITableViewDelegate>
 /** table */
 @property(nonatomic,strong) UITableView *tableView;
 @end
 
-@implementation TestViewController
+@implementation NextViewController
 {
     NSMutableArray *_dataArray;
     NSOperationQueue *_queue;
@@ -41,12 +41,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"Test(多个item)";
+    self.title = @"多个item";
     
     self.jp_BarTintColor = [UIColor redColor];
     
-    [self setupTableViewWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, self.view.bounds.size.width, self.view.bounds.size.height-NAVIGATION_BAR_HEIGHT-HOME_INDICATOR_HEIGHT)];
-    
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.contentInset = UIEdgeInsetsMake(NAVIGATION_BAR_HEIGHT, 0, 0, 0);
+    [self jp_CancelScrollViewInsetWithTableView:self.tableView];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self jp_AddSubView:self.tableView belowNavigationBar:YES];
+
 
     _dataArray = [NSMutableArray array];
     for (int i = 0; i < 20; i++) {
@@ -75,16 +81,6 @@
     [self.navigationController pushViewController:[[BigImageTest alloc] init] animated:YES];
 }
 
-- (void)setupTableViewWithFrame:(CGRect)frame {
-    
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.tableView.contentInset = UIEdgeInsetsMake(NAVIGATION_BAR_HEIGHT, 0, 0, 0);
-    [self jp_CancelScrollViewInsetWithTableView:self.tableView];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    [self jp_AddSubView:self.tableView belowNavigationBar:YES];
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     

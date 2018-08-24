@@ -12,6 +12,7 @@ pod 'AMap3DMap'
 pod 'SVProgressHUD'
 pod 'MJRefresh'
 pod 'YYText'
+pod 'YYModel'
   # Pods for BaseViewController
 
 end

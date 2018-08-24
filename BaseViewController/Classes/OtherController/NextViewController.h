@@ -8,6 +8,6 @@
 
 #import "JPBaseViewController.h"
 
-@interface TestViewController : JPBaseViewController
+@interface NextViewController : JPBaseViewController
 
 @end
