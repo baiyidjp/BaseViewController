@@ -139,6 +139,8 @@
 		F5E7D08D212F9AE000D76CF1 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E7D084212F9AE000D76CF1 /* TestTableViewCell.m */; };
 		F5E7D08E212F9AE000D76CF1 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E7D085212F9AE000D76CF1 /* TestView.m */; };
 		F5E7D08F212F9AE000D76CF1 /* TestDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E7D089212F9AE000D76CF1 /* TestDataModel.m */; };
+		F5E7D095212FAFCC00D76CF1 /* JPRefreshPlaceHolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E7D092212FAFCC00D76CF1 /* JPRefreshPlaceHolderView.m */; };
+		F5E7D096212FAFCC00D76CF1 /* JPRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E7D093212FAFCC00D76CF1 /* JPRefreshTableView.m */; };
 		F5E978A31F95A55E009AC73F /* Base.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5E978A51F95A55E009AC73F /* Base.strings */; };
 /* End PBXBuildFile section */
 
@@ -346,6 +348,10 @@
 		F5E7D086212F9AE000D76CF1 /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
 		F5E7D088212F9AE000D76CF1 /* TestDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDataModel.h; sourceTree = "<group>"; };
 		F5E7D089212F9AE000D76CF1 /* TestDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDataModel.m; sourceTree = "<group>"; };
+		F5E7D091212FAFCC00D76CF1 /* JPRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPRefreshTableView.h; sourceTree = "<group>"; };
+		F5E7D092212FAFCC00D76CF1 /* JPRefreshPlaceHolderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPRefreshPlaceHolderView.m; sourceTree = "<group>"; };
+		F5E7D093212FAFCC00D76CF1 /* JPRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPRefreshTableView.m; sourceTree = "<group>"; };
+		F5E7D094212FAFCC00D76CF1 /* JPRefreshPlaceHolderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPRefreshPlaceHolderView.h; sourceTree = "<group>"; };
 		F5E978A41F95A55E009AC73F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Base.strings; sourceTree = "<group>"; };
 		F5E978A61F95A578009AC73F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Base.strings; sourceTree = "<group>"; };
 		F5E978A71F95A5CE009AC73F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Base.strings"; sourceTree = "<group>"; };
@@ -592,6 +598,7 @@
 		F570935E20F49026002EE746 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				F5E7D090212FAFCC00D76CF1 /* RefreshTableView */,
 				F570942520F4912A002EE746 /* BaseMapView */,
 				F570943220F4912A002EE746 /* JPLoopView */,
 				F570942020F4912A002EE746 /* LoadingHUD */,
@@ -919,6 +926,17 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
+		F5E7D090212FAFCC00D76CF1 /* RefreshTableView */ = {
+			isa = PBXGroup;
+			children = (
+				F5E7D091212FAFCC00D76CF1 /* JPRefreshTableView.h */,
+				F5E7D092212FAFCC00D76CF1 /* JPRefreshPlaceHolderView.m */,
+				F5E7D093212FAFCC00D76CF1 /* JPRefreshTableView.m */,
+				F5E7D094212FAFCC00D76CF1 /* JPRefreshPlaceHolderView.h */,
+			);
+			path = RefreshTableView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1131,11 +1149,13 @@
 				F570941D20F49060002EE746 /* main.m in Sources */,
 				F57093CA20F49026002EE746 /* JPNavigationBar.m in Sources */,
 				F5E7D08C212F9AE000D76CF1 /* TestModel.m in Sources */,
+				F5E7D096212FAFCC00D76CF1 /* JPRefreshTableView.m in Sources */,
 				F57093D520F49026002EE746 /* LoginView.m in Sources */,
 				F57093D320F49026002EE746 /* ForgetViewController.m in Sources */,
 				F5E7D08A212F9AE000D76CF1 /* TestViewModel.m in Sources */,
 				F570941820F49027002EE746 /* BaseConst.m in Sources */,
 				F570941220F49027002EE746 /* NSObject+runtime.m in Sources */,
+				F5E7D095212FAFCC00D76CF1 /* JPRefreshPlaceHolderView.m in Sources */,
 				F570940C20F49027002EE746 /* UIColor+JP_Color.m in Sources */,
 				F570940E20F49027002EE746 /* UIImage+Extension.m in Sources */,
 				F57093D620F49026002EE746 /* MapViewController.m in Sources */,
