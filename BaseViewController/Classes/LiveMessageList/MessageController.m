@@ -42,7 +42,7 @@
     [super viewDidLoad];
     
     self.title = @"YYTextMessageListDemo";
-    
+
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NavHeight, KScreenWidth, KScreenHeight-NavHeight) style:UITableViewStylePlain];
     tableView.delegate = self;
     tableView.dataSource = self;

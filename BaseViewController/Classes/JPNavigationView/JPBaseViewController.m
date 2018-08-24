@@ -141,6 +141,7 @@
 - (void)jp_SetNavigationItemWithInfoString:(NSString *)infoStr Type:(JPNavigationItemType)type Layout:(BOOL)isLeft FixSpace:(BOOL)isFix target:(id)target action:(SEL)action {
     
     UIBarButtonItem *item;
+    NSMutableArray *currentItems = [NSMutableArray arrayWithArray:isLeft ? self.jp_NavigationItem.leftBarButtonItems : self.jp_NavigationItem.rightBarButtonItems];
     
     if (type == JPNavigationItemType_Text) {
         item = [[UIBarButtonItem alloc] initWithItemTitle:infoStr Layout:isLeft target:target action:action];
@@ -150,18 +151,19 @@
         item = [[UIBarButtonItem alloc] initWithItemImageName:infoStr Layout:isLeft target:target action:action];
     }
     
-    if (isFix) {
+    if (isFix && !currentItems.count) {
         //为了缩进
         UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
         spaceItem.width = -5;
-        NSArray *items = @[spaceItem,item];
-        if (!isLeft) {
-            items = @[item,spaceItem];
-        }
-        [self jp_SetItems:items Layout:isLeft];
-    }else {
-        [self p_SetItem:item Layout:isLeft];
+        [currentItems addObject:spaceItem];
     }
+    
+    if (!isLeft) {
+        [currentItems insertObject:item atIndex:0];
+    }else {    
+        [currentItems addObject:item];
+    }
+    [self jp_SetItems:[currentItems copy] Layout:isLeft];
 }
 
 - (void)p_SetItem:(UIBarButtonItem *)item Layout:(BOOL)isLeft {
@@ -199,6 +201,11 @@
     }else {
         [self.view insertSubview:view aboveSubview:self.jp_NavigationBar];
     }
+}
+
+- (void)jp_BaseControllerClickBackItem {
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

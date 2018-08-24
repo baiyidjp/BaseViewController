@@ -38,7 +38,11 @@
 
 - (void)p_ClickBackBtn {
     
-    [self popViewControllerAnimated:YES];
+    //拿到栈顶控制器(当前显示的)
+    JPBaseViewController *currentController = (JPBaseViewController *)[self.childViewControllers lastObject];
+    //拦截pop方法,如果子类控制器实现了这个方法,那么子类自己处理返回逻辑
+    //如果子类没有实现,那么调用父类的方法,直接pop上个控制器
+    [currentController jp_BaseControllerClickBackItem];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -41,7 +41,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"Test";
+    self.title = @"Test(多个item)";
     
     self.jp_BarTintColor = [UIColor redColor];
     
@@ -55,6 +55,19 @@
     }
     
     [self jp_SetNavigationRightTextItemWithInfoString:@"大图" target:self action:@selector(clickBtn)];
+    
+    [self jp_SetNavigationRightTextItemWithInfoString:@"大图2" target:self action:@selector(clickBtn)];
+    
+    
+    [self jp_SetNavigationItemWithInfoString:@"XX" Type:JPNavigationItemType_Text Layout:YES FixSpace:YES target:self action:@selector(clickBtn)];
+
+
+}
+
+- (void)jp_BaseControllerClickBackItem {
+    
+    NSLog(@"test");
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)clickBtn {
@@ -89,7 +102,7 @@
     
     NSLog(@"点击--%zd",indexPath.row);
      [JPLoadingHUD showLoadingHUD];
-//    [SVProgressHUD show];
+
     //测试同步执行异步请求
     [self syncExecuteAsyncRequest];
 }
@@ -106,32 +119,6 @@
     }
 }
 
-//- (void)loadNewData {
-//
-//    [_dataArray insertObject:@"下拉--新数据" atIndex:0];
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [self.baseTableView reloadData];
-//        [self loadNewEndRefresh];
-//        if (_dataArray.count > 25) {
-//            [self noMoreData];
-//        }
-//    });
-//}
-//
-//- (void)loadMoreData {
-//
-//    [_dataArray addObject:@"上拉--新数据"];
-//    NSLog(@"1");
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [self.baseTableView reloadData];
-//        if (_dataArray.count > 25) {
-//            [self noMoreData];
-//        }else {
-//            [self loadMoreEndRefresh];
-//        }
-//    });
-//
-//}
 
 #pragma mark - 测试同步执行异步请求
 - (void)syncExecuteAsyncRequest {

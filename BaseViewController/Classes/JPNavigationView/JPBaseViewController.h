@@ -80,4 +80,9 @@ typedef NS_ENUM(NSInteger, JPNavigationItemType) {
  @param isBelow BOOL
  */
 - (void)jp_AddSubView:(UIView *)view belowNavigationBar:(BOOL)isBelow;
+
+/**
+ 点击返回按钮
+ */
+- (void)jp_BaseControllerClickBackItem;
 @end

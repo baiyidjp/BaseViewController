@@ -32,7 +32,7 @@
     self = [self init];
     if (self) {
         //创建btn
-        JPNavItemButton *btn = [[JPNavItemButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+        JPNavItemButton *btn = [[JPNavItemButton alloc] initWithFrame:CGRectMake(0, 0, 30, 44)];
         [btn setTitle:itemTitle forState:UIControlStateNormal];
         [btn.titleLabel setFont:isBold ? [UIFont boldSystemFontOfSize:titleFont] : [UIFont systemFontOfSize:titleFont]];
         [btn setTitleColor:titleColor forState:UIControlStateNormal];
