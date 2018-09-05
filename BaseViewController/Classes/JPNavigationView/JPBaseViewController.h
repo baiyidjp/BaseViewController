@@ -82,7 +82,7 @@ typedef NS_ENUM(NSInteger, JPNavigationItemType) {
 - (void)jp_AddSubView:(UIView *)view belowNavigationBar:(BOOL)isBelow;
 
 /**
- 点击返回按钮
+ 点击返回按钮 子类可以通过拦截这个方法拦截返回事件
  */
 - (void)jp_BaseControllerClickBackItem;
 @end

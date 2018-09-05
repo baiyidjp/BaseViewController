@@ -10,10 +10,11 @@
 #import "JPLoadingHUD.h"
 #import "BigImageTest.h"
 #import "SVProgressHUD.h"
+#import "JPRefreshTableView.h"
 
-@interface NextViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface NextViewController ()<UITableViewDataSource,UITableViewDelegate,JPRefreshTableViewDelegate>
 /** table */
-@property(nonatomic,strong) UITableView *tableView;
+@property(nonatomic,strong) JPRefreshTableView *tableView;
 @end
 
 @implementation NextViewController
@@ -45,9 +46,10 @@
     
     self.jp_BarTintColor = [UIColor redColor];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
+    self.tableView = [[JPRefreshTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.refreshDelegate = self;
     self.tableView.contentInset = UIEdgeInsetsMake(NAVIGATION_BAR_HEIGHT, 0, 0, 0);
     [self jp_CancelScrollViewInsetWithTableView:self.tableView];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
@@ -56,7 +58,7 @@
 
     _dataArray = [NSMutableArray array];
     for (int i = 0; i < 20; i++) {
-        NSString *str = [NSString stringWithFormat:@"死数据--%d",i];
+        NSString *str = [NSString stringWithFormat:@"JPRefreshTableView--%d",i];
         [_dataArray addObject:str];
     }
     
@@ -72,7 +74,7 @@
 
 - (void)jp_BaseControllerClickBackItem {
     
-    NSLog(@"test");
+    NSLog(@"拦截了返回事件");
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -81,6 +83,17 @@
     [self.navigationController pushViewController:[[BigImageTest alloc] init] animated:YES];
 }
 
+-  (void)tableView:(JPRefreshTableView *)tablView refreshType:(JPRefreshType)refreshType {
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (refreshType == JPRefreshType_Header) {
+            [tablView jp_tableViewHeaderEndRefreshing];
+        }else if (refreshType == JPRefreshType_Footer) {
+            [tablView jp_tableViewFooterEndRefreshingWithNoMoreData:NO];
+        };
+
+    });
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     

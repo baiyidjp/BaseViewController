@@ -930,9 +930,9 @@
 			isa = PBXGroup;
 			children = (
 				F5E7D091212FAFCC00D76CF1 /* JPRefreshTableView.h */,
-				F5E7D092212FAFCC00D76CF1 /* JPRefreshPlaceHolderView.m */,
 				F5E7D093212FAFCC00D76CF1 /* JPRefreshTableView.m */,
 				F5E7D094212FAFCC00D76CF1 /* JPRefreshPlaceHolderView.h */,
+				F5E7D092212FAFCC00D76CF1 /* JPRefreshPlaceHolderView.m */,
 			);
 			path = RefreshTableView;
 			sourceTree = "<group>";
