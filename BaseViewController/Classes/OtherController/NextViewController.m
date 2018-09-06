@@ -174,7 +174,6 @@
     //添加监听 监听队列是否全部执行完毕
     [_queue addObserver:self forKeyPath:@"operationCount" options:0 context:nil];
     [_queue addOperations:@[operation6,operation5,operation4,operation3, operation2, operation1] waitUntilFinished:NO];
-   
     
 }
 

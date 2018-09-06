@@ -9,6 +9,7 @@
 #import "JPLoopView.h"
 #import "JPLoopViewLayout.h"
 #import "JPLoopViewCell.h"
+#import "JPProxy.h"
 
 NSString *const JPCollectionViewId = @"JPCollectionViewId";
 NSInteger const allCount = 200000;
@@ -179,5 +180,9 @@ NSInteger const allCount = 200000;
     }
 }
 
+- (void)dealloc {
+    
+    NSLog(@"%s",__func__);
+}
 
 @end

@@ -141,6 +141,7 @@
 		F5E7D08F212F9AE000D76CF1 /* TestDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E7D089212F9AE000D76CF1 /* TestDataModel.m */; };
 		F5E7D095212FAFCC00D76CF1 /* JPRefreshPlaceHolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E7D092212FAFCC00D76CF1 /* JPRefreshPlaceHolderView.m */; };
 		F5E7D096212FAFCC00D76CF1 /* JPRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E7D093212FAFCC00D76CF1 /* JPRefreshTableView.m */; };
+		F5E7D4512141039600D76CF1 /* JPProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E7D4502141039600D76CF1 /* JPProxy.m */; };
 		F5E978A31F95A55E009AC73F /* Base.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5E978A51F95A55E009AC73F /* Base.strings */; };
 /* End PBXBuildFile section */
 
@@ -352,6 +353,8 @@
 		F5E7D092212FAFCC00D76CF1 /* JPRefreshPlaceHolderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPRefreshPlaceHolderView.m; sourceTree = "<group>"; };
 		F5E7D093212FAFCC00D76CF1 /* JPRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPRefreshTableView.m; sourceTree = "<group>"; };
 		F5E7D094212FAFCC00D76CF1 /* JPRefreshPlaceHolderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPRefreshPlaceHolderView.h; sourceTree = "<group>"; };
+		F5E7D44F2141039600D76CF1 /* JPProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPProxy.h; sourceTree = "<group>"; };
+		F5E7D4502141039600D76CF1 /* JPProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPProxy.m; sourceTree = "<group>"; };
 		F5E978A41F95A55E009AC73F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Base.strings; sourceTree = "<group>"; };
 		F5E978A61F95A578009AC73F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Base.strings; sourceTree = "<group>"; };
 		F5E978A71F95A5CE009AC73F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Base.strings"; sourceTree = "<group>"; };
@@ -704,6 +707,8 @@
 				F570939B20F49026002EE746 /* MidLineLabel.m */,
 				F570939220F49026002EE746 /* JPEditLabel.h */,
 				F570939C20F49026002EE746 /* JPEditLabel.m */,
+				F5E7D44F2141039600D76CF1 /* JPProxy.h */,
+				F5E7D4502141039600D76CF1 /* JPProxy.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -1153,6 +1158,7 @@
 				F57093D520F49026002EE746 /* LoginView.m in Sources */,
 				F57093D320F49026002EE746 /* ForgetViewController.m in Sources */,
 				F5E7D08A212F9AE000D76CF1 /* TestViewModel.m in Sources */,
+				F5E7D4512141039600D76CF1 /* JPProxy.m in Sources */,
 				F570941820F49027002EE746 /* BaseConst.m in Sources */,
 				F570941220F49027002EE746 /* NSObject+runtime.m in Sources */,
 				F5E7D095212FAFCC00D76CF1 /* JPRefreshPlaceHolderView.m in Sources */,
