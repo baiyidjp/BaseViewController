@@ -29,20 +29,46 @@ typedef NS_ENUM(NSInteger, JPLoopViewPageControlAliment) {
 
 @property(nonatomic,weak)id<JPLoopViewDelegate> delegate;
 
+
+/**
+ 类方法创建轮播图
+
+ @param frame 布局
+ @return JPLoopView
+ */
++ (instancetype)loopViewWithFrame:(CGRect)frame;
+
+/**
+ 创建一个轮播图
+ 
+ @param frame 布局
+ @param delegate 代理
+ @return JPLoopView
+ */
++ (instancetype)loopViewWithFrame:(CGRect)frame delegate:(id<JPLoopViewDelegate>)delegate;
+
+/**
+ 创建一个轮播图
+
+ @param frame 布局
+ @param delegate 代理
+ @param placeholderImage 占位图(可为nil)
+ @return JPLoopView
+ */
 + (instancetype)loopViewWithFrame:(CGRect)frame delegate:(id<JPLoopViewDelegate>)delegate placeholderImage:(UIImage *)placeholderImage;
 
 
 /**
- 设置轮播图数据(只有图片没有文本)
+ 刷新轮播图数据(只有图片没有文本)
 
- @param loopImageArray 图片资源(建议[NSString])
+ @param loopImageArray 图片资源(建议[NSString] NSURL也支持)
  */
 - (void)setLoopImageArray:(NSArray *)loopImageArray;
 
 /**
- 设置轮播图数据(带有文本)
+ 刷新轮播图数据(带有文本)
 
- @param loopImageArray 图片资源(建议[NSString])
+ @param loopImageArray 图片资源(建议[NSString] NSURL也支持)
  @param loopTitleArray 文本资源(建议[NSString])
  */
 - (void)setLoopImageArray:(NSArray *)loopImageArray loopTitleArray:(NSArray *)loopTitleArray;
@@ -50,8 +76,6 @@ typedef NS_ENUM(NSInteger, JPLoopViewPageControlAliment) {
 
 /*********************轮播相关***********************/
 
-/** totalItems 要显示的所有item的个数*/
-@property(nonatomic,assign) NSInteger totalItemsCount;
 /** placeholderImage 未加载图片的占位图 */
 @property(nonatomic,strong) UIImage *placeholderImage;
 /** pageAliment 分页控件的位置 默认center */
@@ -89,7 +113,7 @@ typedef NS_ENUM(NSInteger, JPLoopViewPageControlAliment) {
 @property(nonatomic,assign) JPLoopViewTitleAliment titleAliment;
 /** titlefont 默认 17 */
 @property(nonatomic,strong) UIFont *titleFont;
-/** title color 默认 白色色 */
+/** title color 默认 白色 */
 @property(nonatomic,strong) UIColor *titleColor;
 /** leftOffset 左边距离BgView的间距 默认10 */
 @property(nonatomic,assign) CGFloat titleLeftOffset;

@@ -97,7 +97,9 @@ dispatch_semaphore_t _semaphore;
     //取出timer
     dispatch_source_t timer = [_timersDict objectForKey:name];
     //取消定时器
-    dispatch_cancel(timer);
+    if (timer) {
+        dispatch_cancel(timer);
+    }
     //从字典中移除
     [_timersDict removeObjectForKey:name];
 

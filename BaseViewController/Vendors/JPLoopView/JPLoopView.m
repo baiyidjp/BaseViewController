@@ -14,19 +14,19 @@
 #import "JPProxy.h"
 
 NSString *const JPCollectionViewId = @"JPCollectionViewId";
-NSInteger const allCount = 10;//不能是奇数
+NSInteger const allCount = 10000;//不能是奇数
 
 
 @interface JPLoopView ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
 /** models */
 @property(nonatomic,strong) NSMutableArray *loopDataModels;
-
 /** collectionview */
 @property(nonatomic,strong) UICollectionView *collectionView;
 /** pagecontrol 分页控件 */
 @property(nonatomic,strong) JPPageControl *pageControl;
-
+/** totalItems 要显示的所有item的个数*/
+@property(nonatomic,assign) NSInteger totalItemsCount;
 /** 当前计时器的名字 */
 @property(nonatomic,strong) NSString *timerManageName;
 
@@ -42,6 +42,16 @@ NSInteger const allCount = 10;//不能是奇数
         _loopDataModels = [NSMutableArray array];
     }
     return _loopDataModels;
+}
+
++ (instancetype)loopViewWithFrame:(CGRect)frame {
+    
+    return [self loopViewWithFrame:frame delegate:nil];
+}
+
++ (instancetype)loopViewWithFrame:(CGRect)frame delegate:(id<JPLoopViewDelegate>)delegate {
+    
+    return [self loopViewWithFrame:frame delegate:delegate placeholderImage:nil];
 }
 
 + (instancetype)loopViewWithFrame:(CGRect)frame delegate:(id<JPLoopViewDelegate>)delegate placeholderImage:(UIImage *)placeholderImage {
@@ -276,7 +286,7 @@ NSInteger const allCount = 10;//不能是奇数
     [self.collectionView reloadData];
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (self.loopDataModels.count) {
+        if (self.loopDataModels.count && self.infiniteLoop) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.totalItemsCount/2 inSection:0];
             [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
         }
@@ -351,10 +361,13 @@ NSInteger const allCount = 10;//不能是奇数
     //实现无限滚动
     if (index == 0 || index == allCellCount - 1) {
         
-        if (index == 0) {
-            index = allCellCount/2;
-        }else{
-            index = allCellCount/2-1;
+        if (self.infiniteLoop) {
+            
+            if (index == 0) {
+                index = allCellCount/2;
+            }else{
+                index = allCellCount/2-1;
+            }
         }
     }
     self.collectionView.contentOffset = CGPointMake(index*scrollView.bounds.size.width, 0);
