@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class JPLoopCellModel;
 @interface JPLoopViewCell : UICollectionViewCell
 
-/** url */
-@property(nonatomic,strong)NSString *url;
+/** model */
+@property(nonatomic,strong) JPLoopCellModel *cellModel;
 
 @end

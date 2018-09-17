@@ -37,6 +37,7 @@
         [btn.titleLabel setFont:isBold ? [UIFont boldSystemFontOfSize:titleFont] : [UIFont systemFontOfSize:titleFont]];
         [btn setTitleColor:titleColor forState:UIControlStateNormal];
         [btn setTitleColor:highTitleColor ? highTitleColor : titleColor forState:UIControlStateHighlighted];
+        [btn.titleLabel setTextAlignment:isLeft ? NSTextAlignmentLeft : NSTextAlignmentRight];
         [btn setImage:[UIImage imageNamed:itemImageName] forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:highImageName.length ? highImageName : itemImageName] forState:UIControlStateHighlighted];
         if (itemTitle.length) {
