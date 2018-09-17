@@ -12,6 +12,7 @@
 @interface JPLoopViewController ()<JPLoopViewDelegate>
 /** loopView; */
 @property(nonatomic,strong) JPLoopView *loopView;
+@property(nonatomic,strong) JPLoopView *loopView_1;
 @end
 
 @implementation JPLoopViewController
@@ -26,8 +27,9 @@
     self.loopView.pageIndicatorImage = [UIImage imageNamed:@"home_new_bannerDotImage"];
     self.loopView.currentPageIndicatorImage = [UIImage imageNamed:@"home_new_bannerCurrentImage"];
     self.loopView.pageIndicatorSize = CGSizeMake(7, 2);
-//    self.loopView.intervalTime = 10;
-    [self.view addSubview:_loopView];
+    self.loopView.intervalTime = 5;
+    self.loopView.pageControlAliment = JPLoopViewPageControlAlimentRight;
+    [self.view addSubview:self.loopView];
     
     NSArray *images = @[@"http://ossweb-img.qq.com/upload/qqtalk/news/201610/261147252661302_480.jpg",@"http://ossweb-img.qq.com/upload/qqtalk/news/201610/281001502516278_480.jpg",@"http://ossweb-img.qq.com/upload/qqtalk/news/201610/201023267005533_480.jpg"];
     
@@ -39,6 +41,17 @@
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(changePic) forControlEvents:UIControlEventTouchUpInside];
     
+    
+    self.loopView_1 = [JPLoopView loopViewWithFrame:CGRectMake(0, CGRectGetMaxY(btn.frame)+20, self.view.bounds.size.width, self.view.bounds.size.width*9.0/16) delegate:self placeholderImage:nil];
+    self.loopView_1.pageIndicatorTintColor = [UIColor whiteColor];
+    self.loopView_1.intervalTime = 10;
+    self.loopView_1.pageControlAliment = JPLoopViewPageControlAlimentLeft;
+    [self.view addSubview:self.loopView_1];
+    
+    NSArray *images_1 = @[@"http://ossweb-img.qq.com/upload/qqtalk/news/201610/261147252661302_480.jpg",@"http://ossweb-img.qq.com/upload/qqtalk/news/201610/281001502516278_480.jpg",@"http://ossweb-img.qq.com/upload/qqtalk/news/201610/201023267005533_480.jpg"];
+    
+    [self.loopView_1 setLoopImageArray:images_1 loopTitleArray:@[@"0000000000",@"1111111111",@"2222222222"]];
+
 
 }
 

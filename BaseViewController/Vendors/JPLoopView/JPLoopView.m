@@ -141,17 +141,20 @@ NSInteger const allCount = 10;//不能是奇数
             break;
         case JPLoopViewPageControlAlimentLeft:
         {
+            pageControl.hidden = NO;
             pageControl.frame = CGRectMake(self.pageControlLeftOffset, self.frame.size.height-self.pageControlBottomOffset-pageSize.height, pageSize.width, pageSize.height);
         }
             break;
         case JPLoopViewPageControlAlimentCenter:
         {
+            pageControl.hidden = NO;
             pageControl.frame = CGRectMake(self.frame.size.width*0.5-pageSize.width*0.5, self.frame.size.height-self.pageControlBottomOffset-pageSize.height, pageSize.width, pageSize.height);
 
         }
             break;
         case JPLoopViewPageControlAlimentRight:
         {
+            pageControl.hidden = NO;
             pageControl.frame = CGRectMake(self.frame.size.width-self.pageControlRightOffset-pageSize.width, self.frame.size.height-self.pageControlBottomOffset-pageSize.height, pageSize.width, pageSize.height);
 
         }
@@ -198,6 +201,7 @@ NSInteger const allCount = 10;//不能是奇数
 - (void)setLoopImageArray:(NSArray *)loopImageArray loopTitleArray:(NSArray *)loopTitleArray {
     
     if (!loopImageArray || !loopImageArray.count || (loopTitleArray && loopTitleArray.count && (loopImageArray.count != loopTitleArray.count))) {
+        NSLog(@"imageCount != titleCount");
         return;
     }
     
