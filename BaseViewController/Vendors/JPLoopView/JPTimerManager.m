@@ -99,9 +99,9 @@ dispatch_semaphore_t _semaphore;
     //取消定时器
     if (timer) {
         dispatch_cancel(timer);
+        //从字典中移除
+        [_timersDict removeObjectForKey:name];
     }
-    //从字典中移除
-    [_timersDict removeObjectForKey:name];
 
     /****************************解锁******************************/
     dispatch_semaphore_signal(_semaphore);
