@@ -54,17 +54,19 @@
     //创建会话请求
     NSURLSessionDownloadTask *downTask = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
-        [fileManager moveItemAtURL:location toURL:[NSURL fileURLWithPath:pathString] error:nil];
-        
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSData *saveData = [NSData dataWithContentsOfFile:pathString];
-            UIImage *saveImage = placeholder;
-            if (saveData) {
-                saveImage = [UIImage imageWithData:saveData];
+            if (location && location.absoluteString.length) {
+                
+                [fileManager moveItemAtURL:location toURL:[NSURL fileURLWithPath:pathString] error:nil];
+                NSData *saveData = [NSData dataWithContentsOfFile:pathString];
+                UIImage *saveImage = placeholder;
+                if (saveData) {
+                    saveImage = [UIImage imageWithData:saveData];
+                }
+                [saveImage jp_asynCornerImageWithSize:self.bounds.size cornerRadius:cornerRadius fillColor:self.superview.backgroundColor completion:^(UIImage *resultImage) {
+                    self.image = resultImage;
+                }];
             }
-            [saveImage jp_asynCornerImageWithSize:self.bounds.size cornerRadius:cornerRadius fillColor:self.superview.backgroundColor completion:^(UIImage *resultImage) {
-                self.image = resultImage;
-            }];
         });
     }];
     //发送请求

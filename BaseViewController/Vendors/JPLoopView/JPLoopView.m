@@ -13,7 +13,7 @@
 #import "JPTimerManager.h"
 #import "JPProxy.h"
 
-NSString *const JPCollectionViewId = @"JPCollectionViewId";
+NSString *const JPCollectionViewCellID = @"JPCollectionViewCellID";
 NSInteger const allCount = 10000;//不能是奇数
 
 
@@ -113,7 +113,7 @@ NSInteger const allCount = 10000;//不能是奇数
     self.collectionView = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:[[JPLoopViewLayout alloc]init]];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    [self.collectionView registerClass:[JPLoopViewCell class] forCellWithReuseIdentifier:JPCollectionViewId];
+    [self.collectionView registerClass:[JPLoopViewCell class] forCellWithReuseIdentifier:JPCollectionViewCellID];
     [self addSubview:self.collectionView];
 }
 
@@ -300,7 +300,7 @@ NSInteger const allCount = 10000;//不能是奇数
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    JPLoopViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:JPCollectionViewId forIndexPath:indexPath];
+    JPLoopViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:JPCollectionViewCellID forIndexPath:indexPath];
     JPLoopCellModel *cellModel = self.loopDataModels[indexPath.item % self.loopDataModels.count];
     cell.cellModel = cellModel;
     return cell;
